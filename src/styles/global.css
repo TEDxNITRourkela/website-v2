@@ -158,6 +158,21 @@ table {
 [tabindex] {
   outline: none !important;
 }
+
+:root {
+  --color-primary: #ff2b06;
+  --color-secondary: #ffffff;
+  --color-tertiary: rgba(255, 255, 255, 0.5);
+
+  --background-primary: #1a1a1a;
+  --background-secondary: #232323;
+  --background-tertiary: #f4f4f4;
+
+  --max-width: 83.5em;
+  --max-width-bleed: 90%;
+  --max-width-narrow: 50em;
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 5px;
@@ -170,7 +185,7 @@ table {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0e151c;
+  background: var(--background-primary);
   height: 100px;
 }
 
@@ -179,17 +194,6 @@ table {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5f676e;
+  background: var(--background-secondary);
   border-radius: 5px;
-}
-
-:root {
-  --background-dark: #121217;
-  --background-darker: #17171d;
-  --text-color-primary: #fff;
-  --text-color-secondary: rgba(255, 255, 255, 0.4);
-
-  --max-width: 83.5em;
-  --max-width-bleed: 90%;
-  --max-width-narrow: 50em;
 }
