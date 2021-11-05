@@ -1,26 +1,27 @@
 {
-  "name": "project-oregano",
+  "name": "website-v2",
   "private": true,
-  "description": "Official repository for HackNITR 3.0",
+  "description": "Official repository for TEDxNITRourkela",
   "version": "0.1.0",
   "license": "MIT",
-  "main": "src/pages/index.js",
+  "main": "src/pages/index.jsx",
   "keywords": [
-    "hacknitr",
-    "hackathon",
     "website",
     "react",
     "gatsby",
-    "tailwind",
-    "dscnitrourkela",
-    "nitrourkela"
+    "nitrourkela",
+    "ted",
+    "webapp",
+    "tedx",
+    "nit",
+    "tedxnitrourkela"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dscnitrourkela/project-oregano.git"
+    "url": "https://github.com/TEDxNITRourkela/website-v2.git"
   },
   "bugs": {
-    "url": "https://github.com/dscnitrourkela/project-oregano.git"
+    "url": "https://github.com/TEDxNITRourkela/website-v2.git"
   },
   "scripts": {
     "build": "gatsby build",
