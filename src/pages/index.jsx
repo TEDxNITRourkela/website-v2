@@ -5,6 +5,7 @@ import { onSnapshot, doc } from 'firebase/firestore';
 
 // Utils
 import { useFirebase } from '../utils/firebase';
+import { Layout } from '../components/shared';
 
 const Homepage = () => {
   const { firebase: app, db } = useFirebase();
@@ -27,9 +28,7 @@ const Homepage = () => {
   
   return (
     <div>
-      <h1>Hello World</h1>
-      <h2>{data?.text}</h2>
-      <img src={data?.img} alt='Trial' />
+      <Layout>Hello World</Layout>
     </div>
   );
 };
