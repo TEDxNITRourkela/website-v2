@@ -18,12 +18,7 @@ const Nav = styled.div`
   top: 0;
 `;
 
-const Container = styled.div`
-  width: 100%;
-  background-color: #1a1a1a;
-`;
-
-export default ({ childern }) => {
+export default ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenuOpen = () => (menuOpen ? setMenuOpen(false) : setMenuOpen(true));
 
@@ -35,7 +30,7 @@ export default ({ childern }) => {
           {menuOpen && <MobileNavbar />}
         </MenuContext.Provider>
       </Nav>
-      <Container>{childern}</Container>
+      {children}
       <Footer />
     </Layout>
   );

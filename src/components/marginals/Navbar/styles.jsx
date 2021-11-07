@@ -20,6 +20,7 @@ export const NavContainer = styled.div`
   background-color: #1a1a1a;
   display: flex;
   justify-content: space-around;
+  box-shodow: ${({ shadow }) => (shadow ? '0px 3px 15px #080808' : '')};
   align-items: center;
   .bars {
     color: #fff;
