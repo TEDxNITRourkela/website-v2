@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // Components
-import { DesktopNavbar, MobileNavbar, MenuContext } from '../marginals/Navbar';
+import { DesktopNavbar, MobileNavbar, MenuContext, Footer } from '../marginals';
 
 const Layout = styled.div`
   width: 100%;
@@ -16,6 +16,11 @@ const Nav = styled.div`
   position: relative;
   width: 100%;
   top: 0;
+`;
+
+const Container = styled.div`
+  width: 100%;
+  background-color: #1a1a1a;
 `;
 
 export default ({ childern }) => {
@@ -30,7 +35,8 @@ export default ({ childern }) => {
           {menuOpen && <MobileNavbar />}
         </MenuContext.Provider>
       </Nav>
-      {childern}
+      <Container>{childern}</Container>
+      <Footer />
     </Layout>
   );
 };
