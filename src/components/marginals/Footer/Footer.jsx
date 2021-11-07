@@ -34,6 +34,7 @@ const Footer = () => {
           </Link>
           <div className='sub-heading'>{subHeading}</div>
         </Container>
+
         <NavContainer>
           <div className='column'>
             {NAV1.map(({ link, name }) => (
@@ -50,11 +51,13 @@ const Footer = () => {
             ))}
           </div>
         </NavContainer>
+
         <Container>
           <h3 className='contact-heading'>{contact.heading}</h3>
           <p className='contact-email'>{contact.body}</p>
         </Container>
       </SubContainer>
+
       <BottomContainer>
         <SocialContainer>
           {socials.map(({ icon, link }) => (
@@ -63,6 +66,7 @@ const Footer = () => {
             </Link>
           ))}
         </SocialContainer>
+
         <h5 className='copyright'>{copyright}</h5>
       </BottomContainer>
     </MainContainer>

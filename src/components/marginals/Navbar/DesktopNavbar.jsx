@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 
 // libraries
@@ -13,13 +13,26 @@ import { MenuContext } from '..';
 import { nav } from '../../../../config/content';
 
 const DesktopNavbar = () => {
+  const [shadow, setShadow] = useState(false);
   const { logo, navItems } = nav;
 
   const menuContext = useContext(MenuContext);
   const { toggleMenuOpen } = menuContext;
 
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 100) {
+      setShadow(true);
+    } else {
+      setShadow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+  }, []);
+
   return (
-    <NavContainer>
+    <NavContainer shadow={shadow}>
       <LogoContainer>
         <Link to='/'>
           <img src={logo.src} className='logo' alt={logo.alt} />
