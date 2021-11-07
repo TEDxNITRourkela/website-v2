@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'gatsby';
 
 const fadeDown = keyframes`
     0% {
@@ -52,9 +53,10 @@ export const TabContainer = styled.div`
   }
 `;
 
-export const TabLink = styled.div`
+export const TabLink = styled(Link)`
   padding: 0 15px;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 export const Tab = styled.div`

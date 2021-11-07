@@ -6,7 +6,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 // Components
 import { MobileNavbarSection, Tab, TabLink } from './styles';
-import { MenuContext } from '.';
+import { MenuContext } from '..';
 
 // assets
 import { nav } from '../../../../config/content';
@@ -24,7 +24,7 @@ const MobileNavbar = () => {
       <div className='mobile-nav-container'>
         <ul className='linkList'>
           {navItems.map(({ link, name }) => (
-            <TabLink key={link} className='listItem' onClick={toggleMenuOpen}>
+            <TabLink key={link} to={link} className='listItem' onClick={toggleMenuOpen}>
               <Tab>{name}</Tab>
             </TabLink>
           ))}
