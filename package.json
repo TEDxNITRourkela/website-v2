@@ -1,9 +1,9 @@
 {
-  "name": "website-v2",
+  "name": "tedxnitrourkela-website-v2",
   "private": true,
-  "description": "Official repository for TEDxNITRourkela",
+  "description": "Official repository for the website of TEDxNITRourkela",
   "version": "0.1.0",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE.md",
   "main": "src/pages/index.jsx",
   "keywords": [
     "website",
