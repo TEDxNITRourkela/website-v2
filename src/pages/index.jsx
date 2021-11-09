@@ -24,6 +24,7 @@ const Homepage = () => {
     }
   }, [app, db]);
 
+  
   return (
     <div>
       <h1>Hello World</h1>
