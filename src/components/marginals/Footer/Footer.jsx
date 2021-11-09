@@ -14,6 +14,7 @@ import {
   SocialContainer,
   NavLink,
 } from './styles';
+import { Para2, Para1 } from '../..';
 
 // assets
 import { footer, nav } from '../../../../config/content';
@@ -32,29 +33,29 @@ const Footer = () => {
           <Link to='/'>
             <img className='logo' src={logo.src} alt={logo.alt} />
           </Link>
-          <div className='sub-heading'>{subHeading}</div>
+          <Para2 className='sub-heading'>{subHeading}</Para2>
         </Container>
 
         <NavContainer>
           <div className='column'>
             {NAV1.map(({ link, name }) => (
               <NavLink className={link} key={link} to={link}>
-                <div className='nav-text'>{name}</div>
+                <Para2 className='nav-text'>{name}</Para2>
               </NavLink>
             ))}
           </div>
           <div className='column'>
             {NAV2.map(({ link, name }) => (
               <NavLink className={link} key={link} to={link}>
-                <div className='nav-text'>{name}</div>
+                <Para2 className='nav-text'>{name}</Para2>
               </NavLink>
             ))}
           </div>
         </NavContainer>
 
         <Container>
-          <h3 className='contact-heading'>{contact.heading}</h3>
-          <p className='contact-email'>{contact.body}</p>
+          <Para1 className='contact-heading'>{contact.heading}</Para1>
+          <Para2 className='contact-email'>{contact.body}</Para2>
         </Container>
       </SubContainer>
 

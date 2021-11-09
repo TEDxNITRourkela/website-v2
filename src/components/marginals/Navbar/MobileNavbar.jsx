@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 // Components
-import { MobileNavbarSection, Tab, TabLink } from './styles';
+import { MobileNavbarSection, TabLink } from './styles';
+import { Para1 } from '../..';
 
 // assets
 import { nav } from '../../../../config/content';
@@ -21,7 +22,7 @@ const MobileNavbar = ({ toggleMenuOpen }) => {
         <ul className='linkList'>
           {navItems.map(({ link, name }) => (
             <TabLink key={link} to={link} className='listItem' onClick={toggleMenuOpen}>
-              <Tab>{name}</Tab>
+              <Para1>{name}</Para1>
             </TabLink>
           ))}
         </ul>
