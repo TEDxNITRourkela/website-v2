@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // Components
-import { DesktopNavbar, MobileNavbar, MenuContext, Footer } from '../marginals';
+import { DesktopNavbar, MobileNavbar, Footer } from '../marginals';
 
 const Layout = styled.div`
   width: 100%;
@@ -25,10 +25,8 @@ export default ({ children }) => {
   return (
     <Layout>
       <Nav>
-        <MenuContext.Provider value={{ menuOpen, toggleMenuOpen }}>
-          <DesktopNavbar />
-          {menuOpen && <MobileNavbar />}
-        </MenuContext.Provider>
+        <DesktopNavbar toggleMenuOpen={toggleMenuOpen} />
+        {menuOpen && <MobileNavbar toggleMenuOpen={toggleMenuOpen} />}
       </Nav>
       {children}
       <Footer />

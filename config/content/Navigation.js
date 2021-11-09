@@ -18,14 +18,14 @@ export default {
       name: 'Partners',
       link: '/partners',
     },
-    // {
-    //   name: 'Tickets',
-    //   link: '/tickets',
-    // },
-    // {
-    //   name: 'Participate',
-    //   link: '/campus_ambassadors',
-    // },
+    {
+      name: 'Tickets',
+      link: '/tickets',
+    },
+    {
+      name: 'Participate',
+      link: '/campus_ambassadors',
+    },
     {
       name: 'Merch',
       link: '/merchandise',
@@ -38,17 +38,17 @@ export default {
       name: 'Gallery',
       link: '/gallery',
     },
-    // {
-    //   name: 'Join',
-    //   link: '/join',
-    // },
-    // {
-    //   name: 'Events',
-    //   link: '/events',
-    // },
-    // {
-    //   name: 'Our Community',
-    //   link: '/community',
-    // },
+    {
+      name: 'Join',
+      link: '/join',
+    },
+    {
+      name: 'Events',
+      link: '/events',
+    },
+    {
+      name: 'Our Community',
+      link: '/community',
+    },
   ],
 };

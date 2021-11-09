@@ -30,4 +30,5 @@ module.exports = {
   linkedin: 'https://www.linkedin.com/company/tedxnitrourkela',
   facebook: 'https://facebook.com/tedxnitrourkela',
   instagram: 'https://instagram.com/tedxnitrourkela',
+  youtube: 'https://www.youtube.com/channel/UCsY55AEkwUHJnbc6TLRB-7g',
 };

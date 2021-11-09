@@ -22,8 +22,8 @@ const Footer = () => {
   const { logo, subHeading, contact, copyright, socials } = footer;
   const { navItems } = nav;
 
-  const NAV1 = navItems.slice(0, 3);
-  const NAV2 = navItems.slice(3, 7);
+  const NAV1 = navItems.slice(0, navItems.length / 2);
+  const NAV2 = navItems.slice(navItems.length / 2, navItems.length);
 
   return (
     <MainContainer>
