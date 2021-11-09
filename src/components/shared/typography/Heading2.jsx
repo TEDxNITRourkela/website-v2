@@ -9,7 +9,7 @@ export default styled.h2`
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 1.6;
   text-align: center;
   color: #ffffff;

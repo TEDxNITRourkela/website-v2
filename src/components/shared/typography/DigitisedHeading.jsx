@@ -5,8 +5,15 @@ export default styled.h1`
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 120px;
-  line-height: 120px;
-
+  font-size: 7.5rem;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.4);
+
+  @media (max-width: 900px) {
+    font-size: 6.5rem;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 5rem;
+  }
 `;

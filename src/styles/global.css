@@ -176,6 +176,16 @@ table {
   --max-width-narrow: 50em;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 5px;
