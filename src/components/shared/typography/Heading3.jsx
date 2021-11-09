@@ -4,7 +4,8 @@ import styled from 'styled-components';
  * Used in the teams component for team headings.
  */
 export default styled.h3`
-  font-family: Zilla Slab;
+  font-family: 'Zilla Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
