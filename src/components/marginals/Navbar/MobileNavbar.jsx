@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 // libraries
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,16 +6,12 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 // Components
 import { MobileNavbarSection, Tab, TabLink } from './styles';
-import { MenuContext } from '..';
 
 // assets
 import { nav } from '../../../../config/content';
 
-const MobileNavbar = () => {
+const MobileNavbar = ({ toggleMenuOpen }) => {
   const { navItems } = nav;
-
-  const menuContext = useContext(MenuContext);
-  const { toggleMenuOpen } = menuContext;
 
   return (
     <MobileNavbarSection>

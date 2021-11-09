@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 
 // libraries
@@ -7,17 +7,13 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 // Components
 import { NavContainer, LogoContainer, TabContainer, TabLink, Tab } from './styles';
-import { MenuContext } from '..';
 
 //  assets
 import { nav } from '../../../../config/content';
 
-const DesktopNavbar = () => {
+const DesktopNavbar = ({ toggleMenuOpen }) => {
   const [shadow, setShadow] = useState(false);
   const { logo, navItems } = nav;
-
-  const menuContext = useContext(MenuContext);
-  const { toggleMenuOpen } = menuContext;
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 100) {

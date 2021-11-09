@@ -7,6 +7,8 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
+import { facebook, twitter, instagram, youtube, linkedin } from '../website';
+
 export default {
   title: 'Footer',
   logo: {
@@ -22,23 +24,23 @@ export default {
   socials: [
     {
       icon: faFacebookF,
-      link: 'https://www.facebook.com/tedxnitrourkela/',
+      link: facebook,
     },
     {
       icon: faTwitter,
-      link: 'https://twitter.com/tedxnitr',
+      link: twitter,
     },
     {
       icon: faYoutube,
-      link: 'https://www.youtube.com/channel/UCsY55AEkwUHJnbc6TLRB-7g',
+      link: youtube,
     },
     {
       icon: faLinkedinIn,
-      link: 'https://in.linkedin.com/company/tedxnitrourkela',
+      link: linkedin,
     },
     {
       icon: faInstagram,
-      link: 'https://www.instagram.com/tedxnitrourkela/',
+      link: instagram,
     },
   ],
 };
