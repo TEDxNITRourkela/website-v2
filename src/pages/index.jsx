@@ -11,7 +11,7 @@ const Homepage = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    if (app) {
+    if (app && db) {
       const getTrialData = async () => {
         // eslint-disable-next-line no-unused-vars
         const unsub = onSnapshot(doc(db, 'trial', 'trialDoc'), (snap) => {
@@ -20,11 +20,7 @@ const Homepage = () => {
         });
       };
 
-      const fetchData = async () => {
-        await Promise.all([getTrialData()]);
-      };
-
-      fetchData();
+      getTrialData();
     }
   }, [app, db]);
 
