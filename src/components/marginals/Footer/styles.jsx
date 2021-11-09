@@ -39,20 +39,19 @@ export const Container = styled.div`
     }
   }
   .sub-heading {
-    margin-top: 18px;
+    margin-top: 60px;
     font-weight: 700;
-    color: #fff;
+    @media all and (max-width: 760px) {
+      margin-top: 20px;
+    }
   }
   .contact-heading {
-    font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    opacity: 0.4;
   }
   .contact-email {
-    font-size: 16px;
     font-weight: 700;
-    color: #fff;
-    margin-top: 7px;
+    margin-top: 3px;
   }
   @media all and (max-width: 760px) {
     margin-top: 40px;
@@ -71,10 +70,8 @@ export const NavContainer = styled.div`
     align-items: flex-start;
   }
   .nav-text {
-    color: #fff;
-    font-size: 16px;
     text-align: left;
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 5px;
     cursor: pointer;
   }
@@ -98,7 +95,7 @@ export const BottomContainer = styled.div`
   align-items: center;
   .copyright {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
     color: #fff;
     @media all and (max-width: 760px) {
       margin-top: 20px;

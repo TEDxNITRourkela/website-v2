@@ -6,9 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 // Components
-import { NavContainer, LogoContainer, TabContainer, TabLink, Tab } from './styles';
+import { NavContainer, LogoContainer, TabContainer, TabLink } from './styles';
+import { Para2 } from '../..';
 
-//  assets
+// assets
 import { nav } from '../../../../config/content';
 
 const DesktopNavbar = ({ toggleMenuOpen }) => {
@@ -40,7 +41,7 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
       <TabContainer>
         {navItems.map(({ link, name }) => (
           <TabLink key={link} to={link}>
-            <Tab>{name}</Tab>
+            <Para2>{name}</Para2>
           </TabLink>
         ))}
       </TabContainer>
