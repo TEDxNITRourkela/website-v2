@@ -15,6 +15,7 @@ import {
   NavLink,
 } from './styles';
 import { Para2, Para1 } from '../..';
+import { SectionContainer } from '../../shared';
 
 // assets
 import { footer, nav } from '../../../../config/content';
@@ -28,48 +29,50 @@ const Footer = () => {
 
   return (
     <MainContainer>
-      <SubContainer>
-        <Container>
-          <Link to='/'>
-            <img className='logo' src={logo.src} alt={logo.alt} />
-          </Link>
-          <Para2 className='sub-heading'>{subHeading}</Para2>
-        </Container>
-
-        <NavContainer>
-          <div className='column'>
-            {NAV1.map(({ link, name }) => (
-              <NavLink className={link} key={link} to={link}>
-                <Para2 className='nav-text'>{name}</Para2>
-              </NavLink>
-            ))}
-          </div>
-          <div className='column'>
-            {NAV2.map(({ link, name }) => (
-              <NavLink className={link} key={link} to={link}>
-                <Para2 className='nav-text'>{name}</Para2>
-              </NavLink>
-            ))}
-          </div>
-        </NavContainer>
-
-        <Container>
-          <Para1 className='contact-heading'>{contact.heading}</Para1>
-          <Para2 className='contact-email'>{contact.body}</Para2>
-        </Container>
-      </SubContainer>
-
-      <BottomContainer>
-        <SocialContainer>
-          {socials.map(({ icon, link }) => (
-            <Link key={link} to={link}>
-              <FontAwesomeIcon className='icon' icon={icon} />
+      <SectionContainer>
+        <SubContainer>
+          <Container>
+            <Link to='/'>
+              <img className='logo' src={logo.src} alt={logo.alt} />
             </Link>
-          ))}
-        </SocialContainer>
+            <Para2 className='sub-heading'>{subHeading}</Para2>
+          </Container>
 
-        <h5 className='copyright'>{copyright}</h5>
-      </BottomContainer>
+          <NavContainer>
+            <div className='column'>
+              {NAV1.map(({ link, name }) => (
+                <NavLink className={link} key={link} to={link}>
+                  <Para2 className='nav-text'>{name}</Para2>
+                </NavLink>
+              ))}
+            </div>
+            <div className='column'>
+              {NAV2.map(({ link, name }) => (
+                <NavLink className={link} key={link} to={link}>
+                  <Para2 className='nav-text'>{name}</Para2>
+                </NavLink>
+              ))}
+            </div>
+          </NavContainer>
+
+          <Container>
+            <Para1 className='contact-heading'>{contact.heading}</Para1>
+            <Para2 className='contact-email'>{contact.body}</Para2>
+          </Container>
+        </SubContainer>
+
+        <BottomContainer>
+          <SocialContainer>
+            {socials.map(({ icon, link }) => (
+              <Link key={link} to={link}>
+                <FontAwesomeIcon className='icon' icon={icon} />
+              </Link>
+            ))}
+          </SocialContainer>
+
+          <h5 className='copyright'>{copyright}</h5>
+        </BottomContainer>
+      </SectionContainer>
     </MainContainer>
   );
 };

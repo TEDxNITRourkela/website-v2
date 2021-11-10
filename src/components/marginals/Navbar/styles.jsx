@@ -14,15 +14,10 @@ const fadeDown = keyframes`
 
 export const NavContainer = styled.div`
   width: 100%;
-  height: 100px;
   position: fixed;
   top: 0;
   background-color: #1a1a1a;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 90px;
   box-shodow: ${({ shadow }) => (shadow ? '0px 3px 15px #080808' : '')};
-  align-items: center;
   .bars {
     color: #fff;
     @media all and (min-width: 769px) {
@@ -30,11 +25,11 @@ export const NavContainer = styled.div`
       padding: 0px 10px;
     }
   }
-  @media (max-width: 1360px) {
-    padding: 0px 50px;
-  }
-  @media (max-width: 321px) {
-    padding: 0px 20px;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
   }
 `;
 

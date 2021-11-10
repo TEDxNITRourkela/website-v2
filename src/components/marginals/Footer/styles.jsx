@@ -7,17 +7,17 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  padding: 65px 90px;
+  padding: 65px 0px;
   padding-bottom: 50px;
   bottom: 0;
   background-color: #1a1a1a;
   border-top: 2px solid rgba(255, 255, 255, 0.3);
   @media (max-width: 1360px) {
-    padding: 30px 50px;
+    padding: 30px 0px;
     padding-bottom: 30px;
   }
   @media (max-width: 321px) {
-    padding: 10px 20px;
+    padding: 10px 0px;
     padding-bottom: 15px;
   }
 `;
@@ -45,6 +45,7 @@ export const Container = styled.div`
   }
   .sub-heading {
     margin-top: 60px;
+    margin-right: 40px;
     font-weight: 700;
     @media all and (max-width: 769px) {
       margin-top: 20px;
