@@ -11,4 +11,7 @@ export default styled.p`
   font-size: 1rem;
   line-height: 1.6;
   color: #ffffff;
+  @media all and (max-width: 1024px) {
+    font-size: 0.8rem;
+  }
 `;

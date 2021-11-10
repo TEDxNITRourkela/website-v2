@@ -7,13 +7,18 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
+  padding: 65px 90px;
+  padding-bottom: 50px;
   bottom: 0;
   background-color: #1a1a1a;
   border-top: 2px solid rgba(255, 255, 255, 0.3);
-  padding: 60px 120px;
-  @media all and (max-width: 760px) {
-    padding: 10px 35px;
-    padding-bottom: 50px;
+  @media (max-width: 1360px) {
+    padding: 30px 50px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 321px) {
+    padding: 10px 20px;
+    padding-bottom: 15px;
   }
 `;
 
@@ -21,7 +26,7 @@ export const SubContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media all and (max-width: 760px) {
+  @media all and (max-width: 769px) {
     flex-direction: column;
   }
 `;
@@ -34,14 +39,14 @@ export const Container = styled.div`
   .logo {
     width: 400px;
     height: auto;
-    @media all and (max-width: 760px) {
+    @media all and (max-width: 850px) {
       width: 250px;
     }
   }
   .sub-heading {
     margin-top: 60px;
     font-weight: 700;
-    @media all and (max-width: 760px) {
+    @media all and (max-width: 769px) {
       margin-top: 20px;
     }
   }
@@ -53,7 +58,7 @@ export const Container = styled.div`
     font-weight: 700;
     margin-top: 3px;
   }
-  @media all and (max-width: 760px) {
+  @media all and (max-width: 769px) {
     margin-top: 40px;
   }
 `;
@@ -78,7 +83,7 @@ export const NavContainer = styled.div`
   .link {
     text-decoration: none;
   }
-  @media all and (max-width: 760px) {
+  @media all and (max-width: 769px) {
     margin-top: 40px;
   }
 `;
@@ -97,11 +102,11 @@ export const BottomContainer = styled.div`
     font-weight: 400;
     font-size: 12px;
     color: #fff;
-    @media all and (max-width: 760px) {
+    @media all and (max-width: 769px) {
       margin-top: 20px;
     }
   }
-  @media all and (max-width: 760px) {
+  @media all and (max-width: 769px) {
     margin-top: 60px;
     flex-direction: column;
     justify-content: center;

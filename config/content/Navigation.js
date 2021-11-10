@@ -46,9 +46,5 @@ export default {
       name: 'Events',
       link: '/events',
     },
-    {
-      name: 'Our Community',
-      link: '/community',
-    },
   ],
 };

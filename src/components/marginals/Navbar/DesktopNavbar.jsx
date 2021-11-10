@@ -41,7 +41,7 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
       <TabContainer>
         {navItems.map(({ link, name }) => (
           <TabLink key={link} to={link}>
-            <Para2>{name}</Para2>
+            <Para2 className='nav-text'>{name}</Para2>
           </TabLink>
         ))}
       </TabContainer>

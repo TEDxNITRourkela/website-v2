@@ -19,23 +19,33 @@ export const NavContainer = styled.div`
   top: 0;
   background-color: #1a1a1a;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0px 90px;
   box-shodow: ${({ shadow }) => (shadow ? '0px 3px 15px #080808' : '')};
   align-items: center;
   .bars {
     color: #fff;
-    @media all and (min-width: 760px) {
+    @media all and (min-width: 769px) {
       display: none;
+      padding: 0px 10px;
     }
+  }
+  @media (max-width: 1360px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 321px) {
+    padding: 0px 20px;
   }
 `;
 
 export const LogoContainer = styled.div`
   width: 250px;
   height: auto;
-  margin-left: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 10px;
-  @media (max-width: 759px) {
+  @media (max-width: 768px) {
     width: 200px;
   }
   .logo {
@@ -48,9 +58,14 @@ export const TabContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 50px;
-  @media (max-width: 759px) {
+  margin-left: 50px;
+  @media (max-width: 768px) {
     display: none;
+  }
+  .nav-text {
+    @media all and (max-width: 1024px) {
+      font-size: 0.8rem;
+    }
   }
 `;
 
@@ -58,6 +73,9 @@ export const TabLink = styled(Link)`
   padding: 0 15px;
   cursor: pointer;
   text-decoration: none;
+  @media all and (max-width: 1024px) {
+    padding: 0 10px;
+  }
 `;
 
 export const Tab = styled.div`
@@ -69,7 +87,7 @@ export const MobileNavbarSection = styled.section`
   top: 0;
   bottom: 0;
   right: 0;
-  width: 50%;
+  width: 100%;
   padding-top: 50px;
   padding-left: 20px;
   background-color: #17171d;
@@ -78,8 +96,8 @@ export const MobileNavbarSection = styled.section`
   .mobile-nav-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     min-height: 100%;
   }
   .back-button {
@@ -92,7 +110,7 @@ export const MobileNavbarSection = styled.section`
     list-style-type: none;
   }
   .listItem {
-    text-align: left;
+    text-align: center;
     margin-bottom: 1em;
   }
   .link {
