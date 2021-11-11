@@ -2,7 +2,7 @@ import React from 'react';
 
 // libraries
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 // Components
 import { MobileNavbarSection, TabLink } from './styles';
@@ -16,7 +16,7 @@ const MobileNavbar = ({ toggleMenuOpen }) => {
 
   return (
     <MobileNavbarSection>
-      <FontAwesomeIcon className='back-button' onClick={toggleMenuOpen} icon={faArrowRight} />
+      <FontAwesomeIcon className='back-button' onClick={toggleMenuOpen} icon={faTimes} />
 
       <div className='mobile-nav-container'>
         <ul className='linkList'>

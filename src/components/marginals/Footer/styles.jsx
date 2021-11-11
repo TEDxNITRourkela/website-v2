@@ -59,6 +59,16 @@ export const Container = styled.div`
     font-weight: 700;
     margin-top: 3px;
   }
+  .privacy {
+    font-weight: 400;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  .terms {
+    font-weight: 400;
+    margin-top: 2px;
+    cursor: pointer;
+  }
   @media all and (max-width: 769px) {
     margin-top: 40px;
   }
@@ -121,7 +131,7 @@ export const SocialContainer = styled.div`
   .icon {
     cursor: pointer;
     font-size: 20px;
-    margin-left: 22px;
+    margin-right: 22px;
     color: rgba(255, 255, 255, 0.3);
     &:hover {
       color: rgba(255, 255, 255, 1);
