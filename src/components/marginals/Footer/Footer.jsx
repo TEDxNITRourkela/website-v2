@@ -58,6 +58,8 @@ const Footer = () => {
           <Container>
             <Para1 className='contact-heading'>{contact.heading}</Para1>
             <Para2 className='contact-email'>{contact.body}</Para2>
+            <Para2 className='privacy'>{contact.privacy}</Para2>
+            <Para2 className='terms'>{contact.terms}</Para2>
           </Container>
         </SubContainer>
 

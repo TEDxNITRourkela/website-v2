@@ -19,6 +19,8 @@ export default {
   contact: {
     heading: 'Contact Us:',
     body: 'info@tedxnitrourkela.com',
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Services',
   },
   copyright: '© 2021 TEDxNITRourkela. All rights reserved.',
   socials: [

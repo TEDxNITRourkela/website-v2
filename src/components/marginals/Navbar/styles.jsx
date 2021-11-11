@@ -84,7 +84,6 @@ export const MobileNavbarSection = styled.section`
   right: 0;
   width: 100%;
   padding-top: 50px;
-  padding-left: 20px;
   background-color: #17171d;
   z-index: 9999;
   animation: ${fadeDown} 0.35s cubic-bezier(0.16, 1, 0.3, 1);
