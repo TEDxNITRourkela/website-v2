@@ -18,6 +18,12 @@ const Nav = styled.div`
   top: 0;
 `;
 
+const Container = styled.div`
+  margin: 120px 5%;
+  overflow-x: hidden;
+  overflow-y: auto;
+`;
+
 export default ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenuOpen = () => (menuOpen ? setMenuOpen(false) : setMenuOpen(true));
@@ -28,7 +34,7 @@ export default ({ children }) => {
         <DesktopNavbar toggleMenuOpen={toggleMenuOpen} />
         {menuOpen && <MobileNavbar toggleMenuOpen={toggleMenuOpen} />}
       </Nav>
-      {children}
+      <Container>{children}</Container>
       <Footer />
     </Layout>
   );
