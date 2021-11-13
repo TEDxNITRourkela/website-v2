@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { faqs } from '../../../../config/content';
+import { about } from '../../../../config/content';
 
 export const SectionContainer = styled.div`
   display: flex;
@@ -22,9 +22,9 @@ export const AccordionTitle = styled.div`
     border-top-left-radius: ${({ index }) => (index === 0 ? '16px' : '0px')};
     border-top-right-radius: ${({ index }) => (index === 0 ? '16px' : '0px')};
     border-bottom-left-radius: ${({ index, active }) =>
-      index === faqs.length - 1 && !active ? '16px' : '0px'};
+      index === about.FAQ.length - 1 && !active ? '16px' : '0px'};
     border-bottom-right-radius: ${({ index, active }) =>
-      index === faqs.length - 1 && !active ? '16px' : '0px'};
+      index === about.FAQ.length - 1 && !active ? '16px' : '0px'};
   }
   &:hover {
     background-color: #ccc;
@@ -52,9 +52,9 @@ export const AccordionContent = styled.div`
   transition: max-height 0.6s ease;
   &:last-child {
     border-bottom-left-radius: ${({ index, active }) =>
-      index === faqs.length - 1 && active ? '16px' : '0px'};
+      index === about.FAQ.length - 1 && active ? '16px' : '0px'};
     border-bottom-right-radius: ${({ index, active }) =>
-      index === faqs.length - 1 && active ? '16px' : '0px'};
+      index === about.FAQ.length - 1 && active ? '16px' : '0px'};
   }
   .text {
     padding: 18px;
