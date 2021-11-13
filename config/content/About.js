@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-export default [
+const FAQ = [
   {
     QUESTION: 'What is TEDxNITRourkela?',
     ANSWER:
@@ -54,3 +54,7 @@ export default [
       'No. TEDxNITRourkela is a student-run non-profit event. It is entirely a volunteer endeavor to bring innovative and revolutionary ideas under one roof.',
   },
 ];
+
+export default {
+  FAQ
+}

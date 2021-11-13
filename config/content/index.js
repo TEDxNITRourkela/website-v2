@@ -1,4 +1,4 @@
-export { default as nav } from './Navigation';
-export { default as footer } from './Footer';
+export { default as nav } from './navigation';
+export { default as footer } from './footer';
 
-export { default as faqs } from './About';
+export { default as about } from './about';
