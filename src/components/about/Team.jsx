@@ -52,6 +52,7 @@ const TeamName = styled(Heading3)`
 const TeamContainer = styled.div`
   min-height: 200px;
   height: 100%;
+  z-index: -1;
   width: 70%;
   background: var(--background-quaternary);
   padding: 30px;
