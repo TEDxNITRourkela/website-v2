@@ -8,7 +8,7 @@ export default styled.p`
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.25rem;
-  line-height: 1.6;
+  font-size: 1.rem;
+  line-height: 1;
   color: #ffffff;
 `;
