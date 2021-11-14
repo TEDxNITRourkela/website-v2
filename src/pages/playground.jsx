@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 // Components
 import { Heading1, Heading2, Heading3, Para1, Para2, Digitised, CustomButton } from '../components';
 
+import Executive from "../components/about/Executive";
+import Team from '../components/about/Team';
+
 const Playground = () => {
   const [loading, setLoading] = useState(false);
 
@@ -27,8 +30,10 @@ const Playground = () => {
       <CustomButton loading={loading} setLoading={setLoading} handleClick={handleClick}>
         Register Now
     </CustomButton>
+    <Executive />
+    <Team />
     </div>
-    
+
   );
 };
 

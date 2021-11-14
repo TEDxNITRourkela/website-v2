@@ -8,7 +8,7 @@ import Profile from '../shared/Profile';
 import { SectionContainer } from '../shared/index';
 
 // Assets
-import { ABOUT } from '../../../config/content/About';
+import { about } from '../../../config/content';
 
 const Container = styled(SectionContainer)`
   width: 100%;
@@ -46,13 +46,13 @@ function Executive() {
       </Title>
 
       <Row style={{ justifyContent: 'center' }}>
-        {ABOUT.TEAM.ROW1.map((member) => (
+        {about.TEAM.ROW1.map((member) => (
           <Profile key={`core-team-${member.NAME}`} member={member} />
         ))}
       </Row>
 
       <Row>
-        {ABOUT.TEAM.ROW2.map((member) => (
+        {about.TEAM.ROW2.map((member) => (
           <Profile key={`core-team-${member.NAME}`} member={member} />
         ))}
       </Row>

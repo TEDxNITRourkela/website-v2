@@ -9,7 +9,7 @@ import { Heading2, Heading3 } from '../index';
 import { SectionContainer } from '../shared/index';
 
 // Assets
-import { ABOUT } from '../../../config/content/About';
+import { about } from '../../../config/content';
 import { GRAPHICS } from '../../../config/img/graphics';
 
 const Section = styled(SectionContainer)`
@@ -108,7 +108,7 @@ function Team() {
   const renderTeam = () => {
     switch (stage) {
       case STAGE.DESIGN:
-        return ABOUT.TEAM.DESIGN.map((member) => (
+        return about.TEAM.DESIGN.map((member) => (
           <Profile
             key={`design-team-${member.NAME}`}
             member={member}
@@ -118,7 +118,7 @@ function Team() {
           />
         ));
       case STAGE.TECH:
-        return ABOUT.TEAM.TECH.map((member) => (
+        return about.TEAM.TECH.map((member) => (
           <Profile
             key={`tech-team-${member.NAME}`}
             member={member}
@@ -128,7 +128,7 @@ function Team() {
           />
         ));
       case STAGE.CURATION:
-        return ABOUT.TEAM.CURATION.map((member) => (
+        return about.TEAM.CURATION.map((member) => (
           <Profile
             key={`curation-team-${member.NAME}`}
             member={member}
@@ -138,7 +138,7 @@ function Team() {
           />
         ));
       case STAGE.MANAGEMENT:
-        return ABOUT.TEAM.MANAGEMENT.map((member) => (
+        return about.TEAM.MANAGEMENT.map((member) => (
           <Profile
             key={`management-team-${member.NAME}`}
             member={member}
@@ -148,7 +148,7 @@ function Team() {
           />
         ));
       default:
-        return ABOUT.TEAM.DESIGN.map((member) => (
+        return about.TEAM.DESIGN.map((member) => (
           <Profile
             key={`design-team-${member.NAME}`}
             member={member}

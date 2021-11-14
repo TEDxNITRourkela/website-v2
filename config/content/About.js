@@ -261,8 +261,8 @@ const FAQ = [
   },
 ];
 
-export const ABOUT = [
+export default {
   TEAM,
   FAQ
-];
+};
 
