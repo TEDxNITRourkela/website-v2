@@ -5,10 +5,11 @@ import { onSnapshot, doc } from 'firebase/firestore';
 
 // Utils
 import { useFirebase } from '../utils/firebase';
-import { Layout } from '../components/shared';
+import { Layout } from '../components';
 
 const Homepage = () => {
   const { firebase: app, db } = useFirebase();
+  // eslint-disable-next-line no-unused-vars
   const [data, setData] = useState();
 
   useEffect(() => {

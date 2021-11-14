@@ -6,10 +6,8 @@ export const MainContainer = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  position: fixed;
   padding: 65px 0px;
   padding-bottom: 50px;
-  bottom: 0;
   background-color: #1a1a1a;
   border-top: 2px solid rgba(255, 255, 255, 0.3);
   @media (max-width: 1360px) {
