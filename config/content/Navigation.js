@@ -28,7 +28,7 @@ export default {
     },
     {
       name: 'Merch',
-      link: '/merchandise',
+      link: '/merch',
     },
     {
       name: 'Wall',
