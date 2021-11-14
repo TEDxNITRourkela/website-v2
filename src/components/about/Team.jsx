@@ -99,12 +99,6 @@ const STAGE = {
 function Team() {
   const [stage, setStage] = useState(STAGE.DESIGN);
 
-  // Helpers
-  const setStageToDesign = () => setStage(STAGE.DESIGN);
-  const setStageToTech = () => setStage(STAGE.TECH);
-  const setStageToCuration = () => setStage(STAGE.CURATION);
-  const setStageToManagement = () => setStage(STAGE.MANAGEMENT);
-
   const renderTeam = () => {
     switch (stage) {
       case STAGE.DESIGN:
@@ -163,39 +157,19 @@ function Team() {
   return (
     <Section>
       <NavContainer>
-        <TeamName
-          onClick={setStageToDesign}
-          style={{
-            color: stage === STAGE.DESIGN ? '#fff' : 'rgba(255,255,255,0.4)',
-          }}
-        >
-          Design Team
-        </TeamName>
-        <TeamName
-          onClick={setStageToTech}
-          style={{
-            color: stage === STAGE.TECH ? '#fff' : 'rgba(255,255,255,0.4)',
-          }}
-        >
-          Tech Team
-        </TeamName>
-        <TeamName
-          onClick={setStageToCuration}
-          style={{
-            color: stage === STAGE.CURATION ? '#fff' : 'rgba(255,255,255,0.4)',
-          }}
-        >
-          Curation Team
-        </TeamName>
-        <TeamName
-          onClick={setStageToManagement}
-          style={{
-            color:
-              stage === STAGE.MANAGEMENT ? '#fff' : 'rgba(255,255,255,0.4)',
-          }}
-        >
-          Management Team
-        </TeamName>
+        {Object.keys(STAGE).map((key) => (
+            <TeamName
+              key={key}
+              style={{
+                color: stage === STAGE[key] ? '#fff' : 'rgba(255,255,255,0.4)',
+              }}
+              onClick={() => {
+                setStage(STAGE[key]);
+              }}
+            >
+              {STAGE[key]}
+            </TeamName>
+        ))}
       </NavContainer>
 
       <TeamContainer>

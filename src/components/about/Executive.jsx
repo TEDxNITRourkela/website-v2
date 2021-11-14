@@ -10,7 +10,7 @@ import { SectionContainer } from '../shared/index';
 // Assets
 import { about } from '../../../config/content';
 
-const Container = styled(SectionContainer)`
+const ExecContainer = styled(SectionContainer)`
   width: 100%;
   min-height: 500px;
 `;
@@ -40,7 +40,7 @@ const Row = styled.div`
 function Executive() {
 
   return (
-    <Container>
+    <ExecContainer>
       <Title>
         Team
       </Title>
@@ -56,7 +56,7 @@ function Executive() {
           <Profile key={`core-team-${member.NAME}`} member={member} />
         ))}
       </Row>
-    </Container>
+    </ExecContainer>
   );
 }
 

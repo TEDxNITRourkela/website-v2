@@ -11,6 +11,7 @@ export const limitString = (str, n) =>
 
 const Designation = styled(Para2)`
   font-style: italic;
+  line-height: 1.4;
   text-align: center;
   color: ${({ dark }) => dark ? `#ffffff` : `#000000`};
 `;
@@ -30,12 +31,16 @@ const Img = styled.img`
     width: ${({ small }) => (small ? `90px` : `120px`)};
     height: ${({ small }) => (small ? `90px` : `120px`)};
     border-radius: 100%;
-    background: var(--color-secondary);
+    background-color: var(--color-secondary);
+    object-fit: cover;
+    object-position: center;
 `;
 
 const Name = styled(Para1)`
     font-weight: 400;
     margin-bottom: 5px;
+    font-size: 1rem;
+    line-height: 1;
     margin-top: 5px;
     text-align: center;
     color: ${({ dark }) => dark ? `#ffffff` : `#000000`};
