@@ -8,3 +8,6 @@ export { default as SectionContainer } from './Container';
 
 // Accordion
 export { default as Accordion } from './accordion/Accordion';
+
+// Banner
+export { default as Banner } from './contentBanner/ContentBanner';
