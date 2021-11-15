@@ -162,6 +162,12 @@ table {
   outline: none !important;
 }
 
+::-webkit-scrollbar-thumb:horizontal {
+  border-radius: 10px;
+  width: 50%;
+  background: rgba(256, 256, 256, 0.4);
+}
+
 :root {
   --color-primary: #ff2b06;
   --color-secondary: #ffffff;
