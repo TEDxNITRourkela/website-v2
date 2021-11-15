@@ -3,6 +3,7 @@ import React from 'react';
 // Components
 import { Layout, Table } from '../components';
 
+// Assests
 import { merch } from '../../config/content';
 
 const Merch = () => {

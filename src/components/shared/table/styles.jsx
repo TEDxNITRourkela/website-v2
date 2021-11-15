@@ -6,7 +6,7 @@ export const TableContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 40px;
-  @media all and (max-width: 1024px) {
+  @media all and (max-width: 950px) {
     justify-content: flex-start;
   }
 `;
@@ -29,7 +29,7 @@ export const TableHeadingRow = styled.th`
     border-right: 2px solid rgba(255, 255, 255, 0.4);
   }
   &:last-child {
-    border-right: 0px solid rgba(255, 255, 255, 0.4);
+    border-right: none;
   }
 `;
 
@@ -39,7 +39,7 @@ export const TableHeadingColumn = styled.th`
   &:first-child {
     border-bottom: ${({ index, length }) =>
       index === length - 1
-        ? '0px solid rgba(255, 255, 255, 0.1)'
+        ? 'none'
         : '1px solid rgba(255, 255, 255, 0.1)'};
   }
 `;
@@ -62,10 +62,10 @@ export const TableData = styled.td`
   padding: 0px;
   border-bottom: ${({ index, length }) =>
     index === length - 1
-      ? '0px solid rgba(255, 255, 255, 0.1)'
+      ? 'none'
       : '1px solid rgba(255, 255, 255, 0.1)'};
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   &:last-child {
-    border-right: 0px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
   }
 `;

@@ -25,6 +25,7 @@ const CustomTable = ({ title, headings, body }) => (
               </TableHeadingRow>
             ))}
           </TableRow>
+          
           {body.map((row, index) => (
             <TableRow key={row.heading}>
               <TableHeadingColumn index={index} length={body.length}>
