@@ -19,7 +19,6 @@ const Nav = styled.div`
 `;
 
 const Container = styled.div`
-  margin: 120px 5%;
   overflow-x: hidden;
   overflow-y: auto;
 `;

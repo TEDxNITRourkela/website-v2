@@ -55,7 +55,7 @@ const TeamContainer = styled.div`
   z-index: -1;
   width: 70%;
   background: var(--background-quaternary);
-  padding: 30px;
+  padding: 35px;
   position: relative;
 
   @media (max-width: 540px){
@@ -64,9 +64,9 @@ const TeamContainer = styled.div`
 `;
 
 const TeamName2 = styled(Heading2)`
-  margin-bottom: 20px;
   font-family: 'Zilla Slab';
   line-height: 1.2;
+  margin-top: -10px;
   text-align: left;
   opacity: 0.5;
   color: var(--background-primary);
@@ -109,7 +109,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small
+            small="true"
           />
         ));
       case STAGE.TECH:
@@ -119,7 +119,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small
+            small="true"
           />
         ));
       case STAGE.CURATION:
@@ -129,7 +129,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small
+            small="true"
           />
         ));
       case STAGE.MANAGEMENT:
@@ -139,7 +139,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small
+            small="true"
           />
         ));
       default:
@@ -149,7 +149,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small
+            small="true"
           />
         ));
     }

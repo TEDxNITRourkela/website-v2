@@ -12,13 +12,15 @@ export const limitString = (str, n) =>
 const Designation = styled(Para2)`
   font-style: italic;
   line-height: 1.4;
+  margin-top: 3px;
+  font-size: 0.98rem;
   text-align: center;
   color: ${({ dark }) => dark ? `#ffffff` : `#000000`};
 `;
 
 const ImageContainer = styled.div`
-    width: ${({ small }) => (small ? `110px` : `180px`)};
-    height: ${({ small }) => (small ? `110px` : `180px`)};
+    width: ${({ small }) => (small ? `100px` : `180px`)};
+    height: ${({ small }) => (small ? `100px` : `180px`)};
     margin: 0px 5px;
     margin-top: 20px;
     display: flex;
@@ -28,8 +30,8 @@ const ImageContainer = styled.div`
 `;
 
 const Img = styled.img`
-    width: ${({ small }) => (small ? `90px` : `120px`)};
-    height: ${({ small }) => (small ? `90px` : `120px`)};
+    width: ${({ small }) => (small ? `80px` : `120px`)};
+    height: ${({ small }) => (small ? `80px` : `120px`)};
     border-radius: 100%;
     background-color: var(--color-secondary);
     object-fit: cover;
@@ -38,10 +40,9 @@ const Img = styled.img`
 
 const Name = styled(Para1)`
     font-weight: 400;
-    margin-bottom: 5px;
-    font-size: 1rem;
+    font-size: ${({ small }) => (small ? `0.9rem` : `1.16rem`)};
     line-height: 1;
-    margin-top: 5px;
+    margin-top: ${({ small }) => (small ? `5px` : `15px`)};
     text-align: center;
     color: ${({ dark }) => dark ? `#ffffff` : `#000000`};
 `;
@@ -62,7 +63,7 @@ const Image = ({
           loading='eager'
         />
       </div>
-      <Name dark={dark}>
+      <Name dark={dark} small={small}>
         {limitString(member.NAME, 22)}
       </Name>
       {showDesignation && (

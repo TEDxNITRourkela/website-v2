@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 // Components
-import { Heading1, Heading2, Heading3, Para1, Para2, Digitised, CustomButton } from '../components';
+// eslint-disable-next-line max-len
+import { Heading1, Heading2, Heading3, Para1, Para2, Digitised, CustomButton, FAQ, Layout } from '../components';
 
 import Executive from "../components/about/Executive";
 import Team from '../components/about/Team';
@@ -30,8 +31,12 @@ const Playground = () => {
       <CustomButton loading={loading} setLoading={setLoading} handleClick={handleClick}>
         Register Now
     </CustomButton>
-    <Executive />
-    <Team />
+    <Layout>
+      <Executive />
+      <Team />
+
+      <FAQ />
+  </Layout>
     </div>
 
   );

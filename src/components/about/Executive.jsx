@@ -5,15 +5,10 @@ import styled from 'styled-components';
 
 // Components
 import Profile from '../shared/Profile';
-import { SectionContainer } from '../shared/index';
+import { PageContainer } from '..';
 
 // Assets
 import { about } from '../../../config/content';
-
-const ExecContainer = styled(SectionContainer)`
-  width: 100%;
-  min-height: 500px;
-`;
 
 const Title = styled.h2`
     font-size: 1.50rem;
@@ -40,7 +35,7 @@ const Row = styled.div`
 function Executive() {
 
   return (
-    <ExecContainer>
+    <PageContainer>
       <Title>
         Team
       </Title>
@@ -56,7 +51,7 @@ function Executive() {
           <Profile key={`core-team-${member.NAME}`} member={member} />
         ))}
       </Row>
-    </ExecContainer>
+    </PageContainer>
   );
 }
 
