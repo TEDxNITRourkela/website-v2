@@ -19,6 +19,7 @@ export const Table = styled.table`
   min-width: 400px;
   background-color: #232323;
   border-radius: 16px;
+  margin-bottom: 7px;
 `;
 
 export const TableHeadingRow = styled.th`
@@ -38,9 +39,7 @@ export const TableHeadingColumn = styled.th`
   border-right: 2px solid rgba(255, 255, 255, 0.4);
   &:first-child {
     border-bottom: ${({ index, length }) =>
-      index === length - 1
-        ? 'none'
-        : '1px solid rgba(255, 255, 255, 0.1)'};
+      index === length - 1 ? 'none' : '1px solid rgba(255, 255, 255, 0.1)'};
   }
 `;
 
@@ -61,9 +60,7 @@ export const TableData = styled.td`
   min-width: 150px;
   padding: 0px;
   border-bottom: ${({ index, length }) =>
-    index === length - 1
-      ? 'none'
-      : '1px solid rgba(255, 255, 255, 0.1)'};
+    index === length - 1 ? 'none' : '1px solid rgba(255, 255, 255, 0.1)'};
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   &:last-child {
     border-right: none;
