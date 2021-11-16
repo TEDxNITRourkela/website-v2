@@ -9,6 +9,9 @@ export { default as Digitised } from './shared/typography/DigitisedHeading';
 
 export { default as FAQ } from './About/FAQ';
 
+// Merch Card
+export { default as Card } from './Merch/Card';
+
 // button
 export { default as CustomButton } from './shared/CustomButton';
 

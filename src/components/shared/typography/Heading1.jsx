@@ -13,4 +13,7 @@ export default styled.h1`
   line-height: 1.6;
   text-align: center;
   color: #ffffff;
+  @media all and (max-width: 769px) {
+    font-size: 2.25rem;
+  }
 `;
