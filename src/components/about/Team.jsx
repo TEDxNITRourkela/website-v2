@@ -13,11 +13,10 @@ import { about } from '../../../config/content';
 import { GRAPHICS } from '../../../config/img/graphics';
 
 const Section = styled(SectionContainer)`
-  width: 100%;
+  max-width: 95rem;
   min-height: 300px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   margin-top: 40px;
   margin-bottom: 40px;
 
