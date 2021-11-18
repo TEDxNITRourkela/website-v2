@@ -2,9 +2,19 @@ import React, { useState } from 'react';
 
 // Components
 // eslint-disable-next-line max-len
-import { Heading1, Heading2, Heading3, Para1, Para2, Digitised, CustomButton, FAQ, Layout } from '../components';
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  Para1,
+  Para2,
+  Digitised,
+  CustomButton,
+  FAQ,
+  Layout,
+} from '../components';
 
-import Executive from "../components/about/Executive";
+import Executive from '../components/about/Executive';
 import Team from '../components/about/Team';
 
 const Playground = () => {
@@ -30,15 +40,14 @@ const Playground = () => {
 
       <CustomButton loading={loading} setLoading={setLoading} handleClick={handleClick}>
         Register Now
-    </CustomButton>
-    <Layout>
-      <Executive />
-      <Team />
+      </CustomButton>
+      <Layout>
+        <Executive />
+        <Team />
 
-      <FAQ />
-  </Layout>
+        <FAQ />
+      </Layout>
     </div>
-
   );
 };
 

@@ -9,6 +9,9 @@ export { default as Digitised } from './shared/typography/DigitisedHeading';
 
 export { default as FAQ } from './About/FAQ';
 
+// Speaker Card
+export { default as SpeakerCard } from './Speaker/SpeakerCard';
+
 // Merch Card
 export { default as Card } from './Merch/Card';
 
