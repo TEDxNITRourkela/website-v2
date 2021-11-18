@@ -4,14 +4,15 @@ import { about } from '../../../../config/content';
 export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0px 10%;
+  margin-left: 2%;
+  margin-right: 2%;
 `;
 
 export const AccordionTitle = styled.div`
   background-color: #f4f4f4;
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
