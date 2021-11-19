@@ -15,8 +15,9 @@ const fadeDown = keyframes`
 export const NavContainer = styled.div`
   width: 100%;
   position: fixed;
-  top:0;
+  top: 0;
   background-color: #1a1a1a;
+  z-index: 99999;
   box-shodow: ${({ shadow }) => (shadow ? '0px 3px 15px #080808' : '')};
   .bars {
     color: #fff;
