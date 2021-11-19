@@ -2,46 +2,21 @@ import React, { useState } from 'react';
 
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faInfoCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInfoCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { CardContainer, Common, CardBack, ImageContainer, Content, LinkContainer } from './styles';
 import { Heading3, Para2, Para1 } from '..';
 
-const links = [
-  {
-    link: 'https://www.zachkingmagic.com/',
-    icon: faGlobe,
-    link_name: 'website',
-    aria_label: 'Website',
-  },
-  {
-    link: 'https://www.youtube.com/channel/UCq8DICunczvLuJJq414110A',
-    icon: faYoutube,
-    link_name: 'youtube',
-    aria_label: 'Youtube',
-  },
-  {
-    link: 'https://twitter.com/zachking?lang=en',
-    icon: faTwitter,
-    link_name: 'twitter',
-    aria_label: 'Twitter',
-  },
-  {
-    link: 'https://www.instagram.com/zachking/?hl=en',
-    icon: faInstagram,
-    link_name: 'instagram',
-    aria_label: 'Instagram',
-  },
-  {
-    link: 'https://www.facebook.com/ZachKingVine',
-    icon: faFacebookF,
-    link_name: 'facebook',
-    aria_label: 'Facebook',
-  },
-];
-
-const SpeakerCard = () => {
+const SpeakerCard = ({
+  name,
+  description,
+  shortDescription,
+  speakerImage,
+  shilhouette,
+  links,
+  isLongCard,
+  isPublished,
+}) => {
   const [front, setFront] = useState(true);
   const [card, setCard] = useState('card');
 
@@ -51,30 +26,40 @@ const SpeakerCard = () => {
     setFront((current) => !current);
   };
 
+  const image = isPublished ? speakerImage : shilhouette;
+
   return (
-    <CardContainer>
+    <CardContainer isPublished={isPublished} isLongCard={isLongCard}>
       <div className={card}>
         <Common>
-          {/* eslint-disable-next-line max-len */}
-          <ImageContainer image='https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Zach_King_2_stntn1.png' />
-          <Para1 className='name'>John Doe</Para1>
-          <Para2 className='content'>Design Guru</Para2>
-          <FontAwesomeIcon
-            icon={faInfoCircle}
-            className='flipButton'
-            onClick={onClick}
-            onKeyDown={onClick}
-          />
+          <ImageContainer isLongCard={isLongCard} isPublished={isPublished} image={image} />
+          {isPublished && (
+            <>
+              <Para1 className='name'>{name}</Para1>
+              <Para2 className='content'>{shortDescription}</Para2>
+              <FontAwesomeIcon
+                icon={faInfoCircle}
+                className='flipButton'
+                onClick={onClick}
+                onKeyDown={onClick}
+              />
+            </>
+          )}
         </Common>
 
         <CardBack>
           <Content>
-            <Heading3 className='authorName'>John Doe</Heading3>
+            <Heading3 className='authorName'>{name} </Heading3>
             <Para2 className='description'>
-              Thought is a free bird, but chained within the realm of ones conscious self. It needs
-              a shot, an effort, a spark that glows, engulfing the thought process, triggering it to
-              action. It needs some necessary ingredients to pop out. One’s thought can
-              revolutionize the world, creating the aura transforming the era.{' '}
+              {description.map((desc) =>
+                typeof desc === 'string' ? (
+                  <span key={desc}>{desc} </span>
+                ) : (
+                  <Link className='link' key={desc} to={desc.href}>
+                    {desc.content}
+                  </Link>
+                ),
+              )}
             </Para2>
           </Content>
           <LinkContainer>
