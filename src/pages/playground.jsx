@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useState } from 'react';
 
 // Components
@@ -17,7 +18,7 @@ import {
 import Executive from '../components/about/Executive';
 import Team from '../components/about/Team';
 
-const Playground = () => {
+function Playground() {
   const [loading, setLoading] = useState(false);
 
   const handleClick = () => {
@@ -49,6 +50,6 @@ const Playground = () => {
       </Layout>
     </div>
   );
-};
+}
 
 export default Playground;

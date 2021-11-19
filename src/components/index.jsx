@@ -7,7 +7,12 @@ export { default as Para1 } from './shared/typography/Para1';
 export { default as Para2 } from './shared/typography/Para2';
 export { default as Digitised } from './shared/typography/DigitisedHeading';
 
+export { default as PageContainer } from './shared/PageContainer';
+
+// About
 export { default as FAQ } from './About/FAQ';
+export { default as Executive } from './About/Executive';
+export { default as Team } from './About/Team';
 
 // Speaker Card
 export { default as SpeakerCard } from './Speaker/SpeakerCard';

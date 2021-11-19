@@ -1,16 +1,15 @@
 import React from 'react';
 
 // Components
-import { FAQ, Layout } from '../components';
-import Executive from "../components/about/Executive";
-import Team from '../components/about/Team';
+import { FAQ, Layout, Executive, Team, PageContainer } from '../components';
 
 const about = () => (
   <Layout>
-    <Executive />
-    <Team />
-
-    <FAQ />
+    <PageContainer>
+      <Executive />
+      <Team />
+      <FAQ />
+    </PageContainer>
   </Layout>
 );
 
