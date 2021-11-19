@@ -35,8 +35,12 @@ export const AccordionTitle = styled.div`
   }
   .title {
     text-align: left;
+    padding-right: 40px;
     color: #000;
     font-weight: bold;
+    @media (max-width: 700px) {
+      font-size: 1rem;
+    }
   }
   .icon {
     margin-left: auto;

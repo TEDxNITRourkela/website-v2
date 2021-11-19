@@ -11,12 +11,9 @@ import {
   Para2,
   Digitised,
   CustomButton,
-  FAQ,
-  Layout,
+  SpeakerCarousel,
 } from '../components';
 
-import Executive from '../components/about/Executive';
-import Team from '../components/about/Team';
 
 function Playground() {
   const [loading, setLoading] = useState(false);
@@ -42,12 +39,7 @@ function Playground() {
       <CustomButton loading={loading} setLoading={setLoading} handleClick={handleClick}>
         Register Now
       </CustomButton>
-      <Layout>
-        <Executive />
-        <Team />
-
-        <FAQ />
-      </Layout>
+      <SpeakerCarousel />
     </div>
   );
 }
