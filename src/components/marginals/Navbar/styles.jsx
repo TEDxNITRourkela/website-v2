@@ -17,7 +17,7 @@ export const NavContainer = styled.div`
   position: fixed;
   top: 0;
   background-color: #1a1a1a;
-  z-index: 99999;
+  z-index: 999;
   box-shodow: ${({ shadow }) => (shadow ? '0px 3px 15px #080808' : '')};
   .bars {
     color: #fff;
@@ -91,6 +91,7 @@ export const MobileNavbarSection = styled.section`
   .mobile-nav-container {
     display: flex;
     flex-direction: column;
+    z-index: 999999;
     align-items: center;
     justify-content: center;
     min-height: 100%;

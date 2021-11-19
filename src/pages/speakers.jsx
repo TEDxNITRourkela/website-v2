@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { speaker } from '../../config/content';
-
+// Components
 import { SpeakerCard, Layout, Heading1, PageContainer } from '../components';
+
+// Assets
+import { speaker } from '../../config/content';
 
 const Container = styled.div`
   margin-top: 30px;

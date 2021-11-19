@@ -14,6 +14,9 @@ export { default as FAQ } from './About/FAQ';
 export { default as Executive } from './About/Executive';
 export { default as Team } from './About/Team';
 
+// Home
+export { default as SpeakerCarousel } from './Home/SpeakerCarousel';
+
 // Speaker Card
 export { default as SpeakerCard } from './Speaker/SpeakerCard';
 

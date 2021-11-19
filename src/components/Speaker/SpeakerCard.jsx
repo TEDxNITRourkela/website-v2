@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
+// libraries
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
+// Components
 import { CardContainer, Common, CardBack, ImageContainer, Content, LinkContainer } from './styles';
 import { Heading3, Para2, Para1 } from '..';
 
