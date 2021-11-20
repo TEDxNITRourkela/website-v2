@@ -6,7 +6,6 @@ export default styled.h1`
   font-style: normal;
   font-weight: normal;
   font-size: 7.5rem;
-  line-height: 1.6;
   color: rgba(255, 255, 255, 0.4);
 
   @media (max-width: 900px) {

@@ -23,6 +23,8 @@ export { default as SpeakerCard } from './Speaker/SpeakerCard';
 // Merch Card
 export { default as Card } from './Merch/Card';
 
+export { default as Hero } from './Home/Hero';
+
 // button
 export { default as CustomButton } from './shared/CustomButton';
 
