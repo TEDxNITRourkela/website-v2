@@ -12,7 +12,7 @@ import { about } from '../../../config/content';
 import { GRAPHICS } from '../../../config/img/graphics';
 
 const Section = styled.div`
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
