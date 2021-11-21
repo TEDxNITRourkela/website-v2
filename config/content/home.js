@@ -11,4 +11,6 @@ export default {
     type: 'video/mp4',
     text: 'Scroll Down',
   },
+  ticket:
+    'https://res.cloudinary.com/sambitsankalp/image/upload/v1637429414/TedxNITR/Group_609_ijzl3y.png',
 };
