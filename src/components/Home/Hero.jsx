@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 // Components
-import { HeroContainer, TimeContainer, IntervalContainer, ScrollDownContainer } from './styles';
+import { HeroContainer, TimeContainer, IntervalContainer } from './styles';
 import { Para2, Heading1, Digitised, Para1 } from '..';
+import { ScrollDown } from './Common';
 
 // Assets
 import { home } from '../../../config/content';
@@ -12,7 +13,7 @@ import calculateTimeLeft from '../../utils/timer';
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const { caption, logo, heading, video } = home;
+  const { caption, logo, heading } = home;
 
   useEffect(() => {
     setTimeout(() => {
@@ -44,13 +45,7 @@ const Hero = () => {
       <img className='logo' src={logo.src} alt={logo.alt} />
       <Heading1 className='heading'>{heading}</Heading1>
       <TimeContainer>{timerComponents}</TimeContainer>
-
-      <ScrollDownContainer>
-        <video autoPlay loop muted playsInline className='scroll'>
-          <source src={video.src} type={video.type} />
-        </video>
-        <Para2>{video.text}</Para2>
-      </ScrollDownContainer>
+      <ScrollDown />
     </HeroContainer>
   );
 };
