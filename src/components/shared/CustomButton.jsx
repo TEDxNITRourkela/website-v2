@@ -9,8 +9,8 @@ const Button = styled.button `
     border: 1px solid var(--color-primary);
     padding: 0px 20px;
     font-size: 16px;
-    min-width: 150px;
-    min-height: 50px;
+    width: 150px;
+    height: 50px;
     border-radius: 6px;
     background-color: var(--background-primary);
 
@@ -22,6 +22,12 @@ const Button = styled.button `
     :disabled {
       cursor: not-allowed;
       opacity: 0.6;
+    }
+
+    @media (max-width: 540px){
+      font-size: 12px;
+      width: 90px;
+      height: 25px;
     }
 `;
 
