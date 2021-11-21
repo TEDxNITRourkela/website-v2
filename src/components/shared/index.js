@@ -4,8 +4,7 @@
 export { default as Layout } from './Layout';
 
 // Container
-export { default as SectionContainer } from './Container';
-export { default as PageContainer } from './PageContainer';
+export { default as Container } from './Container';
 
 // Accordion
 export { default as Accordion } from './accordion/Accordion';

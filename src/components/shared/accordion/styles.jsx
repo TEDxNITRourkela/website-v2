@@ -4,15 +4,15 @@ import { about } from '../../../../config/content';
 export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 2%;
-  margin-right: 2%;
+  width: 100%;
+  padding: 0 10%;
 `;
 
 export const AccordionTitle = styled.div`
   background-color: #f4f4f4;
   color: #444;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,8 +35,12 @@ export const AccordionTitle = styled.div`
   }
   .title {
     text-align: left;
+    padding-right: 40px;
     color: #000;
     font-weight: bold;
+    @media (max-width: 700px) {
+      font-size: 1rem;
+    }
   }
   .icon {
     margin-left: auto;

@@ -1,10 +1,18 @@
+/* eslint-disable import/no-unresolved */
 import React, { useState } from 'react';
 
 // Components
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  Para1,
+  Para2,
+  Digitised,
+  CustomButton,
+  SpeakerCarousel,
+} from '../components';
 // eslint-disable-next-line max-len
-import { Heading1, Heading2, Heading3, Para1, Para2, Digitised, CustomButton, Layout } from '../components';
-
-import Tickets from '../components/tickets/Ticket';
 
 const Playground = () => {
   const [loading, setLoading] = useState(false);
@@ -29,13 +37,10 @@ const Playground = () => {
 
       <CustomButton loading={loading} setLoading={setLoading} handleClick={handleClick}>
         Register Now
-    </CustomButton>
-    <Layout>
-      <Tickets />
-    </Layout>
+      </CustomButton>
+      <SpeakerCarousel />
     </div>
-
   );
-};
+}
 
 export default Playground;

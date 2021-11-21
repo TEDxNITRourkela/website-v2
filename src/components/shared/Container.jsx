@@ -1,5 +1,17 @@
+// Libraries
 import styled from 'styled-components';
 
 export default styled.div`
-  padding: 0px 5%;
+  width: 100%;
+  max-width: var(--max-width);
+  height: auto;
+  margin: 0px auto;
+  padding: 1rem;
+  @media (max-width: 700px) {
+    width: 90%;
+  }
+  @media (max-width: 540px) {
+    width: 95%;
+    padding: 0.5rem;
+  }
 `;

@@ -1,7 +1,14 @@
+// Libraries
 import styled from 'styled-components';
 
 export default styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: 0 5%;
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+  overflow-x: hidden;
+  overflow-y: auto;
 `;

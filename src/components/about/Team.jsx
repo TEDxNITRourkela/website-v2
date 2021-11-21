@@ -5,22 +5,21 @@ import styled from 'styled-components';
 
 // Components
 import Profile from '../shared/Profile';
-import { Heading2, Heading3 } from '../index';
-import { SectionContainer } from '../shared/index';
+import { Heading2, Heading3 } from '..';
 
 // Assets
 import { about } from '../../../config/content';
 import { GRAPHICS } from '../../../config/img/graphics';
 
-const Section = styled(SectionContainer)`
-  max-width: 95rem;
-  min-height: 300px;
+const Section = styled.div`
+  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  align-items: flex-start;
+  margin-top: 80px;
 
-  @media (max-width: 540px){
+  @media (max-width: 540px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -30,13 +29,14 @@ const Section = styled(SectionContainer)`
 const NavContainer = styled.div`
   width: 25%;
 
-  @media (max-width: 540px){
+  @media (max-width: 540px) {
     width: 95%;
   }
 `;
 
 const TeamName = styled(Heading3)`
   margin: 20px auto;
+  margin-top: 0px;
   width: 100%;
   text-align: left;
   font-size: 1.5rem;
@@ -57,7 +57,7 @@ const TeamContainer = styled.div`
   padding: 35px;
   position: relative;
 
-  @media (max-width: 540px){
+  @media (max-width: 540px) {
     width: 95%;
   }
 `;
@@ -88,7 +88,6 @@ const Polygon = styled.img`
   width: 70%;
 `;
 
-
 const STAGE = {
   DESIGN: 'Design Team',
   TECH: 'Tech Team',
@@ -108,7 +107,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small="true"
+            small='true'
           />
         ));
       case STAGE.TECH:
@@ -118,7 +117,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small="true"
+            small='true'
           />
         ));
       case STAGE.CURATION:
@@ -128,7 +127,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small="true"
+            small='true'
           />
         ));
       case STAGE.MANAGEMENT:
@@ -138,7 +137,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small="true"
+            small='true'
           />
         ));
       default:
@@ -148,7 +147,7 @@ function Team() {
             member={member}
             showDesignation={false}
             dark={false}
-            small="true"
+            small='true'
           />
         ));
     }
@@ -158,33 +157,27 @@ function Team() {
     <Section>
       <NavContainer>
         {Object.keys(STAGE).map((key) => (
-            <TeamName
-              key={key}
-              style={{
-                color: stage === STAGE[key] ? '#fff' : 'rgba(255,255,255,0.4)',
-              }}
-              onClick={() => {
-                setStage(STAGE[key]);
-              }}
-            >
-              {STAGE[key]}
-            </TeamName>
+          <TeamName
+            key={key}
+            style={{
+              color: stage === STAGE[key] ? '#fff' : 'rgba(255,255,255,0.4)',
+            }}
+            onClick={() => {
+              setStage(STAGE[key]);
+            }}
+          >
+            {STAGE[key]}
+          </TeamName>
         ))}
       </NavContainer>
 
       <TeamContainer>
-        <TeamName2>
-          {stage}
-        </TeamName2>
+        <TeamName2>{stage}</TeamName2>
         <WrapperContainer>{renderTeam()}</WrapperContainer>
-        <Polygon
-          src={GRAPHICS.TOP_LEFT_POLYGON}
-          alt='Polygon'
-        />
+        <Polygon src={GRAPHICS.TOP_LEFT_POLYGON} alt='Polygon' />
       </TeamContainer>
     </Section>
   );
 }
 
 export default Team;
-
