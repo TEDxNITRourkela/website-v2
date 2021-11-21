@@ -8,7 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 // Components
 import { NavContainer, LogoContainer, TabContainer, TabLink } from './styles';
 import { Para2 } from '../..';
-import { SectionContainer } from '../../shared';
+import Container from '../../shared/Container';
 
 // assets
 import { nav } from '../../../../config/content';
@@ -31,23 +31,25 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
 
   return (
     <NavContainer shadow={shadow}>
-      <SectionContainer className='navbar'>
-        <LogoContainer>
-          <Link to='/'>
-            <img src={logo.src} className='logo' alt={logo.alt} />
-          </Link>
-        </LogoContainer>
+      <Container>
+        <div className='navbar'>
+          <LogoContainer>
+            <Link to='/'>
+              <img src={logo.src} className='logo' alt={logo.alt} />
+            </Link>
+          </LogoContainer>
 
-        <FontAwesomeIcon className='bars' onClick={toggleMenuOpen} icon={faBars} />
+          <FontAwesomeIcon className='bars' onClick={toggleMenuOpen} icon={faBars} />
 
-        <TabContainer>
-          {navItems.map(({ link, name }) => (
-            <TabLink key={link} to={link}>
-              <Para2 className='nav-text'>{name}</Para2>
-            </TabLink>
-          ))}
-        </TabContainer>
-      </SectionContainer>
+          <TabContainer>
+            {navItems.map(({ link, name }) => (
+              <TabLink key={link} to={link}>
+                <Para2 className='nav-text'>{name}</Para2>
+              </TabLink>
+            ))}
+          </TabContainer>
+        </div>
+      </Container>
     </NavContainer>
   );
 };

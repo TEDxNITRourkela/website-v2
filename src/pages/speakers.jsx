@@ -9,7 +9,6 @@ import { speaker } from '../../config/content';
 
 const Container = styled.div`
   margin-top: 30px;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +19,7 @@ const Speaker = () => (
   <Layout>
     <PageContainer>
       <Heading1>TEDxNITRourkelaLive 2021</Heading1>
-      <Container>
+      <Container style={{ marginBottom: '50px' }}>
         {speaker.LIVEGUESTS.map(
           ({
             name,

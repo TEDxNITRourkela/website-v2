@@ -1,40 +1,17 @@
-import React, { useState } from 'react';
-
-// libaries
-import styled from 'styled-components';
+import React from 'react';
 
 // Components
-import { DesktopNavbar, MobileNavbar, Footer } from '../marginals';
+import { Navbar } from '..';
+import Footer from '../marginals/Footer/Footer';
+import PageContainer from './PageContainer';
+import Container from './Container';
 
-const Layout = styled.div`
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
-`;
+export default ({ children }) => (
+  <PageContainer>
+    <Navbar />
 
-const Nav = styled.div`
-  position: relative;
-  width: 100%;
-  top: 0;
-`;
+    <Container>{children}</Container>
 
-const Container = styled.div`
-  overflow-x: hidden;
-  overflow-y: auto;
-`;
-
-export default ({ children }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenuOpen = () => (menuOpen ? setMenuOpen(false) : setMenuOpen(true));
-
-  return (
-    <Layout>
-      <Nav>
-        <DesktopNavbar toggleMenuOpen={toggleMenuOpen} />
-        {menuOpen && <MobileNavbar toggleMenuOpen={toggleMenuOpen} />}
-      </Nav>
-      <Container>{children}</Container>
-      <Footer />
-    </Layout>
-  );
-};
+    <Footer />
+  </PageContainer>
+);

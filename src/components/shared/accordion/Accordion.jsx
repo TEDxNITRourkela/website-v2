@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 // Components
-import { SectionContainer, AccordionTitle, AccordionContent } from './styles';
+import { AccordionTitle, AccordionContent } from './styles';
 import { Para1, Para2 } from '../..';
 
 const Accordion = ({ title, body, index }) => {
@@ -24,7 +24,7 @@ const Accordion = ({ title, body, index }) => {
   };
 
   return (
-    <SectionContainer>
+    <div>
       <AccordionTitle
         index={index}
         active={toggle}
@@ -44,7 +44,7 @@ const Accordion = ({ title, body, index }) => {
         {/* eslint-disable-next-line react/no-danger */}
         <Para2 className='text' dangerouslySetInnerHTML={{ __html: body }} />
       </AccordionContent>
-    </SectionContainer>
+    </div>
   );
 };
 

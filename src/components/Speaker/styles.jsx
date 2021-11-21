@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
     isPublished ? (isLongCard ? '560px' : '280px') : '280px'};
   border-radius: 8px;
   perspective: 600px;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 10px;
   @media (max-width: 660px) {
     height: 230px;
@@ -18,7 +18,7 @@ export const CardContainer = styled.div`
   .card {
     height: 100%;
     width: 100%;
-    transition: all 1.0s ease;
+    transition: all 1s ease;
     transform-style: preserve-3d;
     position: relative;
     display: flex;
@@ -39,6 +39,7 @@ export const Common = styled.div`
   text-align: center;
   backface-visibility: hidden;
   background-color: #232323;
+  border-radius: 8px;
   padding: 33px 25px;
   @media (max-width: 660px) {
     padding: 15px 13px;
@@ -86,6 +87,7 @@ export const ImageContainer = styled.div`
   height: ${({ isPublished, isLongCard }) =>
     // eslint-disable-next-line no-nested-ternary
     isPublished ? (isLongCard ? '78%' : '73%') : '90%'};
+  border-radius: 8px;
   background-size: cover;
   background-color: #232323;
   background-image: ${({ image }) =>

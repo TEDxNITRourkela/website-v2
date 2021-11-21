@@ -11,8 +11,8 @@ export { default as PageContainer } from './shared/PageContainer';
 
 // About
 export { default as FAQ } from './About/FAQ';
-export { default as Executive } from './About/Executive';
-export { default as Team } from './About/Team';
+export { default as Executive } from './about/Executive';
+export { default as Team } from './about/Team';
 
 // Home
 export { default as SpeakerCarousel } from './Home/SpeakerCarousel';
@@ -28,3 +28,4 @@ export { default as CustomButton } from './shared/CustomButton';
 
 // shared
 export * from './shared';
+export { default as Navbar } from './marginals/Navbar/Navbar';
