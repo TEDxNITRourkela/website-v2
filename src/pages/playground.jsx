@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 
 // Components
-// eslint-disable-next-line max-len
 import {
   Heading1,
   Heading2,
@@ -13,9 +12,9 @@ import {
   CustomButton,
   SpeakerCarousel,
 } from '../components';
+// eslint-disable-next-line max-len
 
-
-function Playground() {
+const Playground = () => {
   const [loading, setLoading] = useState(false);
 
   const handleClick = () => {
