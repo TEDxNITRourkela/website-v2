@@ -1,8 +1,9 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 
 // Libraries
 import styled from 'styled-components';
-import { CustomButton } from '../components';
+import { Heading1, Heading2, CustomButton } from '../components';
 
 // Assets
 import { LOGOS } from '../../config/img/logos';
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
   width: 100%;
   min-height: calc(100vh - 150px);
   height: 100%;
+  margin-bottom: 10px;
 `;
 
 const Section = styled.div`
@@ -48,30 +50,14 @@ const Logo = styled.img`
   }
 `;
 
-const Topic = styled.h1`
+const Topic = styled(Heading1)`
+  margin-bottom: 20px;
+  font-weight: 700;
+`;
+
+const Error = styled(Heading2)`
   margin-top: 10px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  color: var(--color-secondary);
-  font-family: 'Zilla Slab';
-`;
-
-const ComingSoon = styled.video`
-  width: 220px;
-  height: 220px;
-  margin-top: 40px;
-
-  @media (max-width: 540px){
-    width: 170px;
-    height: 170px;
-  }
-`;
-
-const Error = styled.h2`
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: var(--color-secondary);
-  font-family: 'Zilla Slab';
+  margin-bottom: 10px;
 `;
 
 const TopRight = styled.img`
@@ -122,9 +108,9 @@ function Index() {
           &#8220;Learning from the Past&#8221;
         </Topic>
 
-        <ComingSoon>
+        <video width="220" height="220" style={{ marginTop: '30px' }} autoPlay loop muted playsInline>
           <source src={VIDEOS.PAGE_NOT_FOUND} type='video/mp4' />
-        </ComingSoon>
+        </video>
         <Error>
           Error: Page not found!
         </Error>
