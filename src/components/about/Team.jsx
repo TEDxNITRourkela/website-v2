@@ -93,6 +93,7 @@ const STAGE = {
   TECH: 'Tech Team',
   CURATION: 'Curation Team',
   MANAGEMENT: 'Management Team',
+  PR: 'Public Relations Team'
 };
 
 function Team() {
@@ -140,6 +141,16 @@ function Team() {
             small='true'
           />
         ));
+        case STAGE.PR:
+          return about.TEAM.PR.map((member) => (
+            <Profile
+              key={`PR-team-${member.NAME}`}
+              member={member}
+              showDesignation={false}
+              dark={false}
+              small='true'
+            />
+          ));
       default:
         return about.TEAM.DESIGN.map((member) => (
           <Profile

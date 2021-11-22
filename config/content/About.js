@@ -159,6 +159,68 @@ const TEAM = {
         DESIGNATION: 'Management Team Member',
       },
     ],
+    PR: [
+      {
+        NAME: 'Ekta Gambhir',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/EktaGambhir.jpeg',
+        DESIGNATION: 'Managing Director',
+      },
+      {
+        NAME: 'Shobhit Parki',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
+        DESIGNATION: 'Deputy Managing Director',
+      },
+      {
+        NAME: 'Ankit Routray',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitRoutray.jpeg',
+        DESIGNATION: 'Management Team Member',
+      },
+      {
+        NAME: 'Ankita Sareen',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitaSareen.jpeg',
+        DESIGNATION: 'Management Team Member',
+      },
+      {
+        NAME: 'Asutosh Mishra',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AsutoshMishra.jpeg',
+        DESIGNATION: 'Management Team Member',
+      },
+      {
+        NAME: 'Lalitha Manaswini',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
+        DESIGNATION: 'Management Team Member',
+      },
+      {
+        NAME: 'Mayank Mishra',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/MayankMishra.jpeg',
+        DESIGNATION: 'Management Team Member',
+      },
+      {
+        NAME: 'Pratyush Kumar Nayak',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/PratyushNayak.jpeg',
+        DESIGNATION: 'Management Team Member',
+      },
+      {
+        NAME: 'Roshan Anduri',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/RoshanAnduri.jpeg',
+        DESIGNATION: 'Management Team Member',
+      },
+      {
+        NAME: 'Spandan Patra',
+        IMG:
+          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SpandanPatra.jpeg',
+        DESIGNATION: 'Management Team Member',
+      },
+    ],
     CURATION: [
       {
         NAME: 'Umme Salma',
