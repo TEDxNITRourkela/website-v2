@@ -8,14 +8,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   MainContainer,
   SubContainer,
-  Container as SomeContainer,
+  AboutContainer,
   NavContainer,
   BottomContainer,
   SocialContainer,
   NavLink,
+  Container,
 } from './styles';
 import { Para2, Para1 } from '../..';
-import Container from '../../shared/Container';
 
 // assets
 import { footer, nav } from '../../../../config/content';
@@ -31,12 +31,12 @@ const Footer = () => {
     <MainContainer>
       <Container>
         <SubContainer>
-          <SomeContainer>
+          <AboutContainer>
             <Link to='/'>
               <img className='logo' src={logo.src} alt={logo.alt} />
             </Link>
             <Para2 className='sub-heading'>{subHeading}</Para2>
-          </SomeContainer>
+          </AboutContainer>
 
           <NavContainer>
             <div className='column'>
@@ -55,12 +55,12 @@ const Footer = () => {
             </div>
           </NavContainer>
 
-          <SomeContainer>
+          <AboutContainer>
             <Para1 className='contact-heading'>{contact.heading}</Para1>
             <Para2 className='contact-email'>{contact.body}</Para2>
             <Para2 className='privacy'>{contact.privacy}</Para2>
             <Para2 className='terms'>{contact.terms}</Para2>
-          </SomeContainer>
+          </AboutContainer>
         </SubContainer>
 
         <BottomContainer>

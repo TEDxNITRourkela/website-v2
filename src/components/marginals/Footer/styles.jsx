@@ -20,6 +20,14 @@ export const MainContainer = styled.div`
   }
 `;
 
+export const Container = styled.div`
+  width: 100%;
+  max-width: var(--max-width);
+  height: auto;
+  margin: 0px auto;
+  padding: 0rem 1rem;
+`;
+
 export const SubContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -29,7 +37,7 @@ export const SubContainer = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
