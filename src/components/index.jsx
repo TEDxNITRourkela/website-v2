@@ -18,6 +18,9 @@ export { default as Team } from './about/Team';
 
 // Home
 export { default as SpeakerCarousel } from './Home/SpeakerCarousel';
+export { default as Hero } from './Home/Hero';
+export { default as TicketHero } from './Home/TicketHero';
+export { default as BrandAmbassador } from './Home/BrandAmbassador';
 
 // Speaker Card
 export { default as SpeakerCard } from './Speaker/SpeakerCard';
@@ -25,7 +28,7 @@ export { default as SpeakerCard } from './Speaker/SpeakerCard';
 // Merch Card
 export { default as Card } from './Merch/Card';
 
-export { default as Hero } from './Home/TicketHero';
+export { default as Main } from './Home/Main';
 
 // button
 export { default as CustomButton } from './shared/CustomButton';

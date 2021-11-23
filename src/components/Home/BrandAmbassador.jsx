@@ -1,21 +1,27 @@
 import React from 'react';
+
+// libraries
 import { Link } from 'gatsby';
 
+// Components
 import { BrandContainer, HeroContainer } from './styles';
 import { Ticket, ScrollDown } from './Common';
 import { Heading3, Para2, CustomButton } from '..';
+
+// Assets
+import { home } from '../../../config/content';
 
 const BrandAmbassador = () => (
   <HeroContainer>
     <Ticket />
     <BrandContainer>
       <div className='text'>
-        <Heading3 className='heading'>Want to be a brand ambassador for TEDxNITRourkela?</Heading3>
-        <Link to='/' className='link'>
-          <Para2 className='linktext'>Know More</Para2>
+        <Heading3 className='heading'>{home.brand.heading} </Heading3>
+        <Link to={home.brand.link.path} className='link'>
+          <Para2 className='linktext'>{home.brand.link.text}</Para2>
         </Link>
       </div>
-      <CustomButton>Apply Now</CustomButton>
+      <CustomButton>{home.brand.buttonText}</CustomButton>
     </BrandContainer>
     <ScrollDown />
   </HeroContainer>

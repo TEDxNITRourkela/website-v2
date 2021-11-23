@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
+// Components
 import { ScrollDownContainer, TicketContainer } from './styles';
 import { Para2, TicketComponent } from '..';
 
+// Assets
 import { home } from '../../../config/content';
-
 import { TICKETS } from '../../../config/img/tickets';
 
 export const ScrollDown = () => (

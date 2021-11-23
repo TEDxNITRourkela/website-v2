@@ -7,10 +7,9 @@ const Button = styled.button `
     color: var(--color-secondary);
     width: auto;
     border: 1px solid var(--color-primary);
-    padding: 0px 20px;
+    padding: 10px 20px;
     font-size: 16px;
-    width: 150px;
-    height: 50px;
+    height: auto;
     border-radius: 6px;
     background-color: var(--background-primary);
 

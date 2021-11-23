@@ -31,6 +31,14 @@ export const HeroContainer = styled.div`
       width: 225px;
     }
   }
+  .image {
+    margin-top: 30px;
+    width: 60%;
+    height: auto;
+    @media (max-width: 500px) {
+      width: 80%;
+    }
+  }
 `;
 
 export const TimeContainer = styled.div`
@@ -109,9 +117,9 @@ export const BrandContainer = styled.div`
     }
   }
   .linktext {
-    font-size: 1.2rem;
+    font-size: 1rem;
     @media (max-width: 1000px) {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
     }
     @media (max-width: 700px) {
       text-align: left;

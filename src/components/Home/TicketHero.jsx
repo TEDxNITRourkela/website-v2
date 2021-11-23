@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Components
 import { HeroContainer } from './styles';
 import { Para2, Heading1 } from '..';
 import { Ticket, ScrollDown } from './Common';
