@@ -12,11 +12,16 @@ const TableContainer = styled.div`
   display: flex;
   overflow: auto;
   margin: 100px 0px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const Carousel = styled.div`
   min-width: min-content;
   padding: 8px 8px;
+  -webkit-overflow-scrolling: touch;
   background-color: #383838;
   display: flex;
   jsutify-content: center;

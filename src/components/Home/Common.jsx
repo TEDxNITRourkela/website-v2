@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { ScrollDownContainer } from './styles';
-import { Para2 } from '..';
+import { ScrollDownContainer, TicketContainer } from './styles';
+import { Para2, TicketComponent } from '..';
 
 import { home } from '../../../config/content';
+
+import { TICKETS } from '../../../config/img/tickets';
 
 export const ScrollDown = () => (
   <ScrollDownContainer>
@@ -13,3 +15,26 @@ export const ScrollDown = () => (
     <Para2>{home.video.text}</Para2>
   </ScrollDownContainer>
 );
+
+export const Ticket = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleClick = () => {
+    if (loading === false) {
+      setLoading(true);
+    }
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
+  return (
+    <TicketContainer>
+      <TicketComponent
+        imageURL={TICKETS.TICKET}
+        loading={loading}
+        setLoading={setLoading}
+        handleClick={handleClick}
+      />
+    </TicketContainer>
+  );
+};
