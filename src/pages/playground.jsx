@@ -2,16 +2,7 @@
 import React, { useState } from 'react';
 
 // Components
-import {
-  Heading1,
-  Heading2,
-  Heading3,
-  Para1,
-  Para2,
-  Digitised,
-  CustomButton,
-  SpeakerCarousel,
-} from '../components';
+import { Heading1, Heading2, Heading3, Para1, Para2, Digitised, CustomButton } from '../components';
 // eslint-disable-next-line max-len
 
 const Playground = () => {
@@ -38,9 +29,8 @@ const Playground = () => {
       <CustomButton loading={loading} setLoading={setLoading} handleClick={handleClick}>
         Register Now
       </CustomButton>
-      <SpeakerCarousel />
     </div>
   );
-}
+};
 
 export default Playground;

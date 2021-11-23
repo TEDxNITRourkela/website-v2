@@ -11,6 +11,16 @@ export default {
     type: 'video/mp4',
     text: 'Scroll Down',
   },
-  ticket:
-    'https://res.cloudinary.com/sambitsankalp/image/upload/v1637429414/TedxNITR/Group_609_ijzl3y.png',
+  thankyouurl: {
+    src: 'https://res.cloudinary.com/sambitsankalp/image/upload/v1637665968/TedxNITR/thankyou_niz4ks.png',
+    alt: 'Thank You Speakers',
+  },
+  brand: {
+    heading: 'Want to be a brand ambassador for TEDxNITRourkela?',
+    link: {
+      text: 'Know More',
+      path: '/',
+    },
+    buttonText: 'Apply Now',
+  },
 };
