@@ -1,0 +1,31 @@
+/* eslint-disable max-len */
+export const PARTNERS = Object.freeze({
+    TATA:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/tata_steel_wgnvt3.png',
+    EVERWALL:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/everwall.png',
+    FLICKR:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/flickr.png',
+    MAILCHIMP:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/mailchimp.png',
+    SHUTTERSTOCK:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/shutterstock.png',
+    ROURKELA360:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/SAVE_20190409_182652-removebg-preview_2_sbqqon.png',
+    NOTICEBARD:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/NoticeBard_logo-removebg-preview_e7s7hy.png',
+    CHALO_ODISHA:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/Chalo_Odisha_Logo-removebg-preview_vwv7f2.png',
+    MY_PURI:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/my_puri-removebg-preview_iupdzm.png',
+    ODISHA_TRENDING:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/odisha_trending_sndntr.png',
+    ROURKELA_SHINES:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/Rourkela_shines-removebg-preview_edahhf.png',
+    OVOTEES:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/ovotees-removebg-preview_wgiddk.png',
+    ROURKELA_TIPS:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/partners/RT_LOGO_1_1_rkcddh.jpg',
+    THE_PIONEER:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/partners/thePioneer_oasmzn.png',
+  });
