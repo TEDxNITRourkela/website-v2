@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
   width: 100%;
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,9 +61,68 @@ export const ScrollDownContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 70px;
+  @media (max-width: 700px) {
+    margin-top: 30px;
+  }
   .scroll {
     margin-bottom: 10px;
-    height: 36px;
-    height: 36px;
+    height: 32px;
+    height: 32px;
+  }
+`;
+
+export const BrandContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  width: 100%;
+  margin-top: 55px;
+  background-color: var(--background-secondary);
+  border-radius: 16px;
+  @media (max-width: 700px) {
+    margin-top: 10px;
+  }
+  .link {
+    color: #fff;
+    padding-left: 3px;
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 700px) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: left;
+    }
+  }
+  .heading {
+    font-size: 1.5rem;
+    margin-top: 0px;
+    @media (max-width: 1000px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 700px) {
+      text-align: left;
+    }
+  }
+  .linktext {
+    font-size: 1.2rem;
+    @media (max-width: 1000px) {
+      font-size: 0.7rem;
+    }
+    @media (max-width: 700px) {
+      text-align: left;
+    }
+  }
+`;
+
+export const TicketContainer = styled.div`
+  width: 80%;
+  height: auto;
+  @media (max-width: 700px) {
+    width: 100%;
   }
 `;
