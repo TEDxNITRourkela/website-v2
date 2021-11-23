@@ -15,7 +15,7 @@ const fadeDown = keyframes`
 export const NavContainer = styled.div`
   width: 100%;
   position: fixed;
-  top:0;
+  top: 0;
   background-color: #1a1a1a;
   z-index: 999;
   box-shodow: ${({ shadow }) => (shadow ? '0px 3px 15px #080808' : '')};
@@ -26,12 +26,18 @@ export const NavContainer = styled.div`
       padding: 0px 10px;
     }
   }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-  }
+`;
+
+export const Navbar = styled.div`
+  width: 100%;
+  max-width: var(--max-width);
+  height: auto;
+  margin: 0px auto;
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
 `;
 
 export const LogoContainer = styled.div`

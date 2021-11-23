@@ -9,9 +9,7 @@ import Container from './Container';
 export default ({ children }) => (
   <PageContainer>
     <Navbar />
-
     <Container>{children}</Container>
-
     <Footer />
   </PageContainer>
 );
