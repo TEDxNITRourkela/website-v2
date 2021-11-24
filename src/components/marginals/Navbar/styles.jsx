@@ -18,7 +18,7 @@ export const NavContainer = styled.div`
   top: 0;
   background-color: #1a1a1a;
   z-index: 999;
-  box-shodow: ${({ shadow }) => (shadow ? '0px 3px 15px #080808' : '')};
+  box-shadow: ${({ shadow }) => (shadow ? '0px 3px 15px #080808' : '')};
   .bars {
     color: #fff;
     @media all and (min-width: 769px) {

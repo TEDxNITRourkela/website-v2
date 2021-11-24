@@ -12,3 +12,5 @@ export default () => {
 
   return timeLeft;
 };
+
+export const getlength = (number) => number.toString().length;

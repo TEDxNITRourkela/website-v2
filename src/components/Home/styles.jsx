@@ -5,38 +5,46 @@ export const HeroContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 60px;
   align-items: center;
   .caption {
     margin-top: 1px;
-    letter-spacing: 2.5px;
-    font-size: 14px;
+    letter-spacing: 1.8px;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.2);
     font-weight: 700;
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
       font-size: 8px;
       letter-spacing: 1.5px;
     }
   }
   .heading {
+    font-size: 40px;
     margin-top: 20px;
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
       font-size: 24px;
     }
   }
   .logo {
     margin-top: 5px;
-    width: 400px;
+    width: 300px;
     height: auto;
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
       width: 225px;
     }
   }
   .image {
     margin-top: 30px;
-    width: 60%;
+    width: 40%;
     height: auto;
-    @media (max-width: 500px) {
+    @media (max-width: 1025px) {
+      width: 60%;
+    }
+    @media (max-width: 769px) {
       width: 80%;
+    }
+    @media (max-width: 500px) {
+      width: 90%;
     }
   }
 `;
@@ -68,7 +76,7 @@ export const ScrollDownContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 50px;
   @media (max-width: 700px) {
     margin-top: 30px;
   }
@@ -83,9 +91,10 @@ export const BrandContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 20px;
+  padding: 15px 20px;
   width: 100%;
-  margin-top: 55px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   background-color: var(--background-secondary);
   border-radius: 16px;
   @media (max-width: 700px) {
@@ -107,7 +116,7 @@ export const BrandContainer = styled.div`
     }
   }
   .heading {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 0px;
     @media (max-width: 1000px) {
       font-size: 1rem;
@@ -117,7 +126,7 @@ export const BrandContainer = styled.div`
     }
   }
   .linktext {
-    font-size: 1rem;
+    font-size: 0.8rem;
     @media (max-width: 1000px) {
       font-size: 0.6rem;
     }
@@ -128,9 +137,9 @@ export const BrandContainer = styled.div`
 `;
 
 export const TicketContainer = styled.div`
-  width: 80%;
+  width: 70%;
   height: auto;
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     width: 100%;
   }
 `;
