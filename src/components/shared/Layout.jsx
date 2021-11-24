@@ -6,10 +6,10 @@ import Footer from '../marginals/Footer/Footer';
 import PageContainer from './PageContainer';
 import Container from './Container';
 
-export default ({ children }) => (
+export default ({ children, isContainer }) => (
   <PageContainer>
     <Navbar />
-    <Container>{children}</Container>
+    {isContainer ? <Container>{children}</Container> : children}
     <Footer />
   </PageContainer>
 );

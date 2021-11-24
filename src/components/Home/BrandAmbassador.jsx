@@ -12,7 +12,7 @@ import { Heading3, Para2, CustomButton } from '..';
 import { home } from '../../../config/content';
 
 const BrandAmbassador = () => (
-  <HeroContainer>
+  <HeroContainer style={{ marginTop: '0px' }}>
     <Ticket />
     <BrandContainer>
       <div className='text'>

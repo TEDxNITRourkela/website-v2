@@ -9,7 +9,7 @@ import { ScrollDown } from './Common';
 import { home } from '../../../config/content';
 
 // Utils
-import calculateTimeLeft from '../../utils/timer';
+import calculateTimeLeft, { getlength } from '../../utils/timer';
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -26,6 +26,10 @@ const Hero = () => {
   Object.keys(timeLeft).forEach((interval) => {
     if (!timeLeft[interval]) {
       timeLeft[interval] = '00';
+    }
+
+    if (getlength(timeLeft[interval]) === 1) {
+      timeLeft[interval] = `0${timeLeft[interval]}`;
     }
 
     timerComponents.push(

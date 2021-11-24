@@ -5,7 +5,7 @@ import { onSnapshot, doc } from 'firebase/firestore';
 
 // Utils
 import { useFirebase } from '../utils/firebase';
-import { Layout, PageContainer, Main } from '../components';
+import { Layout, Main } from '../components';
 
 const Homepage = () => {
   const { firebase: app, db } = useFirebase();
@@ -28,10 +28,8 @@ const Homepage = () => {
 
   return (
     <div>
-      <Layout>
-        <PageContainer>
-          <Main number='1' />
-        </PageContainer>
+      <Layout isContainer={false}>
+        <Main number='4' />
       </Layout>
     </div>
   );
