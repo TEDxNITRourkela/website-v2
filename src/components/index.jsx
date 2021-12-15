@@ -24,11 +24,15 @@ export { default as BrandAmbassador } from './Home/BrandAmbassador';
 
 // Speaker Card
 export { default as SpeakerCard } from './Speaker/SpeakerCard';
+export { default as SpeakerSection } from './Speaker/SpeakerSection';
 
 // Merch Card
 export { default as Card } from './Merch/Card';
 
 export { default as Main } from './Home/Main';
+
+// Events
+export { default as EventHero } from './events/EventHero';
 
 // button
 export { default as CustomButton } from './shared/CustomButton';
