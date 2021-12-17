@@ -6,11 +6,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 // Components
-import { NavContainer, LogoContainer, TabContainer, TabLink, Navbar } from './styles';
-import { Para2 } from '../..';
+import { NavContainer, LogoContainer, TabContainer, TabLink, Navbar, NavText } from './styles';
+import { DropDown } from '../..';
 
 // assets
 import { nav } from '../../../../config/content';
+
+const DropdownNavbarItem = ({ name, children }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <TabLink>
+      <NavText onClick={() => setOpen(!open)}>{name} </NavText>
+      {open && children}
+    </TabLink>
+  );
+};
 
 const DesktopNavbar = ({ toggleMenuOpen }) => {
   const [shadow, setShadow] = useState(false);
@@ -40,11 +50,20 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
         <FontAwesomeIcon className='bars' onClick={toggleMenuOpen} icon={faBars} />
 
         <TabContainer>
-          {navItems.map(({ link, name }) => (
-            <TabLink key={link} to={link}>
-              <Para2 className='nav-text'>{name}</Para2>
-            </TabLink>
-          ))}
+          {navItems.map(({ link, name }) => {
+            if (name === 'Events') {
+              return (
+                <DropdownNavbarItem name={name}>
+                  <DropDown />
+                </DropdownNavbarItem>
+              );
+            }
+            return (
+              <TabLink key={link} to={link}>
+                <NavText>{name}</NavText>
+              </TabLink>
+            );
+          })}
         </TabContainer>
       </Navbar>
     </NavContainer>

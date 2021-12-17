@@ -1,5 +1,12 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'gatsby';
+import { Para2 } from '../..';
+
+export const NavText = styled(Para2)`
+  @media all and (max-width: 1024px) {
+    font-size: 0.8rem;
+  }
+`;
 
 const fadeDown = keyframes`
     0% {

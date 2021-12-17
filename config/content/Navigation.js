@@ -23,6 +23,10 @@ export default {
       link: '/tickets',
     },
     {
+      name: 'Events',
+      link: '/events',
+    },
+    {
       name: 'Participate',
       link: '/campus_ambassadors',
     },
@@ -41,10 +45,6 @@ export default {
     {
       name: 'Join',
       link: '/join',
-    },
-    {
-      name: 'Events',
-      link: '/events',
     },
   ],
 };
