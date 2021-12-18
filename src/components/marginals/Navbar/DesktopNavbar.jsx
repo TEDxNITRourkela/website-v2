@@ -27,6 +27,9 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      setShadow();
+    };
   }, []);
 
   return (
@@ -44,7 +47,7 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
           {navItems.map(({ link, name }) => {
             if (name === 'Events') {
               return (
-                <DropdownNavbarItem name={name}>
+                <DropdownNavbarItem key={link} name={name}>
                   <DropDown data={events.NAVTEXT} />
                 </DropdownNavbarItem>
               );

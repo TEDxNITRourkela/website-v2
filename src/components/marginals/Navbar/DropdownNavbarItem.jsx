@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 
 // Components
-import { TabLink, NavText } from './styles';
+import { NavText } from './styles';
 
 const DropdownNavbarItem = ({ name, children }) => {
   const [open, setOpen] = useState(false);
   return (
-    <TabLink>
-      <NavText onClick={() => setOpen(!open)}>{name}</NavText>
+    <>
+      <NavText style={{ padding: '0px 15px', cursor: 'pointer' }} onClick={() => setOpen(!open)}>
+        {name}
+      </NavText>
       {open && children}
-    </TabLink>
+    </>
   );
 };
 

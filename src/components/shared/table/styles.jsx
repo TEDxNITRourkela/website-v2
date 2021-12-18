@@ -5,14 +5,11 @@ export const TableContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 15px;
   margin-top: 40px;
   @media all and (max-width: 950px) {
     justify-content: flex-start;
   }
-`;
-
-export const BodyContainer = styled.div`
-  margin: 15px;
 `;
 
 export const Table = styled.table`

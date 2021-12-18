@@ -28,8 +28,8 @@ const Homepage = () => {
 
   return (
     <div>
-      <Layout isContainer={false}>
-        <Main number='4' />
+      <Layout>
+        <Main number='1' />
       </Layout>
     </div>
   );

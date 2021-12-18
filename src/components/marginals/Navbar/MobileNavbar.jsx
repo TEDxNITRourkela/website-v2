@@ -24,7 +24,7 @@ const MobileNavbar = ({ toggleMenuOpen }) => {
           {navItems.map(({ link, name }) => {
             if (name === 'Events') {
               return (
-                <DropdownNavbarItem name={name}>
+                <DropdownNavbarItem key={link} name={name}>
                   <DropDown data={events.NAVTEXT} />
                 </DropdownNavbarItem>
               );

@@ -33,7 +33,7 @@ const Hero = () => {
     }
 
     timerComponents.push(
-      <IntervalContainer>
+      <IntervalContainer key={timeLeft[interval]}>
         <Digitised>
           {timeLeft[interval]}
           {interval === 'Minutes' ? '' : ':'}
