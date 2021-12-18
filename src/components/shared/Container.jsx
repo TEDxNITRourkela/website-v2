@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 export default styled.div`
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 100vw;
   height: auto;
   margin: 0px auto;
-  padding: 1rem;
+  padding-top: 20px;
   @media (max-width: 700px) {
     width: 90%;
   }

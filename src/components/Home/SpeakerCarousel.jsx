@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useRef } from 'react';
 
 // libraries
@@ -48,7 +49,6 @@ const Carousel = styled.div`
 
 const SpeakerCarousel = () => {
   const ref = useRef(null);
-  const { caption, heading, thankyouurl } = home;
 
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
@@ -57,11 +57,11 @@ const SpeakerCarousel = () => {
   return (
     <>
       <HeroContainer>
-        <Para2 className='caption'>{caption} </Para2>
+        <Para2 className='caption'>{home.CONTENT1.caption} </Para2>
         <Heading1 className='heading' style={{ marginTop: '0px' }}>
-          {heading}
+          {home.CONTENT1.heading}
         </Heading1>
-        <img className='image' src={thankyouurl.src} alt={thankyouurl.alt} />
+        <img className='image' src={home.CONTENT1.thankyouurl.src} alt={home.CONTENT1.thankyouurl.alt} />
       </HeroContainer>
       <ButtonContainer>
         <FontAwesomeIcon onClick={() => scroll(-300)} className='btn' icon={faAngleLeft} />
