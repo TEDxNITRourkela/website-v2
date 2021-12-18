@@ -8,19 +8,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 // Components
 import { NavContainer, LogoContainer, TabContainer, TabLink, Navbar, NavText } from './styles';
 import { DropDown } from '../..';
+import DropdownNavbarItem from './DropdownNavbarItem';
 
 // assets
-import { nav } from '../../../../config/content';
-
-const DropdownNavbarItem = ({ name, children }) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <TabLink>
-      <NavText onClick={() => setOpen(!open)}>{name} </NavText>
-      {open && children}
-    </TabLink>
-  );
-};
+import { nav, events } from '../../../../config/content';
 
 const DesktopNavbar = ({ toggleMenuOpen }) => {
   const [shadow, setShadow] = useState(false);
@@ -54,7 +45,7 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
             if (name === 'Events') {
               return (
                 <DropdownNavbarItem name={name}>
-                  <DropDown />
+                  <DropDown data={events.NAVTEXT} />
                 </DropdownNavbarItem>
               );
             }

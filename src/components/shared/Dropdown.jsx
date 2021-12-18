@@ -1,10 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
+
+// libraries
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CSSTransition } from 'react-transition-group';
 import { faAngleRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
-import { Para2, Para1 } from '..';
+// Components
+import { Para2 } from '..';
 
 const DropdownContainer = styled.div`
   position: absolute;
@@ -12,9 +16,12 @@ const DropdownContainer = styled.div`
   width: 200px;
   transform: translateX(0%);
   background-color: #242526;
-  border-radius: 0px 0px 8px 8px;
   overflow: hidden;
   transition: height 500ms ease;
+  @media (max-width: 769px) {
+    top: 345px;
+    transform: translateX(-35%);
+  }
   .menu-primary-enter {
     position: absolute;
     transform: translateX(-110%);
@@ -47,6 +54,9 @@ const DropdownContainer = styled.div`
 
 const Menu = styled.div`
   width: 100%;
+  .link {
+    text-decoration: none;
+  }
 `;
 
 const MenuItem = styled.div`
@@ -62,6 +72,13 @@ const MenuItem = styled.div`
   }
   .text {
     margin-left: 5px;
+    @media (max-width: 769px) {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: #ffffff;
+    }
   }
 `;
 
@@ -88,6 +105,13 @@ const MenuHead = styled.div`
   .heading {
     margin-left: 5px;
     font-weight: bold;
+    @media (max-width: 769px) {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: #ffffff;
+    }
   }
 `;
 
@@ -99,7 +123,7 @@ const DropdownHead = ({ goToMenu, setActiveMenu, children }) => (
       icon={faArrowLeft}
       size='xs'
     />
-    <Para1 className='heading'>{children} </Para1>
+    <Para2 className='heading'>{children} </Para2>
   </MenuHead>
 );
 
@@ -110,7 +134,7 @@ const DropdownItem = ({ goToMenu, setActiveMenu, children, haveChildren }) => (
   </MenuItem>
 );
 
-const Dropdown = () => {
+const Dropdown = ({ data }) => {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
@@ -134,31 +158,34 @@ const Dropdown = () => {
         onEnter={calcHeight}
       >
         <Menu>
-          <DropdownItem goToMenu='settings' setActiveMenu={setActiveMenu} haveChildren>
-            2020
-          </DropdownItem>
-          <DropdownItem goToMenu='settings' setActiveMenu={setActiveMenu} haveChildren>
-            2021
-          </DropdownItem>
+          {data.map(({ title }) => (
+            <DropdownItem key={title} goToMenu={title} setActiveMenu={setActiveMenu} haveChildren>
+              {title}
+            </DropdownItem>
+          ))}
         </Menu>
       </CSSTransition>
-      <CSSTransition
-        in={activeMenu === 'settings'}
-        timeout={500}
-        classNames='menu-secondary'
-        unmountOnExit
-        onEnter={calcHeight}
-      >
-        <Menu>
-          <DropdownHead goToMenu='main' setActiveMenu={setActiveMenu}>
-            2021
-          </DropdownHead>
-          <DropdownItem>HTML</DropdownItem>
-          <DropdownItem>CSS</DropdownItem>
-          <DropdownItem>JavaScript</DropdownItem>
-          <DropdownItem>Awesome!</DropdownItem>
-        </Menu>
-      </CSSTransition>
+      {data.map(({ title, items }) => (
+        <CSSTransition
+          key={title}
+          in={activeMenu === title}
+          timeout={500}
+          classNames='menu-secondary'
+          unmountOnExit
+          onEnter={calcHeight}
+        >
+          <Menu>
+            <DropdownHead goToMenu='main' setActiveMenu={setActiveMenu}>
+              {title}
+            </DropdownHead>
+            {items.map(({ link, text }) => (
+              <Link className='link' key={link} to={`/events/${title}/${link}`}>
+                <DropdownItem>{text}</DropdownItem>
+              </Link>
+            ))}
+          </Menu>
+        </CSSTransition>
+      ))}
     </DropdownContainer>
   );
 };

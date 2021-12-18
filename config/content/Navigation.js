@@ -1,8 +1,10 @@
 /* eslint-disable max-len */
+import { LOGOS } from '../img/logos';
+
 export default {
   title: 'Navigation',
   logo: {
-    src: 'https://res.cloudinary.com/sambitsankalp/image/upload/v1636208790/TedxNITR/White_Logo_ldguyq.png',
+    src: LOGOS.TEDxNITRourkela.LIGHT,
     alt: 'TedxNITRourkela',
   },
   navItems: [

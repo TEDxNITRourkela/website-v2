@@ -9,7 +9,7 @@ import { speaker } from '../../config/content';
 const Speaker = () => (
   <Layout>
     <PageContainer>
-      <SpeakerSection title='TEDxNITRourkelaLive 2021' data={speaker} />
+      <SpeakerSection title='TEDxNITRourkelaLive 2021' data={speaker.LIVEGUESTS} />
     </PageContainer>
   </Layout>
 );

@@ -6,13 +6,13 @@ import {
   faTwitter,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-
+import { LOGOS } from '../img/logos';
 import { facebook, twitter, instagram, youtube, linkedin } from '../website';
 
 export default {
   title: 'Footer',
   logo: {
-    src: 'https://res.cloudinary.com/sambitsankalp/image/upload/v1636208790/TedxNITR/White_Logo_ldguyq.png',
+    src: LOGOS.TEDxNITRourkela.LIGHT,
     alt: 'TedxNITRourkela',
   },
   subHeading: 'This independent TEDx event is operated under licence from TED',

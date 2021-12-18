@@ -5,7 +5,6 @@ import { Heading1, SpeakerCard } from '..';
 
 const Container = styled.div`
   margin-top: 30px;
-  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +15,7 @@ const SpeakerSection = ({ data, title }) => (
   <>
     <Heading1>{title}</Heading1>
     <Container>
-      {data.LIVEGUESTS.map(
+      {data.map(
         ({
           name,
           description,

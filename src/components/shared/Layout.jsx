@@ -7,7 +7,7 @@ import PageContainer from './PageContainer';
 import Container from './Container';
 
 export default ({ children, isContainer = true }) => (
-  <PageContainer>
+  <PageContainer style={{ marginBottom: '0px' }}>
     <Navbar />
     {isContainer ? <Container>{children}</Container> : children}
     <Footer />

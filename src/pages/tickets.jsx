@@ -1,13 +1,14 @@
 import React from 'react';
 
 // Components
-import { Layout } from '../components';
+import { Layout, PageContainer } from '../components';
 import Tickets from '../components/tickets/Ticket';
 
 const tickets = () => (
   <Layout>
-
-    <Tickets />
+    <PageContainer>
+      <Tickets />
+    </PageContainer>
   </Layout>
 );
 
