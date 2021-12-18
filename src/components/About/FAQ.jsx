@@ -10,7 +10,7 @@ import { about } from '../../../config/content';
 const FAQContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 130px;
+  margin-top: 100px;
 `;
 
 const FAQ = () => (

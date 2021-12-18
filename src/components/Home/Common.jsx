@@ -11,9 +11,9 @@ import { TICKETS } from '../../../config/img/tickets';
 export const ScrollDown = () => (
   <ScrollDownContainer>
     <video autoPlay loop muted playsInline className='scroll'>
-      <source src={home.video.src} type={home.video.type} />
-    </video>
-    <Para2>{home.video.text}</Para2>
+      <source src={home.CONTENT1.video.src} type={home.CONTENT1.video.type} />
+    </video>  
+    <Para2>{home.CONTENT1.video.text}</Para2>
   </ScrollDownContainer>
 );
 
