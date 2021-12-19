@@ -22,6 +22,7 @@ export { default as SpeakerCarousel } from './Home/SpeakerCarousel';
 export { default as Hero } from './Home/Hero';
 export { default as TicketHero } from './Home/TicketHero';
 export { default as BrandAmbassador } from './Home/BrandAmbassador';
+export { default as Subscribe } from './Home/Subscribe';
 
 // Speaker Card
 export { default as SpeakerCard } from './Speaker/SpeakerCard';
