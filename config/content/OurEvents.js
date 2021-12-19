@@ -2,7 +2,7 @@
 import speaker from './speaker';
 import { LOGOS } from '../img/logos';
 
-const CONTENT = {
+export const CONTENT = {
   hero: 'https://res.cloudinary.com/sambitsankalp/image/upload/v1639550836/TedxNITR/Events_bg_y2ersf.png',
   logo: {
     src: LOGOS.TEDxNITRourkela.LIGHT,
@@ -10,7 +10,7 @@ const CONTENT = {
   },
 };
 
-const NAVTEXT = [
+export const NAVTEXT = [
   {
     title: '2020',
     items: [
@@ -43,7 +43,7 @@ const NAVTEXT = [
   },
 ];
 
-const EVENTS = [
+export const EVENTS = [
   {
     year: '2020',
     events: [
@@ -90,9 +90,3 @@ const EVENTS = [
     ],
   },
 ];
-
-export default {
-  NAVTEXT,
-  EVENTS,
-  CONTENT,
-};
