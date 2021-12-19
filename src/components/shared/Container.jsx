@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default styled.div`
   width: 100%;
-  max-width: 100vw;
+  max-width: 90vw;
   height: auto;
   margin: 0px auto;
   padding-top: 20px;

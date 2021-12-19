@@ -5,7 +5,10 @@ import { onSnapshot, doc } from 'firebase/firestore';
 
 // Utils
 import { useFirebase } from '../utils/firebase';
-import { Layout, Main } from '../components';
+import { Layout, Main, ContentBanner } from '../components';
+
+// Assets
+import { home } from '../../config/content';
 
 const Homepage = () => {
   const { firebase: app, db } = useFirebase();
@@ -30,6 +33,7 @@ const Homepage = () => {
     <div>
       <Layout>
         <Main number='1' />
+        <ContentBanner DATA={home.CONTENT2.ONE} wrapContainer={false} />
       </Layout>
     </div>
   );

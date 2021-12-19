@@ -16,12 +16,12 @@ const BrandAmbassador = () => (
     <Ticket />
     <BrandContainer>
       <div className='text'>
-        <Heading3 className='heading'>{home.brand.heading} </Heading3>
-        <Link to={home.brand.link.path} className='link'>
-          <Para2 className='linktext'>{home.brand.link.text}</Para2>
+        <Heading3 className='heading'>{home.CONTENT1.brand.heading} </Heading3>
+        <Link to={home.CONTENT1.brand.link.path} className='link'>
+          <Para2 className='linktext'>{home.CONTENT1.brand.link.text}</Para2>
         </Link>
       </div>
-      <CustomButton>{home.brand.buttonText}</CustomButton>
+      <CustomButton>{home.CONTENT1.brand.buttonText}</CustomButton>
     </BrandContainer>
     <ScrollDown />
   </HeroContainer>

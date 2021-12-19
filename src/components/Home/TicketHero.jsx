@@ -10,9 +10,9 @@ import { home } from '../../../config/content';
 
 const TicketHero = () => (
   <HeroContainer>
-    <Para2 className='caption'>{home.caption} </Para2>
-    <img className='logo' src={home.logo.src} alt={home.logo.alt} />
-    <Heading1 className='heading'>{home.heading}</Heading1>
+    <Para2 className='caption'>{home.CONTENT1.caption} </Para2>
+    <img className='logo' src={home.CONTENT1.logo.src} alt={home.CONTENT1.logo.alt} />
+    <Heading1 className='heading'>{home.CONTENT1.heading}</Heading1>
     <Ticket />
     <ScrollDown />
   </HeroContainer>
