@@ -11,3 +11,6 @@ export { default as Accordion } from './accordion/Accordion';
 
 // Table
 export { default as Table } from './table/CustomTable';
+
+// Container
+export { default as DropDown } from './Dropdown';

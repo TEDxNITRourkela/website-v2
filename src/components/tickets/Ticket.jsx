@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import { TICKETS } from '../../../config/img/tickets';
 
 // Components
-import { TicketComponent } from '..';
+import { TicketComponent, Heading1 } from '..';
 
 const Container = styled.div`
   display: flex;
@@ -18,18 +18,8 @@ const Container = styled.div`
   background-color: var(--background-primary);
   margin-top: 10px;
   z-index: 3;
-`;
-
-const Title = styled.h2`
-  font-size: 1.5rem;
-  width: 100%;
-  text-align: center;
-  margin-top: 5%;
-  font-family: 'Zilla Slab';
-  color: var(--color-secondary);
-
-  @media (max-width: 540px) {
-    margin-top: 15%;
+  .heading {
+    margin-top: 50px;
   }
 `;
 
@@ -47,7 +37,7 @@ function Tickets() {
 
   return (
     <Container>
-      <Title>Book Tickets</Title>
+      <Heading1 className='heading'>Book Tickets</Heading1>
       {Object.keys(TICKETS).map((key) => (
         <TicketComponent
           key={key}

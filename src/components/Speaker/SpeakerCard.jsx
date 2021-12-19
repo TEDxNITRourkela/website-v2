@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 // libraries
-import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -57,18 +56,24 @@ const SpeakerCard = ({
                 typeof desc === 'string' ? (
                   <span key={desc}>{desc} </span>
                 ) : (
-                  <Link className='link' key={desc} to={desc.href}>
+                  <a
+                    className='link'
+                    key={`${desc.href}-${desc.content}`}
+                    href={desc.href}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     {desc.content}
-                  </Link>
+                  </a>
                 ),
               )}
             </Para2>
           </Content>
           <LinkContainer>
             {links.map(({ link, icon }) => (
-              <Link key={link} to={link}>
+              <a key={link} href={link} target='_blank' rel='noreferrer'>
                 <FontAwesomeIcon className='icon' icon={icon} />
-              </Link>
+              </a>
             ))}
           </LinkContainer>
 

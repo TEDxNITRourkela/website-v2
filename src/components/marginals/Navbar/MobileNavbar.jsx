@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 // Components
-import { MobileNavbarSection, TabLink } from './styles';
-import { Para1 } from '../..';
+import { MobileNavbarSection, TabLink, NavText } from './styles';
+import { DropDown } from '../..';
+import DropdownNavbarItem from './DropdownNavbarItem';
 
 // assets
-import { nav } from '../../../../config/content';
+import { nav, events } from '../../../../config/content';
 
 const MobileNavbar = ({ toggleMenuOpen }) => {
   const { navItems } = nav;
@@ -20,11 +21,20 @@ const MobileNavbar = ({ toggleMenuOpen }) => {
 
       <div className='mobile-nav-container'>
         <ul className='linkList'>
-          {navItems.map(({ link, name }) => (
-            <TabLink key={link} to={link} className='listItem' onClick={toggleMenuOpen}>
-              <Para1>{name}</Para1>
-            </TabLink>
-          ))}
+          {navItems.map(({ link, name }) => {
+            if (name === 'Events') {
+              return (
+                <DropdownNavbarItem key={link} name={name}>
+                  <DropDown data={events.NAVTEXT} />
+                </DropdownNavbarItem>
+              );
+            }
+            return (
+              <TabLink key={link} to={link}>
+                <NavText>{name}</NavText>
+              </TabLink>
+            );
+          })}
         </ul>
       </div>
     </MobileNavbarSection>

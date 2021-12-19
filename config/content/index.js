@@ -8,3 +8,5 @@ export { default as merch } from './merch';
 
 export { default as speaker } from './speaker';
 export { default as home } from './home';
+
+export * as events from './OurEvents';

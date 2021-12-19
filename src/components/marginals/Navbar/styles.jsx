@@ -1,5 +1,20 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'gatsby';
+import { Para2 } from '../..';
+
+export const NavText = styled(Para2)`
+  @media (max-width: 1024px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 769px) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 5px 0px;
+  }
+`;
 
 const fadeDown = keyframes`
     0% {
@@ -109,6 +124,10 @@ export const MobileNavbarSection = styled.section`
     top: 40px;
   }
   .linkList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
   }
   .listItem {

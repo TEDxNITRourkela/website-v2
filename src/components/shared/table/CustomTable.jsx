@@ -2,7 +2,6 @@ import React from 'react';
 
 // Components
 import {
-  BodyContainer,
   Table,
   TableData,
   TableRow,
@@ -17,7 +16,7 @@ const CustomTable = ({ title, headings, body }) => (
     <Heading2>{title}</Heading2>
     <TableContainer>
       <Table>
-        <BodyContainer>
+        <tbody>
           <TableRow>
             {headings.map((heading) => (
               <TableHeadingRow key={heading}>
@@ -25,7 +24,7 @@ const CustomTable = ({ title, headings, body }) => (
               </TableHeadingRow>
             ))}
           </TableRow>
-          
+
           {body.map((row, index) => (
             <TableRow key={row.heading}>
               <TableHeadingColumn index={index} length={body.length}>
@@ -38,7 +37,7 @@ const CustomTable = ({ title, headings, body }) => (
               ))}
             </TableRow>
           ))}
-        </BodyContainer>
+        </tbody>
       </Table>
     </TableContainer>
   </>

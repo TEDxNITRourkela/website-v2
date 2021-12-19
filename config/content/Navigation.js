@@ -1,8 +1,10 @@
 /* eslint-disable max-len */
+import { LOGOS } from '../img/logos';
+
 export default {
   title: 'Navigation',
   logo: {
-    src: 'https://res.cloudinary.com/sambitsankalp/image/upload/v1636208790/TedxNITR/White_Logo_ldguyq.png',
+    src: LOGOS.TEDxNITRourkela.LIGHT,
     alt: 'TedxNITRourkela',
   },
   navItems: [
@@ -23,6 +25,10 @@ export default {
       link: '/tickets',
     },
     {
+      name: 'Events',
+      link: '/events',
+    },
+    {
       name: 'Participate',
       link: '/campus_ambassadors',
     },
@@ -41,10 +47,6 @@ export default {
     {
       name: 'Join',
       link: '/join',
-    },
-    {
-      name: 'Events',
-      link: '/events',
     },
   ],
 };

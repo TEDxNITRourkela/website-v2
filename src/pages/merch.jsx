@@ -2,18 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Components
-import { Layout, Table, Card, Heading1 } from '../components';
+import { Layout, Table, Card, Heading1, PageContainer } from '../components';
 
 // Assests
 import { merch } from '../../config/content';
 
-const Container = styled.div`
-  max-width: 100vw;
-  height: auto;
-  min-height: 100vh;
-  padding-top: 80px;
-  margin: 80px 5% 130px;
-`;
 
 const CardContainer = styled.div`
   display: flex;
@@ -28,7 +21,7 @@ const Merch = () => {
   const { title, headings, body } = merch.SIZE;
   return (
     <Layout>
-      <Container>
+      <PageContainer>
         <Heading1>Merchandise</Heading1>
         <CardContainer>
           {merch.MERCH.map(({ name, imageUrl, description, price }) => (
@@ -42,7 +35,7 @@ const Merch = () => {
           ))}
         </CardContainer>
         <Table title={title} headings={headings} body={body} />
-      </Container>
+      </PageContainer>
     </Layout>
   );
 };
