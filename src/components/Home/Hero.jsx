@@ -13,12 +13,7 @@ import calculateTimeLeft, { getlength } from '../../utils/timer';
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const { caption, heading } = home;
-
-  const logo = {
-    src: 'https://res.cloudinary.com/sambitsankalp/image/upload/v1636208790/TedxNITR/White_Logo_ldguyq.png',
-    alt: 'TedxNITRourkela',
-  };
+  const { caption, logo, heading } = home.CONTENT1;
 
   useEffect(() => {
     setTimeout(() => {

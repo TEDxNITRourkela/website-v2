@@ -22,7 +22,7 @@ const Content = styled(Para2)`
 
 const Section = styled.div`
     width: 50%;
-    margin: 20px;
+    margin: 0 10px;
     
     @media(max-width: 540px) {
         width: 90%;
@@ -69,9 +69,8 @@ const Wrapper = styled(Container)`
     align-items: center;
     color: var(--color-secondary);
     height: 100%;
-    width: 90%;
+    width: 100%;
     min-height: 300px;
-    margin-top: 50px;
 
     @media(max-width: 540px) {
       flex-direction: ${(reverse) => (reverse ? 'column-reverse' : 'column')};
@@ -121,7 +120,7 @@ function About({ direction, first, DATA, link, columnReverse = false }) {
 
   return (
     <Wrapper columnReverse={columnReverse}
-      style={{ marginTop: first ? '80px' : '50px' }}
+      style={{ marginTop: first ? '0px' : '50px' }}
     >
       <Img1 src={GRAPHICS.TOP_LEFT} alt='ellipses'/>
       <Img2
