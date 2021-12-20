@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+// Libraries
+import { Helmet } from 'react-helmet';
+
 // Components
 import { Layout, EventHero, SpeakerSection, Container } from '../../../components';
 
@@ -20,6 +23,11 @@ const Events = ({ params }) => {
 
   return (
     <Layout isContainer={false}>
+      <Helmet>
+        <title>{`TEDxNITRourkela | ${eventData?.name}`}</title>
+        <meta name='title' content={`TEDxNITRourkela | ${eventData?.name}`} />
+        <link rel='canonical' href={`https://tedxnitrourkela.com/${year}/${key}`} />
+      </Helmet>
       {eventData && (
         <>
           <EventHero year={year} name={eventData.name} about={eventData.about} />

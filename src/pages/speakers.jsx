@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Libraries
+import { Helmet } from 'react-helmet';
+
 // Components
 import { Layout, PageContainer, SpeakerSection } from '../components';
 
@@ -21,6 +24,18 @@ const Decoration = styled.img`
 
 const Speaker = () => (
   <Layout>
+    <Helmet>
+      <title>TEDxNITRourkela | Speakers</title>
+      <meta name='title' content='TEDxNITRourkela | Speakers' />
+      <link rel='canonical' href='https://tedxnitrourkela.com/speakers' />
+      {speaker.LIVEGUESTS.map(({ shortDescription, name }) => (
+        <meta
+          key={name}
+          name='description'
+          content={`TEDxNITRourkela Speaker | ${name} |${shortDescription}`}
+        />
+      ))}
+    </Helmet>
     <PageContainer>
       <SpeakerSection title='TEDxNITRourkelaLive 2021' data={speaker.LIVEGUESTS} />
       <Decoration src={GRAPHICS.TOP_LEFT} alt='ellipse' />

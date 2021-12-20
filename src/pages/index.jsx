@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 
 // Libraries
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { onSnapshot, doc } from 'firebase/firestore';
-
-// Utils
-import { useFirebase } from '../utils/firebase';
 
 // Components
 import { Layout, Main, ContentBanner, Subscribe } from '../components';
+
+// Utils
+import { useFirebase } from '../utils/firebase';
+import { eventData, breadcrumbsData, faqData, logoData, merch } from '../utils/structuredData';
 
 // Assets
 import { home } from '../../config/content';
@@ -67,6 +69,21 @@ const Homepage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>TEDxNITRourkela</title>
+        <meta name='title' content='TEDxNITRourkela' />
+        <link rel='canonical' href='https://tedxnitrourkela.com' />
+
+        <script type='application/ld+json'>{JSON.stringify(eventData)}</script>
+        <script type='application/ld+json'>{JSON.stringify(faqData)}</script>
+        <script type='application/ld+json'>{JSON.stringify(logoData)}</script>
+        <script type='application/ld+json'>{JSON.stringify(breadcrumbsData)}</script>
+        {merch.map((product) => (
+          <script key={product.sku} type='application/ld+json'>
+            {JSON.stringify(product)}
+          </script>
+        ))}
+      </Helmet>
       <Layout>
         <Main number='1' />
         <ContentBanner DATA={home.CONTENT2.ONE} wrapContainer={false} />
