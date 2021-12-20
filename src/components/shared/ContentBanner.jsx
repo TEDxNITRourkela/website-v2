@@ -13,7 +13,7 @@ const Column = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
+  margin-top: 20px;
   @media (max-width: 540px) {
     width: 95%;
     min-height: 100px;
@@ -27,7 +27,6 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin-top: 20px;
 `;
 
 const Img = styled.img`
@@ -120,6 +119,7 @@ const Section1 = styled(Container)`
 
   @media (max-width: 540px) {
     flex-direction: column;
+    margin: 40px 0;
   }
 `;
 
@@ -134,6 +134,7 @@ const Section2 = styled.div`
 
   @media (max-width: 540px) {
     flex-direction: column;
+    margin: 40px 0;
   }
 `;
 

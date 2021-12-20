@@ -136,7 +136,7 @@ const LIVEGUESTS = [
     ],
   },
   {
-    isPublished: false,
+    isPublished: true,
     name: 'Isha Datar',
     description: [
       'Isha Datar, apart from being the Executive Director of ',
@@ -170,7 +170,7 @@ const LIVEGUESTS = [
     ],
   },
   {
-    isPublished: false,
+    isPublished: true,
     name: 'Steven Johnson',
     description: [
       'Steven Johnson has authored numerous books on the intersection of science, technology, and culture. He is the recipient of ',
@@ -205,7 +205,7 @@ const LIVEGUESTS = [
     ],
   },
   {
-    isPublished: false,
+    isPublished: true,
     name: 'Pardis Parker',
     description: [
       'Pardis Parker is an award-winning director, writer, actor, and comedian. He has done commendable work in the field of entertainment and has been validated with several prestigious awards and nominations. His acting work has received acclamation from the ',
