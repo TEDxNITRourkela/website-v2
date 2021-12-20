@@ -16,7 +16,7 @@ const Events = ({ params }) => {
     )[0];
 
     setEventData(ed);
-  }, []);
+  }, [year, key]);
 
   return (
     <Layout isContainer={false}>

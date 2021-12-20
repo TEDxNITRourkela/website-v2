@@ -18,18 +18,32 @@ const DecorationOne = styled.img`
   position: absolute;
   top: 100px;
   right: 0px;
+  @media (max-width: 600px) {
+    width: 30%;
+    height: auto;
+  }
 `;
 
 const DecorationTwo = styled.img`
   position: absolute;
   bottom: -140px;
   left: 0px;
+  @media (max-width: 600px) {
+    width: 30%;
+    height: auto;
+    bottom: -90px;
+  }
 `;
 
 const DecorationThree = styled.img`
   position: absolute;
   bottom: -450px;
   right: 0px;
+  @media (max-width: 600px) {
+    width: 30%;
+    height: auto;
+    bottom: -600px;
+  }
 `;
 
 const Homepage = () => {

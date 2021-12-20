@@ -6,7 +6,18 @@ import { Layout, Table, Card, Heading1, PageContainer } from '../components';
 
 // Assests
 import { merch } from '../../config/content';
+import { GRAPHICS } from '../../config/img/graphics';
 
+const Decoration = styled.img`
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: -1;
+  @media (max-width: 600px) {
+    width: 50%;
+    height: auto;
+  }
+`;
 
 const CardContainer = styled.div`
   display: flex;
@@ -35,6 +46,7 @@ const Merch = () => {
           ))}
         </CardContainer>
         <Table title={title} headings={headings} body={body} />
+        <Decoration src={GRAPHICS.TOP_LEFT} alt='ellipse' />
       </PageContainer>
     </Layout>
   );

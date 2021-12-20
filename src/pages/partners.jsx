@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 // Libraries
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Heading2, PageContainer, Layout } from '../components';
+import { PageContainer, Layout, Heading1 } from '../components';
 
 // Component
 import Partners from '../components/partners/Partner';
@@ -13,28 +13,27 @@ import Partners from '../components/partners/Partner';
 // Placeholder
 import { PARTNER } from '../../config/content/Partner';
 
-const Title = styled(Heading2)`
+const Title = styled(Heading1)`
   font-weight: 800;
 `;
 
 const TitleContainer = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
 `;
 
 const HorizontalLine = styled.div`
-    width: 80%;
-    height: 1px;
-    background-color: var(--color-secondary);
-    opacity: 0.3;
-    z-index: -1;
+  width: 80%;
+  height: 1px;
+  background-color: var(--color-secondary);
+  opacity: 0.3;
+  z-index: -1;
 `;
 
 function Partner() {
-
   return (
     <Layout>
       <Helmet>
@@ -82,27 +81,25 @@ function Partner() {
         ))}
       </Helmet>
 
-      <PageContainer style={{ marginTop: '150px' }}>
+      <PageContainer>
         <TitleContainer>
-          <Title>
-            TEDxNITRourkelaLive 2021
-          </Title>
+          <Title>TEDxNITRourkelaLive 2021</Title>
           <HorizontalLine />
         </TitleContainer>
         <Partners DATA={PARTNER.LIVE.ONE} />
         <Partners DATA={PARTNER.LIVE.TWO} />
 
-        <TitleContainer>
-          <Title>
-            TedxNITRourkela 2021
-          </Title>
-          <HorizontalLine />
-        </TitleContainer>
-        <Partners DATA={PARTNER.ONE} main />
-        <Partners DATA={PARTNER.TWO} />
-        <Partners DATA={PARTNER.THREE} />
-        <Partners DATA={PARTNER.FOUR} />
-        <Partners DATA={PARTNER.FIVE} />
+        <div style={{ marginTop: '150px' }}>
+          <TitleContainer>
+            <Title>TedxNITRourkela 2021</Title>
+            <HorizontalLine />
+          </TitleContainer>
+          <Partners DATA={PARTNER.ONE} main />
+          <Partners DATA={PARTNER.TWO} />
+          <Partners DATA={PARTNER.THREE} />
+          <Partners DATA={PARTNER.FOUR} />
+          <Partners DATA={PARTNER.FIVE} />
+        </div>
 
         {/* <ContentBanner DATA={PARTNER.CONTENT} wrapContainer /> */}
       </PageContainer>
@@ -111,5 +108,3 @@ function Partner() {
 }
 
 export default Partner;
-
- 
