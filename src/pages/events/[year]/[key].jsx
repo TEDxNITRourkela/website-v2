@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
 // Libraries
 import { Helmet } from 'react-helmet';
@@ -8,6 +9,23 @@ import { Layout, EventHero, SpeakerSection, Container } from '../../../component
 
 // Assets
 import { events } from '../../../../config/content';
+import { GRAPHICS } from '../../../../config/img/graphics';
+
+const DecorationOne = styled.img`
+  position: absolute;
+  top: 390px;
+  right: 0px;
+  z-index: -1;
+  @media (max-width: 500px) {
+    top: 320px;
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    height: auto;
+    top: 320px;
+  }
+`;
+
 
 const Events = ({ params }) => {
   const { year, key } = params;
@@ -36,6 +54,7 @@ const Events = ({ params }) => {
           </Container>
         </>
       )}
+      <DecorationOne src={GRAPHICS.TOP_RIGHT_EVENT} alt='ellipse' />
     </Layout>
   );
 };

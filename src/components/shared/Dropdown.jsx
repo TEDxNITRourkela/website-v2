@@ -14,7 +14,7 @@ const DropdownContainer = styled.div`
   position: absolute;
   top: 100px;
   width: 200px;
-  transform: translateX(0%);
+  transform: translateX(50%);
   background-color: #242526;
   overflow: hidden;
   transition: height 500ms ease;

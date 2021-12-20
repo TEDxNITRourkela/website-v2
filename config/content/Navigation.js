@@ -20,18 +20,18 @@ export default {
       name: 'Partners',
       link: '/partners',
     },
-    {
-      name: 'Tickets',
-      link: '/tickets',
-    },
+    // {
+    //   name: 'Tickets',
+    //   link: '/tickets',
+    // },
     {
       name: 'Events',
       link: '/events',
     },
-    {
-      name: 'Participate',
-      link: '/campus_ambassadors',
-    },
+    // {
+    //   name: 'Participate',
+    //   link: '/campus_ambassadors',
+    // },
     {
       name: 'Merch',
       link: '/merch',
@@ -44,9 +44,9 @@ export default {
       name: 'Gallery',
       link: '/gallery',
     },
-    {
-      name: 'Join',
-      link: '/join',
-    },
+    // {
+    //   name: 'Join',
+    //   link: '/join',
+    // },
   ],
 };
