@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { onSnapshot, doc } from 'firebase/firestore';
 
 // Components
-import { Layout, Main, ContentBanner, Subscribe } from '../components';
+import { Layout, Main, ContentBanner } from '../components';
 
 // Utils
 import { useFirebase } from '../utils/firebase';
@@ -20,6 +20,7 @@ const DecorationOne = styled.img`
   position: absolute;
   top: 100px;
   right: 0px;
+  z-index: -1;
   @media (max-width: 600px) {
     width: 30%;
     height: auto;
@@ -30,6 +31,7 @@ const DecorationTwo = styled.img`
   position: absolute;
   bottom: -140px;
   left: 0px;
+  z-index: -1;
   @media (max-width: 600px) {
     width: 30%;
     height: auto;
@@ -41,6 +43,7 @@ const DecorationThree = styled.img`
   position: absolute;
   bottom: -450px;
   right: 0px;
+  z-index: -1;
   @media (max-width: 600px) {
     width: 30%;
     height: auto;
@@ -87,7 +90,7 @@ const Homepage = () => {
       <Layout>
         <Main number='1' />
         <ContentBanner DATA={home.CONTENT2.ONE} wrapContainer={false} />
-        <Subscribe />
+        {/* <Subscribe /> */}
         <DecorationOne src={GRAPHICS.TOP_RIGHT} alt='ellipse' />
         <DecorationTwo src={GRAPHICS.BOTTOM_LEFT} alt='ellipse' />
         <DecorationThree src={GRAPHICS.BOTTOM_RIGHT} alt='ellipse' />

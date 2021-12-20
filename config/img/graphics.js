@@ -15,7 +15,7 @@ export const GRAPHICS = Object.freeze({
   CIRCLES:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/graphics/circles_fjjqwx.png',
   TOP_RIGHT_EVENT:
-    'https://res.cloudinary.com/sambitsankalp/image/upload/v1639994175/TedxNITR/EventDecorartionOne_ty3lvo.png',
+    'https://res.cloudinary.com/sambitsankalp/image/upload/v1640005630/TedxNITR/EventDecorartionOne_ptzdvh.png',
   BOTTOM_LEFT_EVENT:
     'https://res.cloudinary.com/sambitsankalp/image/upload/v1639994185/TedxNITR/EventDecorartionTwo_ha0saz.png',
 });

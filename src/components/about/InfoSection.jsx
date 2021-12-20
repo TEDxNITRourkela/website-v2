@@ -30,7 +30,7 @@ const Section = styled.div`
 `;
 
 const Img = styled.img`
-  width: 100%;
+  width: 90%;
   height: auto;
 `;
 

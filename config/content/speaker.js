@@ -1,10 +1,14 @@
 /* eslint-disable max-len */
 
-import { faBook, faGlobe, faUniversity } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faGlobe, faGraduationCap, faUniversity } from '@fortawesome/free-solid-svg-icons';
 import {
+  faBehance,
   faFacebookF,
+  faGithub,
   faInstagram,
   faLinkedinIn,
+  faQuora,
+  faSpotify,
   faTwitter,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
@@ -23,7 +27,306 @@ const SILHOUETTE = {
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/silhouettes/Mask_Group-4_jaqgo1.png',
 };
 
-const SPEAKERS = {
+const SPEAKERS_EVENT_ONE = {
+  ONE: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/ashwathy-satheeshan-removebg-preview_100_ycbz30.png',
+  TWO: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/anup_nandy-removebg-preview_hsno3b.png',
+  THREE:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/lisa-russell-removebg-preview_bfjbup.png',
+  FOUR: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/pranav_khaitan-removebg-preview_yuzml1.png',
+  FIVE: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/jimy-removebg-preview_hxqrld.png',
+  SIX: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/lokesh-removebg-preview_rmxpfx.png',
+  SEVEN:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/kabir-cafe-bg_mi8xsp.png',
+  EIGHT:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/riki-biswas-removebg-preview_mxcqf2.png',
+  NINE: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/sabhyasachi-patra-removebg-preview_rrx28e.png',
+};
+
+const GUESTS = [
+  {
+    isPublished: true,
+    shilhouette: SILHOUETTE.ONE,
+    name: 'Ashwathy  Satheesan',
+    description: [
+      'A graduate of ',
+      { href: 'http://www.nid.edu/', content: 'NID Ahemdabad' },
+      ', Ashwathy is passionate about projects dealing with design activism, circular economy & the future. She has won numerous accolades, including National Winner of the prestigious ',
+      {
+        href: 'https://www.jamesdysonaward.org/',
+        content: 'James Dyson Award',
+      },
+      ' in 2019.',
+    ],
+    shortDescription: 'Winner | James Dyson Award',
+    speakerImage: SPEAKERS_EVENT_ONE.ONE,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://www.linkedin.com/in/ashwathysatheesan/',
+        icon: faLinkedinIn,
+      },
+      {
+        link: 'https://www.instagram.com/ashwathy_cs/',
+        icon: faInstagram,
+      },
+      {
+        link: 'https://www.behance.net/AshwathySatheesan/',
+        icon: faBehance,
+      },
+    ],
+  },
+  {
+    isPublished: true,
+    shilhouette: SILHOUETTE.TWO,
+    name: 'Anup Nandy',
+    description: [
+      'Professor Anup Nandy, a researcher in AI & ML area and professor at ',
+      { href: 'https://nitrkl.ac.in/', content: 'NIT Rourkela' },
+      ', was one of the few Indian scientists selected to present his research in the momentous 5th BRICS Young Scientist Conclave 2020.',
+    ],
+    shortDescription: 'Represented India @ 5th BRICS YSC',
+    speakerImage: SPEAKERS_EVENT_ONE.TWO,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://www.linkedin.com/in/anup-nandy-14032a178/',
+        icon: faLinkedinIn,
+      },
+      {
+        link: 'https://www.nitrkl.ac.in/FProfile.aspx?nandya',
+        icon: faGraduationCap,
+      },
+      {
+        link: 'https://scholar.google.co.in/citations?user=9bnp0PQAAAAJ&hl=en',
+        icon: faBook,
+      },
+    ],
+  },
+  {
+    isPublished: true,
+    shilhouette: SILHOUETTE.THREE,
+    name: 'Lisa Russell',
+    description: [
+      'Lisa Russell, MPH, is an ',
+      { href: 'https://emmys.com', content: 'Emmy-winning' },
+      ' filmmaker and art curator. She is a two-time ',
+      {
+        href: 'https://www.ted.com/about/programs-initiatives/tedx-program',
+        content: 'TEDx',
+      },
+      ' speaker, Fulbright Specialist and an accomplished presenter along with many other accolades.',
+    ],
+    shortDescription: 'Winner | Emmy Award 2009',
+    speakerImage: SPEAKERS_EVENT_ONE.THREE,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://www.linkedin.com/in/lisarussellfilms/',
+        icon: faLinkedinIn,
+      },
+      {
+        link: 'https://twitter.com/lisarusselfilm',
+        icon: faTwitter,
+      },
+      {
+        link: 'https://www.instagram.com/lisarussellfilm/',
+        icon: faInstagram,
+      },
+      {
+        link: 'http://lisa-russell-films.squarespace.com/',
+        icon: faGlobe,
+      },
+    ],
+  },
+  {
+    isPublished: true,
+    name: 'Pranav Khaitan',
+    description: [
+      'Pranav Khaitan is a senior engineering lead at Google AI where he led various R&D projects like Chrome, Youtube. He was also a part of the ',
+      { href: 'https://www.nobelprize.org/', content: 'Nobel Peace Prize' },
+      ' winning team in 2020. He has also been working to solve humanitarian aid problems in partnership with the ',
+      { href: 'https://www.wfp.org/', content: 'UN' },
+      ' and the ',
+      { href: 'https://www.worldbank.org/en/home', content: 'World Bank.' },
+    ],
+    shortDescription: 'Winning Team of Nobel Peace Prize 2020',
+    speakerImage: SPEAKERS_EVENT_ONE.FOUR,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://www.linkedin.com/in/pranavkhaitan/',
+        icon: faLinkedinIn,
+      },
+      {
+        link: 'https://twitter.com/pranavkhaitan',
+        icon: faTwitter,
+      },
+      {
+        link: 'https://research.google/people/106395/',
+        icon: faBook,
+      },
+    ],
+  },
+  {
+    isPublished: true,
+    name: 'Jeremy Philemon',
+    description: [
+      'Jeremy has been maintaining the ',
+      { href: 'https://covid19india.org', content: 'covid19india.org' },
+      ' website since its initial push to production, giving access to centralized, reliable data presented with clarity and good faith.',
+    ],
+    shortDescription: 'Team led the initiative covid19india.org',
+    speakerImage: SPEAKERS_EVENT_ONE.FIVE,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://www.linkedin.com/in/jeremy-philemon-363129121',
+        icon: faLinkedinIn,
+      },
+      {
+        link: 'https://twitter.com/jeremyphilemon?s=09',
+        icon: faTwitter,
+      },
+      {
+        link: 'https://github.com/jeremyphilemon',
+        icon: faGithub,
+      },
+    ],
+  },
+  {
+    isPublished: true,
+    name: 'Lokesh K. Gurram',
+    description: [
+      'Co-founder at ',
+      { href: 'https://finshots.in/', content: 'Finshots' },
+      ', a popular and emerging finance bulletin, he is an alumnus of ',
+      { href: 'https://home.iitd.ac.in/', content: 'IIT Delhi' },
+      ' and one of the few people who truly understand the meaning of building revolutionary services and technology.',
+    ],
+    shortDescription: 'Co-founder of Ditto by Finshots',
+    speakerImage: SPEAKERS_EVENT_ONE.SIX,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://in.linkedin.com/in/lokeshgurram',
+        icon: faLinkedinIn,
+      },
+      {
+        link: 'https://twitter.com/lokesh_gurram',
+        icon: faTwitter,
+      },
+      {
+        link: 'https://www.quora.com/profile/Lokesh-Gurram',
+        icon: faQuora,
+      },
+    ],
+  },
+  {
+    isPublished: true,
+    name: 'Kabir Cafe',
+    description: [
+      'Kabir Cafe is a Mumbai-based folk fusion band known for taking the voice of the saint Kabir Das across the country through their compositions.  In an era where music is losing its credibility, Kabir Cafe has made sure that they present Kabir’s poetry musically without compromising its beauty. Their song ',
+      {
+        href: 'https://open.spotify.com/album/4qsUOnusaOfaWLEVye5ekB?highlight=spotify:track:18dts4OqWOQTGFlMTGodkk',
+        content: '‘Mat Kar Maya ko Ahankar’',
+      },
+      ' for instance, was featured in the hit series, ',
+      {
+        href: 'https://www.sonyliv.com/shows/scam-1992-the-harshad-mehta--1700000292',
+        content: '“Scam 1992’',
+      },
+      ', and was widely critically acclaimed.',
+    ],
+    shortDescription: 'Scam 1992 Song Artist',
+    speakerImage: SPEAKERS_EVENT_ONE.SEVEN,
+    isLongCard: true,
+    links: [
+      {
+        link: 'https://twitter.com/KabirCafe',
+        icon: faTwitter,
+      },
+      {
+        link: 'https://www.instagram.com/kabircafelive/',
+        icon: faInstagram,
+      },
+      {
+        link: 'https://open.spotify.com/artist/2AWF4fUAstzXyJd01JTuS3',
+        icon: faSpotify,
+      },
+      {
+        link: 'https://www.youtube.com/channel/UCh4HyUdUyM7Na3z_Ls-LmnA',
+        icon: faYoutube,
+      },
+    ],
+  },
+  {
+    isPublished: true,
+    name: 'Riki Biswas',
+    description: [
+      'Mr. Biswas is an alumnus of IITG and co-founder of numerous revolutionary companies, Pointo being one of them. Pointo provides an app-based e-rickshaw booking facility. Rodo, the brainchild of Mr. Biswas, is India’s FIRST dock-less public e-bicycle sharing service that aims for a cleaner, greener, hassle-free environment',
+    ],
+    shortDescription: 'Co-Founder & CEO of Pointo',
+    speakerImage: SPEAKERS_EVENT_ONE.EIGHT,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://www.linkedin.com/in/riki-biswas-488ba2a0/',
+        icon: faLinkedinIn,
+      },
+      {
+        link: 'https://www.instagram.com/riki.biswas.iitg/?hl=en',
+        icon: faInstagram,
+      },
+      {
+        link: 'https://www.facebook.com/riki.biswas.52',
+        icon: faFacebookF,
+      },
+    ],
+  },
+  {
+    isPublished: true,
+    name: 'Sabyasachi Patra',
+    description: [
+      'Mr. Patra is an ',
+      { href: 'https://ximb.edu.in/', content: 'NIT Rourkela' },
+      ' alumnus and did his Masters from ',
+      { href: '', content: 'XIMB' },
+      '. After years in corporate, he turned his life and started his filming company Wild Tiger Productions. He has been featured in press releases of Adobe Spark, ',
+      {
+        href: 'https://www.newindianexpress.com/education/edex/2014/jun/30/Preserving-Wildlife-his-Priority-630148.html',
+        content: 'The New Indian Express',
+      },
+      ' to name a few.',
+    ],
+    shortDescription: 'Wildlife Filmographer | Engineer',
+    speakerImage: SPEAKERS_EVENT_ONE.NINE,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://www.linkedin.com/in/sapatra/',
+        icon: faLinkedinIn,
+      },
+      {
+        link: 'https://www.instagram.com/indiawilds/',
+        icon: faInstagram,
+      },
+      {
+        link: 'https://www.facebook.com/riki.biswas.52',
+        icon: faFacebookF,
+      },
+      {
+        link: 'https://twitter.com/indiawilds',
+        icon: faTwitter,
+      },
+      {
+        link: 'https://www.indiawilds.com/',
+        icon: faGlobe,
+      },
+    ],
+  },
+];
+
+const SPEAKERS_EVENT_TWO = {
   ONE: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Zach_King_2_stntn1.png',
   TWO: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Adam_Grant_1_oh18t8.png',
   THREE:
@@ -49,7 +352,7 @@ const LIVEGUESTS = [
       ' magazine.',
     ],
     shortDescription: 'Filmmaker | Illusionist',
-    speakerImage: SPEAKERS.ONE,
+    speakerImage: SPEAKERS_EVENT_TWO.ONE,
     shilhouette: SILHOUETTE.ONE,
     isLongCard: false,
     links: [
@@ -87,7 +390,7 @@ const LIVEGUESTS = [
       ', specializing in organizational psychology. Apart from being a psychologist, ​He is the #1 New York Times bestselling author of 5 books: Think Again, Give and Take, Originals, Option B, and Power Moves. ',
     ],
     shortDescription: 'Organizational Psychologist | New York Times bestselling author',
-    speakerImage: SPEAKERS.TWO,
+    speakerImage: SPEAKERS_EVENT_TWO.TWO,
     shilhouette: SILHOUETTE.TWO,
     isLongCard: false,
     links: [
@@ -117,7 +420,7 @@ const LIVEGUESTS = [
       ' and the director of the Stanford Social Neuroscience Lab. He is the winner of the prestigious Sage Young Scholar and has his writings featured in The New York Times, The Washington Post, The New Yorker, and The Atlantic',
     ],
     shortDescription: 'Stanford Director Social Neuroscience Lab',
-    speakerImage: SPEAKERS.THREE,
+    speakerImage: SPEAKERS_EVENT_TWO.THREE,
     shilhouette: SILHOUETTE.THREE,
     isLongCard: false,
     links: [
@@ -147,7 +450,7 @@ const LIVEGUESTS = [
       ' has made her mark by emphasizing and focusing on the advancement of cellular agriculture. She has highlighted the opportunities for cutting-edge innovation to farmers, producers, grocery stores, to name a few.',
     ],
     shortDescription: 'Executive Director New Harvest',
-    speakerImage: SPEAKERS.FOUR,
+    speakerImage: SPEAKERS_EVENT_TWO.FOUR,
     shilhouette: SILHOUETTE.FOUR,
     isLongCard: false,
     links: [
@@ -186,7 +489,7 @@ const LIVEGUESTS = [
       ' cover article. His writings have been featured in The New York Times, The Wall Street Journal, etc.',
     ],
     shortDescription: 'Author | Media Theorist',
-    speakerImage: SPEAKERS.FIVE,
+    speakerImage: SPEAKERS_EVENT_TWO.FIVE,
     shilhouette: SILHOUETTE.FIVE,
     isLongCard: false,
     links: [
@@ -215,7 +518,7 @@ const LIVEGUESTS = [
       },
     ],
     shortDescription: 'Award winning Director | Comedian',
-    speakerImage: SPEAKERS.SIX,
+    speakerImage: SPEAKERS_EVENT_TWO.SIX,
     shilhouette: SILHOUETTE.SIX,
     isLongCard: false,
     links: [
@@ -254,7 +557,7 @@ const LIVEGUESTS = [
       ' and have given numerous talks. They are best known for their deep knowledge of the importance of humour in business.',
     ],
     shortDescription: 'Psychologists & Professors @Stanford',
-    speakerImage: SPEAKERS.SEVEN,
+    speakerImage: SPEAKERS_EVENT_TWO.SEVEN,
     shilhouette: SILHOUETTE.SEVEN,
     isLongCard: true,
     links: [
@@ -301,7 +604,7 @@ const LIVEGUESTS = [
     ],
     shortDescription:
       'Top violinists in the DownBeat Critics Poll • Guitarist | Composer • Jazz and Rock musician',
-    speakerImage: SPEAKERS.EIGHT,
+    speakerImage: SPEAKERS_EVENT_TWO.EIGHT,
     shilhouette: SILHOUETTE.EIGHT,
     isLongCard: true,
     links: [
@@ -335,4 +638,5 @@ const LIVEGUESTS = [
 
 export default {
   LIVEGUESTS,
+  GUESTS,
 };
