@@ -17,6 +17,7 @@ const Container = styled.div`
   flex-direction: column;
   margin-top: 10px;
   z-index: 3;
+
   .heading {
     margin-top: 50px;
   }

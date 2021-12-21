@@ -4,12 +4,11 @@ import React from 'react';
 import { Navbar } from '..';
 import Footer from '../marginals/Footer/Footer';
 import PageContainer from './PageContainer';
-import Container from './Container';
 
-export default ({ children, isContainer = true }) => (
-  <PageContainer style={{ marginBottom: '0px' }}>
+export default ({ children }) => (
+  <PageContainer>
     <Navbar />
-    {isContainer ? <Container>{children}</Container> : children}
+    {children}
     <Footer />
   </PageContainer>
 );

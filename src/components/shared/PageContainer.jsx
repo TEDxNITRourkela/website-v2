@@ -7,7 +7,6 @@ export default styled.div`
   height: auto;
   min-height: 100vh;
   margin: 0;
-  margin-bottom: 100px;
   padding: 0;
   padding-top: 70px;
   overflow-x: hidden;

@@ -7,7 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 // Components
 import { NavContainer, LogoContainer, TabContainer, TabLink, Navbar, NavText } from './styles';
-import { DropDown } from '../..';
+import { DropDown, Container } from '../..';
 import DropdownNavbarItem from './DropdownNavbarItem';
 
 // assets
@@ -34,32 +34,34 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
 
   return (
     <NavContainer shadow={shadow}>
-      <Navbar>
-        <LogoContainer>
-          <Link to='/'>
-            <img src={logo.src} className='logo' alt={logo.alt} />
-          </Link>
-        </LogoContainer>
+      <Container>
+        <Navbar>
+          <LogoContainer>
+            <Link to='/'>
+              <img src={logo.src} className='logo' alt={logo.alt} />
+            </Link>
+          </LogoContainer>
 
-        <FontAwesomeIcon className='bars' onClick={toggleMenuOpen} icon={faBars} />
+          <FontAwesomeIcon className='bars' onClick={toggleMenuOpen} icon={faBars} />
 
-        <TabContainer>
-          {navItems.map(({ link, name }) => {
-            if (name === 'Events') {
+          <TabContainer>
+            {navItems.map(({ link, name }) => {
+              if (name === 'Events') {
+                return (
+                  <DropdownNavbarItem key={link} name={name}>
+                    <DropDown data={events.NAVTEXT} />
+                  </DropdownNavbarItem>
+                );
+              }
               return (
-                <DropdownNavbarItem key={link} name={name}>
-                  <DropDown data={events.NAVTEXT} />
-                </DropdownNavbarItem>
+                <TabLink key={link} to={link}>
+                  <NavText>{name}</NavText>
+                </TabLink>
               );
-            }
-            return (
-              <TabLink key={link} to={link}>
-                <NavText>{name}</NavText>
-              </TabLink>
-            );
-          })}
-        </TabContainer>
-      </Navbar>
+            })}
+          </TabContainer>
+        </Navbar>
+      </Container>
     </NavContainer>
   );
 };

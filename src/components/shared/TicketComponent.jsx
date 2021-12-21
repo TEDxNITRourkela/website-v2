@@ -11,6 +11,7 @@ const TicketContainer = styled.div`
   min-height: 20vh;
   margin: 40px auto;
   z-index: 0;
+  max-width: 50rem;
 `;
 
 const Ticket = styled.img`

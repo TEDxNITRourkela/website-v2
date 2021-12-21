@@ -1,6 +1,10 @@
 import React from 'react';
 
 // Components
-import { Layout } from './src/components';
+import { App } from './src/components';
 
-export const wrapPageElement = ({ element }) => <Layout>{element}</Layout>;
+export const wrapRootElement = ({ element }) => (
+  <FirebaseProvider>
+    <App>{element}</App>
+  </FirebaseProvider>
+);

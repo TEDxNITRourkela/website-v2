@@ -7,7 +7,7 @@ import { Heading1, Heading2, CustomButton } from '../components';
 
 // Assets
 import { LOGOS } from '../../config/img/logos';
-import { GRAPHICS } from "../../config/img/graphics";
+import { GRAPHICS } from '../../config/img/graphics';
 import { VIDEOS } from '../../config/img/videos';
 
 const Wrapper = styled.div`
@@ -35,7 +35,7 @@ const Content = styled.h2`
   font-family: 'Zilla Slab';
   letter-spacing: 3;
 
-  @media (max-width: 540px){
+  @media (max-width: 540px) {
     font-size: 0.75rem;
   }
 `;
@@ -45,7 +45,7 @@ const Logo = styled.img`
   margin-bottom: 30px;
   width: 30%;
 
-  @media (max-width: 540px){
+  @media (max-width: 540px) {
     width: 80%;
   }
 `;
@@ -65,7 +65,7 @@ const TopRight = styled.img`
   top: 0px;
   right: 0px;
 
-  @media (max-width: 540px){
+  @media (max-width: 540px) {
     width: 30%;
     height: auto;
   }
@@ -76,7 +76,7 @@ const BottomLeft = styled.img`
   top: 100px;
   left: 0px;
 
-  @media (max-width: 540px){
+  @media (max-width: 540px) {
     width: 30%;
     height: auto;
   }
@@ -97,37 +97,30 @@ function Index() {
   return (
     <Wrapper>
       <Section>
-        <Content>
-          TECHNOLOGY . ENTERTAINMENT . DESIGN
-        </Content>
-        <Logo
-          src={LOGOS.TEDxNITRourkela.LIGHT}
-          alt='Logo'
-        />
-        <Topic>
-          &#8220;Learning from the Past&#8221;
-        </Topic>
+        <Content>TECHNOLOGY . ENTERTAINMENT . DESIGN</Content>
+        <Logo src={LOGOS.TEDxNITRourkela.LIGHT} alt='Logo' />
+        <Topic>&#8220;Learning from the Past&#8221;</Topic>
 
-        <video width="220" height="220" style={{ marginTop: '30px' }} autoPlay loop muted playsInline>
+        <video
+          width='220'
+          height='220'
+          style={{ marginTop: '30px' }}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
           <source src={VIDEOS.PAGE_NOT_FOUND} type='video/mp4' />
         </video>
-        <Error>
-          Error: Page not found!
-        </Error>
+        <Error>Error: Page not found!</Error>
 
         <CustomButton loading={loading} setLoading={setLoading} handleClick={handleClick}>
           Go Home
         </CustomButton>
       </Section>
 
-      <TopRight
-        src={GRAPHICS.TOP_RIGHT}
-        alt='ellipse'
-      />
-      <BottomLeft
-        src={GRAPHICS.BOTTOM_LEFT}
-        alt='ellipse'
-      />
+      <TopRight src={GRAPHICS.TOP_RIGHT} alt='ellipse' />
+      <BottomLeft src={GRAPHICS.BOTTOM_LEFT} alt='ellipse' />
     </Wrapper>
   );
 }

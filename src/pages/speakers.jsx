@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 // Components
-import { Layout, PageContainer, SpeakerSection } from '../components';
+import { SpeakerSection, Container } from '../components';
 
 // Assets
 import { speaker } from '../../config/content';
@@ -23,7 +23,7 @@ const Decoration = styled.img`
 `;
 
 const Speaker = () => (
-  <Layout>
+  <Container>
     <Helmet>
       <title>TEDxNITRourkela | Speakers</title>
       <meta name='title' content='TEDxNITRourkela | Speakers' />
@@ -36,11 +36,11 @@ const Speaker = () => (
         />
       ))}
     </Helmet>
-    <PageContainer>
+    <div style={{ marginTop: '2rem', marginBottom: '5rem' }}>
       <SpeakerSection title='TEDxNITRourkelaLive 2021' data={speaker.LIVEGUESTS} />
       <Decoration src={GRAPHICS.TOP_LEFT} alt='ellipse' />
-    </PageContainer>
-  </Layout>
+    </div>
+  </Container>
 );
 
 export default Speaker;
