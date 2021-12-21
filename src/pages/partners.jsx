@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 // Libraries
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { PageContainer, Layout, Heading1 } from '../components';
+import { Heading1, Container } from '../components';
 
 // Component
 import Partners from '../components/partners/Partner';
@@ -35,7 +35,7 @@ const HorizontalLine = styled.div`
 
 function Partner() {
   return (
-    <Layout>
+    <Container>
       <Helmet>
         <title>TEDxNITRourkela | Partners</title>
         <meta name='title' content='TEDxNITRourkela | Partners' />
@@ -81,7 +81,7 @@ function Partner() {
         ))}
       </Helmet>
 
-      <PageContainer>
+      <div style={{ marginTop: '2rem', marginBottom: '5rem' }}>
         <TitleContainer>
           <Title>TEDxNITRourkelaLive 2021</Title>
           <HorizontalLine />
@@ -100,10 +100,8 @@ function Partner() {
           <Partners DATA={PARTNER.FOUR} />
           <Partners DATA={PARTNER.FIVE} />
         </div>
-
-        {/* <ContentBanner DATA={PARTNER.CONTENT} wrapContainer /> */}
-      </PageContainer>
-    </Layout>
+      </div>
+    </Container>
   );
 }
 

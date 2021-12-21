@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 // Components
-import { Layout, Table, Card, Heading1, PageContainer } from '../components';
+import { Table, Card, Heading1, Container } from '../components';
 
 // Assests
 import { merch } from '../../config/content';
@@ -34,20 +34,13 @@ const CardContainer = styled.div`
 const Merch = () => {
   const { title, headings, body } = merch.SIZE;
   return (
-    <Layout>
+    <Container>
       <Helmet>
         <title>TEDxNITRourkela | Merchandise</title>
-        <meta name='title' content='TEDxNITRourkela' />
         <link rel='canonical' href='https://tedxnitrourkela.com/merchandise' />
-        {merch.MERCH.map((product) => (
-          <meta
-            key={product.name}
-            name='description'
-            content={`TEDxNITRourkela | Merchandise | ${product.name} | ${product.description}`}
-          />
-        ))}
       </Helmet>
-      <PageContainer>
+
+      <div style={{ marginTop: '2rem', marginBottom: '5rem' }}>
         <Heading1>Merchandise</Heading1>
         <CardContainer>
           {merch.MERCH.map(({ name, imageUrl, description, price }) => (
@@ -62,8 +55,8 @@ const Merch = () => {
         </CardContainer>
         <Table title={title} headings={headings} body={body} />
         <Decoration src={GRAPHICS.TOP_LEFT} alt='ellipse' />
-      </PageContainer>
-    </Layout>
+      </div>
+    </Container>
   );
 };
 

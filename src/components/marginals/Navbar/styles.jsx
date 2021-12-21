@@ -45,10 +45,6 @@ export const NavContainer = styled.div`
 
 export const Navbar = styled.div`
   width: 100%;
-  max-width: var(--max-width);
-  height: auto;
-  margin: 0px auto;
-  padding: 0rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

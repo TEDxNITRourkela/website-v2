@@ -42,3 +42,8 @@ export { default as CustomButton } from './shared/CustomButton';
 // shared
 export * from './shared';
 export { default as Navbar } from './marginals/Navbar/Navbar';
+export { default as App } from './App';
+
+// SEO
+export { default as SEO } from './shared/seo/SEO';
+export { default as StructuredData } from './shared/seo/StructuredData';
