@@ -33,7 +33,7 @@ const SEO = ({ title, description, img }) => {
     title: title || siteMetadata.title,
     description: description || siteMetadata.description,
     image: img || `${siteMetadata.canonicalUrl}${siteMetadata.image}`,
-    url: `${siteMetadata.canonicalUrl}${window?.location?.pathname}`,
+    url: `${siteMetadata.canonicalUrl}`,
     social: siteMetadata.social,
   };
 
