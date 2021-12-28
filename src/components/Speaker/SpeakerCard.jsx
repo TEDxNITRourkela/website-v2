@@ -69,13 +69,13 @@ const SpeakerCard = ({
               )}
             </Para2>
           </Content>
-          <LinkContainer>
+          {/* <LinkContainer>
             {links.map(({ link, icon }) => (
               <a key={link} href={link} target='_blank' rel='noreferrer'>
                 <FontAwesomeIcon className='icon' icon={icon} />
               </a>
             ))}
-          </LinkContainer>
+          </LinkContainer> */}
 
           <FontAwesomeIcon
             icon={faTimesCircle}
