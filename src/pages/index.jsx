@@ -51,7 +51,6 @@ const Homepage = () => {
       <Main number='1' />
       <ContentBanner DATA={home.CONTENT2.ONE} wrapContainer={false} />
 
-      {/* <Subscribe /> */}
       <DecorationOne src={GRAPHICS.TOP_RIGHT} alt='ellipse' />
       <DecorationTwo src={GRAPHICS.BOTTOM_LEFT} alt='ellipse' />
       <DecorationThree src={GRAPHICS.BOTTOM_RIGHT} alt='ellipse' />
