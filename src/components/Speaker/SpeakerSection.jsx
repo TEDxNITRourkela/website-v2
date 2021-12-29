@@ -11,39 +11,36 @@ const Container = styled.div`
   flex-wrap: wrap;
 `;
 
-const SpeakerSection = ({ data, title }) => (
-  <>
-    <Heading1>{title}</Heading1>
-    <Container>
-      {data.map(
-        (
-          {
-            name,
-            description,
-            shortDescription,
-            speakerImage,
-            links,
-            isLongCard,
-            isPublished,
-            shilhouette,
-          },
-          index,
-        ) => (
-          <SpeakerCard
-            key={`speaker-${index}-${name}`}
-            name={name}
-            description={description}
-            shortDescription={shortDescription}
-            speakerImage={speakerImage}
-            links={links}
-            shilhouette={shilhouette}
-            isLongCard={isLongCard}
-            isPublished={isPublished}
-          />
-        ),
-      )}
-    </Container>
-  </>
+const SpeakerSection = ({ data }) => (
+  <Container>
+    {data.map(
+      (
+        {
+          name,
+          description,
+          shortDescription,
+          speakerImage,
+          links,
+          isLongCard,
+          isPublished,
+          shilhouette,
+        },
+        index,
+      ) => (
+        <SpeakerCard
+          key={`speaker-${index}-${name}`}
+          name={name}
+          description={description}
+          shortDescription={shortDescription}
+          speakerImage={speakerImage}
+          links={links}
+          shilhouette={shilhouette}
+          isLongCard={isLongCard}
+          isPublished={isPublished}
+        />
+      ),
+    )}
+  </Container>
 );
 
 export default SpeakerSection;

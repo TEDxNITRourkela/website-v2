@@ -7,7 +7,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMdx(filter: { fileAbsolutePath: { regex: "/content/live/" } }) {
+      allMdx(filter: { fileAbsolutePath: { regex: "/content/events/" } }) {
         edges {
           node {
             frontmatter {

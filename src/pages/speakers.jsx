@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 // Libraries
 import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 
 // Components
 import { SpeakerSection, Container } from '../components';
 
 // Assets
-import { speaker } from '../../config/content';
 import { GRAPHICS } from '../../config/img/graphics';
 
 const Decoration = styled.img`
@@ -22,25 +22,57 @@ const Decoration = styled.img`
   }
 `;
 
-const Speaker = () => (
-  <Container>
-    <Helmet>
-      <title>TEDxNITRourkela | Speakers</title>
-      <meta name='title' content='TEDxNITRourkela | Speakers' />
-      <link rel='canonical' href='https://tedxnitrourkela.com/speakers' />
-      {speaker.LIVEGUESTS.map(({ shortDescription, name }) => (
-        <meta
-          key={name}
-          name='description'
-          content={`TEDxNITRourkela Speaker | ${name} |${shortDescription}`}
-        />
-      ))}
-    </Helmet>
-    <div style={{ marginTop: '2rem', marginBottom: '5rem' }}>
-      <SpeakerSection title='TEDxNITRourkelaLive 2021' data={speaker.LIVEGUESTS} />
-      <Decoration src={GRAPHICS.TOP_LEFT} alt='ellipse' />
-    </div>
-  </Container>
-);
+export const pageQuery = graphql`
+  {
+    mdx(fileAbsolutePath: { regex: "/content/live/" }) {
+      frontmatter {
+        dates
+        speakers {
+          isLongCard
+          isPublished
+          name
+          shortDescription
+          silhouette
+          speakerImage
+          description {
+            content
+            href
+          }
+          links {
+            icon
+            link
+          }
+        }
+      }
+    }
+  }
+`;
+
+const Speaker = ({ data }) => {
+  const { frontmatter, dates } = data.mdx;
+  const { speakers } = frontmatter;
+
+  return (
+    <Container>
+      <Helmet>
+        <title>TEDxNITRourkela | Speakers</title>
+        <meta name='title' content='TEDxNITRourkela | Speakers' />
+        <link rel='canonical' href='https://tedxnitrourkela.com/speakers' />
+        {speakers.map(({ shortDescription, name }, index) => (
+          <meta
+            key={`speaker-${index}-${name}`}
+            name='description'
+            content={`TEDxNITRourkela ${dates} Speaker | ${name} |${shortDescription}`}
+          />
+        ))}
+      </Helmet>
+
+      <div style={{ marginTop: '2rem', marginBottom: '5rem' }}>
+        <SpeakerSection data={speakers} />
+        <Decoration src={GRAPHICS.TOP_LEFT} alt='ellipse' />
+      </div>
+    </Container>
+  );
+};
 
 export default Speaker;

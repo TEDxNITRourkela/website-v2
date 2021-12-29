@@ -3,10 +3,17 @@ import React, { useState } from 'react';
 // libraries
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import * as faIcons1 from '@fortawesome/free-solid-svg-icons';
+import * as faIcons2 from '@fortawesome/free-brands-svg-icons';
 
 // Components
 import { CardContainer, Common, CardBack, ImageContainer, Content, LinkContainer } from './styles';
 import { Heading3, Para2, Para1 } from '..';
+
+const faIcons = {
+  ...faIcons1,
+  ...faIcons2,
+};
 
 const SpeakerCard = ({
   name,
@@ -69,13 +76,14 @@ const SpeakerCard = ({
               )}
             </Para2>
           </Content>
-          {/* <LinkContainer>
+
+          <LinkContainer>
             {links.map(({ link, icon }) => (
               <a key={link} href={link} target='_blank' rel='noreferrer'>
-                <FontAwesomeIcon className='icon' icon={icon} />
+                <FontAwesomeIcon className='icon' icon={faIcons[icon]} />
               </a>
             ))}
-          </LinkContainer> */}
+          </LinkContainer>
 
           <FontAwesomeIcon
             icon={faTimesCircle}
