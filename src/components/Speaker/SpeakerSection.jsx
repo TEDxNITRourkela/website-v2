@@ -16,18 +16,21 @@ const SpeakerSection = ({ data, title }) => (
     <Heading1>{title}</Heading1>
     <Container>
       {data.map(
-        ({
-          name,
-          description,
-          shortDescription,
-          speakerImage,
-          links,
-          isLongCard,
-          isPublished,
-          shilhouette,
-        }) => (
+        (
+          {
+            name,
+            description,
+            shortDescription,
+            speakerImage,
+            links,
+            isLongCard,
+            isPublished,
+            shilhouette,
+          },
+          index,
+        ) => (
           <SpeakerCard
-            key={name}
+            key={`speaker-${index}-${name}`}
             name={name}
             description={description}
             shortDescription={shortDescription}
