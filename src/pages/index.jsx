@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 // Libraries
 import styled from 'styled-components';
-import { onSnapshot, doc } from 'firebase/firestore';
 
 // Components
 import { Main, ContentBanner, Container } from '../components';
-
-// Utils
-import { useFirebase } from '../utils/firebase';
 
 // Assets
 import { home } from '../../config/content';
@@ -50,19 +46,6 @@ const DecorationThree = styled.img`
 `;
 
 const Homepage = () => {
-  const { firebase: app, db } = useFirebase();
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    if (app && db) {
-      const unsub = onSnapshot(doc(db, 'trial', 'trialDoc'), (snap) => {
-        setData(snap.data());
-      });
-
-      return unsub;
-    }
-  }, [app, db]);
-
   return (
     <Container>
       <Main number='1' />

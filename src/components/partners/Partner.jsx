@@ -2,9 +2,9 @@ import React from 'react';
 
 // Libraries
 import styled from 'styled-components';
-import { Heading2 } from '../index';
 
 // Assets
+import { Heading2 } from '../index';
 import { GRAPHICS } from '../../../config/img/graphics';
 
 const Title = styled(Heading2)`

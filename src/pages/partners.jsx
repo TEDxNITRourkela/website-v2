@@ -1,39 +1,50 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
+import React from 'react';
 
 // Libraries
 import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
-import { Heading1, Container } from '../components';
+import { graphql } from 'gatsby';
 
 // Component
 import Partners from '../components/partners/Partner';
-// import ContentBanner from '../components/shared/ContentBanner';
+import { Container } from '../components';
 
-// Placeholder
-import { PARTNER } from '../../config/content/Partner';
-
-const Title = styled(Heading1)`
-  font-weight: 800;
+export const pageQuery = graphql`
+  {
+    mdx(fileAbsolutePath: { regex: "/content/live/" }) {
+      frontmatter {
+        dates
+        partners {
+          title
+          partners {
+            href
+            img
+            name
+            width
+          }
+        }
+      }
+    }
+  }
 `;
 
-const TitleContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  margin: 10px 0;
-`;
+function Partner({ data }) {
+  const { frontmatter } = data.mdx;
+  const { dates, partners } = frontmatter;
 
-const HorizontalLine = styled.div`
-  width: 80%;
-  height: 1px;
-  background-color: var(--color-secondary);
-  opacity: 0.3;
-  z-index: -1;
-`;
+  const tags = [];
+  partners.forEach(({ partners: list }, i1) => {
+    list.forEach(({ name, href }, i2) => {
+      tags.push(
+        <meta
+          key={`meta-${i1}-${i2}`}
+          name='description'
+          content={`TEDxNITRourkela ${dates} | Partner | ${name}`}
+          key={href}
+        />,
+      );
+    });
+  });
 
-function Partner() {
   return (
     <Container>
       <Helmet>
@@ -41,65 +52,13 @@ function Partner() {
         <meta name='title' content='TEDxNITRourkela | Partners' />
         <link rel='canonical' href='https://tedxnitrourkela.com/partners' />
 
-        {PARTNER.ONE.partners.map(({ hrefTitle }) => (
-          <meta
-            name='description'
-            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
-            key={hrefTitle}
-          />
-        ))}
-        {PARTNER.TWO.partners.map(({ hrefTitle }) => (
-          <meta
-            name='description'
-            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
-            key={hrefTitle}
-          />
-        ))}
-
-        {PARTNER.THREE.partners.map(({ hrefTitle }) => (
-          <meta
-            name='description'
-            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
-            key={hrefTitle}
-          />
-        ))}
-
-        {PARTNER.FOUR.partners.map(({ hrefTitle }) => (
-          <meta
-            name='description'
-            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
-            key={hrefTitle}
-          />
-        ))}
-
-        {PARTNER.FIVE.partners.map(({ hrefTitle }) => (
-          <meta
-            name='description'
-            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
-            key={hrefTitle}
-          />
-        ))}
+        {tags}
       </Helmet>
 
       <div style={{ marginTop: '2rem', marginBottom: '5rem' }}>
-        <TitleContainer>
-          <Title>TEDxNITRourkelaLive 2021</Title>
-          <HorizontalLine />
-        </TitleContainer>
-        <Partners DATA={PARTNER.LIVE.ONE} />
-        <Partners DATA={PARTNER.LIVE.TWO} />
-
-        <div style={{ marginTop: '150px' }}>
-          <TitleContainer>
-            <Title>TedxNITRourkela 2021</Title>
-            <HorizontalLine />
-          </TitleContainer>
-          <Partners DATA={PARTNER.ONE} main />
-          <Partners DATA={PARTNER.TWO} />
-          <Partners DATA={PARTNER.THREE} />
-          <Partners DATA={PARTNER.FOUR} />
-          <Partners DATA={PARTNER.FIVE} />
-        </div>
+        {partners.map((pd, index) => (
+          <Partners DATA={pd} key={index} />
+        ))}
       </div>
     </Container>
   );

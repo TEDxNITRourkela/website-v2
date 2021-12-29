@@ -8,7 +8,7 @@ import { shuffleArray } from '../utils/shuffleArray';
 
 // Components
 import GallerySection from '../components/gallery/Gallery';
-import { Layout, Heading2, Container } from '../components';
+import { Heading2, Container } from '../components';
 
 // Placeholder
 import { GALLERY } from '../../config/img/gallery';
