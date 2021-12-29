@@ -1,9 +1,7 @@
-/* eslint-disable import/no-unresolved */
 import React, { useState } from 'react';
 
 // Components
 import { Heading1, Heading2, Heading3, Para1, Para2, Digitised, CustomButton } from '../components';
-// eslint-disable-next-line max-len
 
 const Playground = () => {
   const [loading, setLoading] = useState(false);
