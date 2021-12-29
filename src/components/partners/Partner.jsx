@@ -72,22 +72,22 @@ const Link = styled.a`
   color: var(--color-secondary);
 `;
 
-function Partner({ DATA, home, main = false }) {
+function Partner({ DATA, home }) {
   const renderPartnerContainer = (
-    <div main={main}>
+    <div>
       <TitleContainer>
         <Title>{home ? 'Partners' : DATA.title}</Title>
         <HorizontalLine />
       </TitleContainer>
 
       <PartnerContainer>
-        {DATA.partners.map((sponsor) => (
+        {DATA.partners.map((sponsor, index) => (
           <ImgSection
+            key={`partner-${index}-${sponsor.name}`}
             target='_blank'
             rel='noreferrer'
             href={sponsor.href}
             title={sponsor.hrefTitle}
-            key={sponsor.href}
             style={{
               width: `${sponsor.size}`,
             }}

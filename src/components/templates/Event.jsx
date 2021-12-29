@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 // Libraries
@@ -6,8 +6,8 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 
 // Components
-import { Layout, EventHero, SpeakerSection, Container } from '../../components';
-import Partners from '../../components/partners/Partner';
+import { EventHero, SpeakerSection, Container } from '../../components';
+import Partner from '../../components/partners/Partner';
 
 // Assets
 import { GRAPHICS } from '../../../config/img/graphics';
@@ -34,6 +34,7 @@ export const pageQuery = graphql`
         dates
         name
         registrationLink
+        slug
         speakers {
           isLongCard
           isPublished
@@ -41,7 +42,6 @@ export const pageQuery = graphql`
           shortDescription
           silhouette
           speakerImage
-          slug
           description {
             content
             href
@@ -55,12 +55,11 @@ export const pageQuery = graphql`
           title
           partners {
             img
-            src
+            href
             name
             width
           }
         }
-        slug
         about
       }
     }
@@ -78,10 +77,8 @@ const Events = ({ data }) => {
     ),
   }));
 
-  console.log(data);
-
   return (
-    <Layout isContainer={false}>
+    <div>
       <Helmet>
         <title>{`TEDxNITRourkela | ${name}`}</title>
         <meta name='title' content={`TEDxNITRourkela | ${name}`} />
@@ -96,12 +93,12 @@ const Events = ({ data }) => {
 
       <div style={{ marginTop: '150px' }}>
         {partners.map((DATA, index) => (
-          <Partners DATA={DATA} key={index} />
+          <Partner DATA={DATA} key={index} />
         ))}
       </div>
 
       <DecorationOne src={GRAPHICS.TOP_RIGHT_EVENT} alt='ellipse' />
-    </Layout>
+    </div>
   );
 };
 
