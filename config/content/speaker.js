@@ -8,7 +8,7 @@ import {
   faInstagram,
   faLinkedinIn,
   faQuora,
-  faSpotify,
+  faSpotify,    
   faTwitter,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
@@ -288,9 +288,9 @@ const GUESTS = [
     name: 'Sabyasachi Patra',
     description: [
       'Mr. Patra is an ',
-      { href: 'https://ximb.edu.in/', content: 'NIT Rourkela' },
+      { href: 'https://www.nitrkl.ac.in/', content: 'NIT Rourkela' },
       ' alumnus and did his Masters from ',
-      { href: '', content: 'XIMB' },
+      { href: 'https://ximb.edu.in/', content: 'XIMB' },
       '. After years in corporate, he turned his life and started his filming company Wild Tiger Productions. He has been featured in press releases of Adobe Spark, ',
       {
         href: 'https://www.newindianexpress.com/education/edex/2014/jun/30/Preserving-Wildlife-his-Priority-630148.html',
@@ -346,7 +346,7 @@ const LIVEGUESTS = [
     name: 'Zach King',
     description: [
       'Zach King is one of the most eminent internet personalities, filmmakers, and illusionists. He created his mark in building digital magic through his exemplary editing skills and has been honored as well as featured  in several media outlets for his vines, including ',
-      { href: 'https://in.mashable.com/', content: 'Mashable ' },
+      { href: 'https://in.mashable.com/', content: 'Mashable' },
       'and ',
       { href: 'https://www.complex.com/', content: 'Complex' },
       ' magazine.',

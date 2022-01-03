@@ -10,7 +10,7 @@ export const PARTNER = Object.freeze({
         {
           img: PARTNERS.THE_PIONEER,
           href: 'https://www.dailypioneer.com/',
-          hrefTitle: 'Rourkela360',
+          hrefTitle: 'The Pioneer',
           size: '25%',
         },
       ],
@@ -122,7 +122,7 @@ export const PARTNER = Object.freeze({
         href: 'https://mailchimp.com',
         hrefTitle: 'MailChimp',
         size: '20%',
-      },
+      },    
       {
         img: PARTNERS.SHUTTERSTOCK,
         href: 'https://shutterstock.com',

@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-export const PARTNERS = Object.freeze({
+export const PARTNERS = Object.freeze({  
     TATA:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/tata_steel_wgnvt3.png',
     EVERWALL:
@@ -7,7 +7,7 @@ export const PARTNERS = Object.freeze({
     FLICKR:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/flickr.png',
     MAILCHIMP:
-      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/mailchimp.png',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/mailchimp.png',   
     SHUTTERSTOCK:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/shutterstock.png',
     ROURKELA360:
