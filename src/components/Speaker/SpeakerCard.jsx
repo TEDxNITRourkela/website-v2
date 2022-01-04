@@ -41,6 +41,7 @@ const SpeakerCard = ({
       <div className={card}>
         <Common>
           <ImageContainer isLongCard={isLongCard} isPublished={isPublished} image={image} />
+
           {isPublished && (
             <>
               <Para1 className='name'>{name}</Para1>

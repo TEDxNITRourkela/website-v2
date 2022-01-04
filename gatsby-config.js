@@ -36,6 +36,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
@@ -62,7 +63,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
