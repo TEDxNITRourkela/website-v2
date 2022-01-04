@@ -4,15 +4,16 @@ import React, { useRef } from 'react';
 // libraries
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import {  faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import { HeroContainer } from './styles';
-import { SpeakerCard, Para2, Heading1 } from '..';
+import { SpeakerCard, Para2, Heading1, Heading2 } from '..';
 import { ScrollDown } from './Common';
 
 // Assets
-import { speaker, home } from '../../../config/content';
+import { home } from '../../../config/content';
 
 const TableContainer = styled.div`
   flex: 1;
@@ -47,9 +48,50 @@ const Carousel = styled.div`
   align-items: center;
 `;
 
-const SpeakerCarousel = () => {
-  const ref = useRef(null);
+const ImgContainer = styled.div`
+  width: 50%;
+  height: 200px;
+  position: relative;
+  margin-top: 2rem;
+`
 
+const Img = styled.img`
+  width: 100%;
+  height: auto;
+  objectFit: cover;
+  objectPosition: center;
+`
+
+const SpeakerCarousel = () => {
+  const data = useStaticQuery(graphql`
+    {
+      mdx(fileAbsolutePath: { regex: "/content/live/" }) {
+        frontmatter {
+          dates
+          speakers {
+            isLongCard
+            isPublished
+            name
+            shortDescription
+            silhouette
+            speakerImage
+            description {
+              content
+              href
+            }
+            links {
+              icon
+              link
+            }
+          }
+        }
+      }
+    }
+  `)
+  const { frontmatter, dates } = data.mdx;
+  const { speakers } = frontmatter;
+
+  const ref = useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
@@ -61,15 +103,24 @@ const SpeakerCarousel = () => {
         <Heading1 className='heading' style={{ marginTop: '0px' }}>
           {home.CONTENT1.heading}
         </Heading1>
-        <img className='image' src={home.CONTENT1.thankyouurl.src} alt={home.CONTENT1.thankyouurl.alt} />
+
+        <ImgContainer>
+          <Img src="https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641279493/assets/logos/Group_631_goyfk3.png" alt={home.CONTENT1.thankyouurl.alt} />
+        </ImgContainer>
+
+        <Heading2 className='heading' style={{ marginTop: '0px' }}>
+          12th January | 4 - 8 pm
+        </Heading2>
       </HeroContainer>
+
       <ButtonContainer>
-        <FontAwesomeIcon onClick={() => scroll(-300)} className='btn' icon={faAngleLeft} />
-        <FontAwesomeIcon onClick={() => scroll(300)} className='btn' icon={faAngleRight} />
+        <FontAwesomeIcon onClick={() => scroll(-300)} className='btn' icon={faChevronCircleLeft} />
+        <FontAwesomeIcon onClick={() => scroll(300)} className='btn' icon={faChevronCircleRight} />
       </ButtonContainer>
+
       <TableContainer ref={ref}>
         <Carousel>
-          {speaker.LIVEGUESTS.map(
+          {speakers.map(
             ({
               name,
               description,

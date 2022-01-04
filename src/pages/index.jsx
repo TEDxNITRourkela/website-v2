@@ -47,14 +47,16 @@ const DecorationThree = styled.img`
 
 const Homepage = () => {
   return (
-    <Container>
-      <Main number='1' />
-      <ContentBanner DATA={home.CONTENT2.ONE} wrapContainer={false} />
+    <>
+      <Main number='4' />
+      <Container>
+        <ContentBanner DATA={home.CONTENT2.ONE} wrapContainer={false} />
 
-      <DecorationOne src={GRAPHICS.TOP_RIGHT} alt='ellipse' />
-      <DecorationTwo src={GRAPHICS.BOTTOM_LEFT} alt='ellipse' />
-      <DecorationThree src={GRAPHICS.BOTTOM_RIGHT} alt='ellipse' />
-    </Container>
+        <DecorationOne src={GRAPHICS.TOP_RIGHT} alt='ellipse' />
+        <DecorationTwo src={GRAPHICS.BOTTOM_LEFT} alt='ellipse' />
+        <DecorationThree src={GRAPHICS.BOTTOM_RIGHT} alt='ellipse' />
+      </Container>
+    </>
   );
 };
 
