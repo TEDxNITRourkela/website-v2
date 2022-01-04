@@ -10,10 +10,10 @@ import { Heading2 } from '..';
 // Assets
 import { about } from '../../../config/content';
 
-
 const Row = styled.div`
   width: 100%;
   margin: 20px 0;
+  padding: 0 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -36,7 +36,7 @@ function Executive() {
         ))}
       </Row>
 
-      <Row>
+      <Row style={{ marginTop: '50px' }}>
         {about.TEAM.ROW2.map((member) => (
           <Profile key={`core-team-${member.NAME}`} member={member} />
         ))}

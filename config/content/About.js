@@ -29,273 +29,212 @@ const SECTION = {
 };
 
 const TEAM = {
-    ROW1: [
-      {
-        NAME: 'Abel Mathew',
-        IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/AbelMathew.jpeg',
-        DESIGNATION: 'Organizer',
-      },
-      {
-        NAME: 'Rutaj Dash',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/RutajDash.jpeg',
-        DESIGNATION: 'Co-Organizer',
-      },
-    ],
-    ROW2: [
-      {
-        NAME: 'Umme Salma',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/UmmeSalma.jpeg',
-        DESIGNATION: 'Curator',
-      },
-      {
-        NAME: 'Leo R. Rodrigues',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LeoRaphaelRodrigues.jpeg',
-        DESIGNATION: 'Associate Curator',
-      },
-      {
-        NAME: 'Rama Krushna',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/RamaKrushna.jpeg',
-        DESIGNATION: 'Chief Designer',
-      },
-      {
-        NAME: 'Ritesh Patil',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/RiteshPatil.jpeg',
-        DESIGNATION: 'Tech Director',
-      },
-      {
-        NAME: 'Ekta Gambhir',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/EktaGambhir.jpeg',
-        DESIGNATION: 'Managing Director',
-      },
-      {
-        NAME: 'Shobhit Parki',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
-        DESIGNATION: 'Deputy Managing Director',
-      },
-    ],
-    TECH: [
-      {
-        NAME: 'Ritesh Patil',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/RiteshPatil.jpeg',
-        DESIGNATION: 'Tech Director',
-      },
-      {
-        NAME: 'Ajibesh Mohapatra',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/AjibeshMohapatra.jpeg',
-        DESIGNATION: 'Technical Team Member',
-      },
-      {
-        NAME: 'Shashi Kant Bharti',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/SashiKantBharati.jpeg',
-        DESIGNATION: 'Technical Team Member',
-      },
-    ],
-    DESIGN: [
-      {
-        NAME: 'Rama Krushna Behera',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/RamaKrushna.jpeg',
-        DESIGNATION: 'Chief Designer',
-      },
-      {
-        NAME: 'Sourav Priyadarsi',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/SouravPriyadarsi.jpeg',
-        DESIGNATION: 'Design Team Member',
-      },
-      {
-        NAME: 'Sambit Kumar Pradhan',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/SambitPradhan.jpeg',
-        DESIGNATION: 'Design Team Member',
-      },
-      {
-        NAME: 'Prithviraj Naik',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/PrithvirajNaik.jpeg',
-        DESIGNATION: 'Design Team Member',
-      },
-    ],
-    MANAGEMENT: [
-      {
-        NAME: 'Ekta Gambhir',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/EktaGambhir.jpeg',
-        DESIGNATION: 'Managing Director',
-      },
-      {
-        NAME: 'Shobhit Parki',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
-        DESIGNATION: 'Deputy Managing Director',
-      },
-      {
-        NAME: 'Ankit Routray',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitRoutray.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Ankita Sareen',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitaSareen.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Asutosh Mishra',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AsutoshMishra.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Lalitha Manaswini',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Mayank Mishra',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/MayankMishra.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Pratyush Kumar Nayak',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/PratyushNayak.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Roshan Anduri',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/RoshanAnduri.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Spandan Patra',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SpandanPatra.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-    ],
-    PR: [
-      {
-        NAME: 'Ekta Gambhir',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/EktaGambhir.jpeg',
-        DESIGNATION: 'Managing Director',
-      },
-      {
-        NAME: 'Shobhit Parki',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
-        DESIGNATION: 'Deputy Managing Director',
-      },
-      {
-        NAME: 'Ankit Routray',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitRoutray.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Ankita Sareen',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitaSareen.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Asutosh Mishra',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AsutoshMishra.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Lalitha Manaswini',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Mayank Mishra',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/MayankMishra.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Pratyush Kumar Nayak',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/PratyushNayak.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Roshan Anduri',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/RoshanAnduri.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-      {
-        NAME: 'Spandan Patra',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SpandanPatra.jpeg',
-        DESIGNATION: 'Management Team Member',
-      },
-    ],
-    CURATION: [
-      {
-        NAME: 'Umme Salma',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/UmmeSalma.jpeg',
-        DESIGNATION: 'Curator',
-      },
-      {
-        NAME: 'Leo R.. Rodrigues',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LeoRaphaelRodrigues.jpeg',
-        DESIGNATION: 'Associate Curator',
-      },
-      {
-        NAME: 'Aswathy Rajendran',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/AswathyRajendran.jpeg',
-        DESIGNATION: 'Curation Team Member',
-      },
-      {
-        NAME: 'Krishnanshu Sharma',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/KrishnansuSharma.jpeg',
-        DESIGNATION: 'Curation Team Member',
-      },
-      {
-        NAME: 'Lokesh Jain',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LokeshJain.jpeg',
-        DESIGNATION: 'Curation Team Member',
-      },
-      {
-        NAME: 'Prabhanshu Chaturvedi',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/PrabhanshuChaturvedi.jpeg',
-        DESIGNATION: 'Curation Team Member',
-      },
-      {
-        NAME: 'Shrey Jha',
-        IMG:
-          'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/ShreyJha.jpeg',
-        DESIGNATION: 'Curation Team Member',
-      },
-    ],
+  ROW1: [
+    {
+      NAME: 'Shobhit Parki',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
+      DESIGNATION: 'President',
+    },
+    {
+      NAME: 'Rutaj Dash',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/RutajDash.jpeg',
+      DESIGNATION: 'Vice-President',
+    },
+  ],
+  ROW2: [
+    {
+      NAME: 'Lokesh Jain',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641292331/team/ted_photo_acszjz.jpg',
+      DESIGNATION: 'Chief Curator',
+    },
+    {
+      NAME: 'Shrey Jha',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641292328/team/Shrey_Jha_l9wrpe.jpg',
+      DESIGNATION: 'Associate Curator',
+    },
+    {
+      NAME: 'Sourav Priyadarsi',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641294701/team/design/Sourav_Priyadarsi_japhgp.jpg',
+      DESIGNATION: 'Chief Designer',
+    },
+    {
+      NAME: 'Ritesh Patil',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/RiteshPatil.jpeg',
+      DESIGNATION: 'Tech Director',
+    },
+    {
+      NAME: 'Prabhanshu Chaturvedi',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1627320450/team/curation/PrabhanshuChaturvedi.jpg',
+      DESIGNATION: 'Managing Director',
+    },
+    {
+      NAME: 'Spandan Patra',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641292332/team/Spandan_Patra_gvjgg7.jpg',
+      DESIGNATION: 'Deputy Managing Director',
+    },
+    {
+      NAME: 'Aswathy Rajendran',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641292328/team/Aswathy_Rajendran_ndhb0z.jpg',
+      DESIGNATION: 'Director of Public Relations',
+    },
+    {
+      NAME: 'Harsh Baid',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291384/team/pr/Harsh_Baid__ahpc7v.jpg',
+      DESIGNATION: 'Director of Public Relations',
+    },
+  ],
+  TECH: [
+    {
+      NAME: 'Ritesh Patil',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/RiteshPatil.jpeg',
+      DESIGNATION: 'Tech Director',
+    },
+    {
+      NAME: 'Sambit Sankalp',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641303936/team/technical/Sambit_Sankalp_ddfkx2.jpg',
+      DESIGNATION: 'Technical Team Member',
+    },
+    {
+      NAME: 'Sonakshi Satpathy',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641308828/team/technical/Sonakshi_Satpathy_km3sl5.jpg',
+      DESIGNATION: 'Technical Team Member',
+    },
+    {
+      NAME: 'Harshavardhan Reddy',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641303936/team/technical/harshavardhan_reddy_2021_dgqwiy.jpg',
+      DESIGNATION: 'Technical Team Member',
+    },
+    {
+      NAME: 'Ankush Lohani',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641303924/team/technical/Ankush_Lohani_bcyjio.jpg',
+      DESIGNATION: 'Technical Team Member',
+    },
+  ],
+  DESIGN: [
+    {
+      NAME: 'Sourav Priyadarsi',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641294701/team/design/Sourav_Priyadarsi_japhgp.jpg',
+      DESIGNATION: 'Chief Designer',
+    },
+  ],
+  MANAGEMENT: [
+    {
+      NAME: 'Prabhanshu Chaturvedi',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1627320450/team/curation/PrabhanshuChaturvedi.jpg',
+      DESIGNATION: 'Managing Director',
+    },
+    {
+      NAME: 'Spandan Patra',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641292332/team/Spandan_Patra_gvjgg7.jpg',
+      DESIGNATION: 'Deputy Managing Director',
+    },
+    {
+      NAME: 'Ayush Jha',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291521/team/management/Ayush_Jha_ixsnp1.jpg',
+      DESIGNATION: 'Management Team Member',
+    },
+    {
+      NAME: 'Sauraj Goswami',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291520/team/management/Sauraj_Goswami_umjzro.jpg',
+      DESIGNATION: 'Management Team Member',
+    },
+    {
+      NAME: 'Shreejai Pati',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291519/team/management/Shreejai_pati_ME_purysn.png',
+      DESIGNATION: 'Management Team Member',
+    },
+    {
+      NAME: 'Smruti Smita Behera',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291521/team/management/Smruti_Smita_Behera_koe2y8.jpg',
+      DESIGNATION: 'Management Team Member',
+    },
+    {
+      NAME: 'Samyak Prusty',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291519/team/management/Samyak_Prusty_wosp7m.jpg',
+      DESIGNATION: 'Management Team Member',
+    },
+  ],
+  PR: [
+    {
+      NAME: 'Aswathy Rajendran',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641292328/team/Aswathy_Rajendran_ndhb0z.jpg',
+      DESIGNATION: 'Director of Public Relations',
+    },
+    {
+      NAME: 'Harsh Baid',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291384/team/pr/Harsh_Baid__ahpc7v.jpg',
+      DESIGNATION: 'Director of Public Relations',
+    },
+    {
+      NAME: 'Harshi Singhi',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291393/team/pr/Harshi_Singhi_rigd7f.jpg',
+      DESIGNATION: 'Public Relations Team Member',
+    },
+    {
+      NAME: 'Tushar Goel',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291385/team/pr/Tushar_Goel__defbhg.jpg',
+      DESIGNATION: 'Public Relations Team Member',
+    },
+    {
+      NAME: 'Ramya Marikukala',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291381/team/pr/Ramya_Marikukala_jhevj7.jpg',
+      DESIGNATION: 'Public Relations Team Member',
+    },
+    {
+      NAME: 'Awantika Mallick',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291381/team/pr/Awantika_Mallick_mbnqc4.jpg',
+      DESIGNATION: 'Public Relations Team Member',
+    },
+    {
+      NAME: 'Animesh Tripathy',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291381/team/pr/Animesh_ygmnoc.jpg',
+      DESIGNATION: 'Public Relations Team Member',
+    },
+    {
+      NAME: 'Amit Kumar Dash',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291381/team/pr/Amit_Kumar_Dash_ME_ib4kze.jpg',
+      DESIGNATION: 'Public Relations Team Member',
+    },
+  ],
+  CURATION: [
+    {
+      NAME: 'Lokesh Jain',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641292331/team/ted_photo_acszjz.jpg',
+      DESIGNATION: 'Chief Curator',
+    },
+    {
+      NAME: 'Shrey Jha',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641292328/team/Shrey_Jha_l9wrpe.jpg',
+      DESIGNATION: 'Associate Curator',
+    },
+    {
+      NAME: 'Promod Goyal',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641290764/team/curation/Pramod_Goyal_itzgal.jpg',
+      DESIGNATION: 'Curation Team Member',
+    },
+    {
+      NAME: 'Rishita Singh',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641290763/team/curation/Rishita_Singh_xuvohy.jpg',
+      DESIGNATION: 'Curation Team Member',
+    },
+    {
+      NAME: 'Yugesh Ramdhun',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641290763/team/curation/Yugesh_Ramdhun_ulwd01.jpg',
+      DESIGNATION: 'Curation Team Member',
+    },
+    {
+      NAME: 'Prerna Chordiya',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641290763/team/curation/Prerna_Chordiya_gozlwg.webp',
+      DESIGNATION: 'Curation Team Member',
+    },
+    {
+      NAME: 'Meghana Gajji',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641290774/team/curation/20210906_141226-01_neuyza.jpg',
+      DESIGNATION: 'Curation Team Member',
+    },
+  ],
 };
-  
+
 const FAQ = [
   {
     QUESTION: 'What is TEDxNITRourkela?',
@@ -355,6 +294,5 @@ const FAQ = [
 export default {
   SECTION,
   TEAM,
-  FAQ
+  FAQ,
 };
-

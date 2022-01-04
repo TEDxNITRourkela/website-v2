@@ -13,7 +13,7 @@ import DropdownNavbarItem from './DropdownNavbarItem';
 // assets
 import { nav, events } from '../../../../config/content';
 
-const DesktopNavbar = ({ toggleMenuOpen }) => {
+function DesktopNavbar({ toggleMenuOpen }) {
   const [shadow, setShadow] = useState(false);
   const { logo, navItems } = nav;
 
@@ -64,6 +64,6 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
       </Container>
     </NavContainer>
   );
-};
+}
 
 export default DesktopNavbar;

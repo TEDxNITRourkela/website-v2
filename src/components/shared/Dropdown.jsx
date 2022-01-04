@@ -115,26 +115,30 @@ const MenuHead = styled.div`
   }
 `;
 
-const DropdownHead = ({ goToMenu, setActiveMenu, children }) => (
-  <MenuHead>
-    <FontAwesomeIcon
-      className='icon'
-      onClick={() => goToMenu && setActiveMenu(goToMenu)}
-      icon={faArrowLeft}
-      size='xs'
-    />
-    <Para2 className='heading'>{children} </Para2>
-  </MenuHead>
-);
+function DropdownHead({ goToMenu, setActiveMenu, children }) {
+  return (
+    <MenuHead>
+      <FontAwesomeIcon
+        className='icon'
+        onClick={() => goToMenu && setActiveMenu(goToMenu)}
+        icon={faArrowLeft}
+        size='xs'
+      />
+      <Para2 className='heading'>{children} </Para2>
+    </MenuHead>
+  );
+}
 
-const DropdownItem = ({ goToMenu, setActiveMenu, children, haveChildren }) => (
-  <MenuItem onClick={() => goToMenu && setActiveMenu(goToMenu)}>
-    <Para2 className='text'>{children}</Para2>
-    {haveChildren && <FontAwesomeIcon icon={faAngleRight} />}
-  </MenuItem>
-);
+function DropdownItem({ goToMenu, setActiveMenu, children, haveChildren }) {
+  return (
+    <MenuItem onClick={() => goToMenu && setActiveMenu(goToMenu)}>
+      <Para2 className='text'>{children}</Para2>
+      {haveChildren && <FontAwesomeIcon icon={faAngleRight} />}
+    </MenuItem>
+  );
+}
 
-const Dropdown = ({ data }) => {
+function Dropdown({ data }) {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
@@ -188,6 +192,6 @@ const Dropdown = ({ data }) => {
       ))}
     </DropdownContainer>
   );
-};
+}
 
 export default Dropdown;

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // Components
 import { NavText } from './styles';
 
-const DropdownNavbarItem = ({ name, children }) => {
+function DropdownNavbarItem({ name, children }) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -13,6 +13,6 @@ const DropdownNavbarItem = ({ name, children }) => {
       {open && children}
     </>
   );
-};
+}
 
 export default DropdownNavbarItem;
