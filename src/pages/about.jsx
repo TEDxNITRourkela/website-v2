@@ -1,14 +1,13 @@
 import React from 'react';
 
 // Libraries
-import { Helmet } from 'react-helmet';
+import { graphql } from "gatsby";
 
 // Components
 import {
   FAQ,
   Executive,
   Team,
-  PageContainer,
   InfoSection,
   ContentBanner,
   Container,
