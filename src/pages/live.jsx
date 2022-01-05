@@ -1,17 +1,58 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 
 // Libraries
-import { collection, onSnapshot, doc, setDoc } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs, onSnapshot, doc, setDoc } from 'firebase/firestore';
+import styled from 'styled-components';
 
 // Components
-import { Container } from '../components';
+import { Container, LiveStage, LiveStreamSidebar} from '../components';
 
-// Utils
-import { useFirebase } from "../utils/firebase";
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
+  height: calc(100vh - 120px);
+  margin-top: 30px;
+
+  @media (max-width: 700px) {
+		grid-column: 1/3;
+    margin-top: 30px;
+    height: auto;
+	}
+`
+
+const addData = () => {
+  speakers.forEach(async ({name, description, shortDescription, img, hasCompleted, youtubeLink}, index) => {
+    await setDoc(doc(db, "speakerLineup", `speaker-${index+1}`), {
+      name,
+      description,
+      shortDescription,
+      img,
+      hasCompleted,
+      youtubeLink
+    })
+  })
+}
+
+// Firebase web config
+const config = {
+  type: process.env.GATSBY_TYPE,
+  projectId: process.env.GATSBY_PROJECT_ID,
+  privateKeyId: process.env.GATSBY_PRIVATE_KEY_ID,
+  privateKey: process.env.GATSBY_PRIVATE_KEY,
+  clientEmail: process.env.GATSBY_CLIENT_EMAIL,
+  clientId: process.env.GATSBY_CLIENT_ID,
+  authUri: process.env.GATSBY_AUTH_URI,
+  tokenUri: process.env.GATSBY_TOKEN_URI,
+  authProviderX509CertUrl: process.env.GATSBY_AUTH_PROVIDER_X509_CERT_URL,
+  clientX509CertUrl: process.env.GATSBY_CLIENT_X509_CERT_URL,
+};
+const firebase = initializeApp(config);
+const db = getFirestore(firebase);
 
 const Live = () => {
-	const {firebase, db} = useFirebase();
+	// const {firebase, db} = useFirebase();
   const [activeSession, setActiveSession] = useState(null);
   const [sessionDetails, setSessionDetails] = useState([]);
   const [containerDimensions, setContainerDimensions] = useState({
@@ -21,20 +62,6 @@ const Live = () => {
 
   useEffect(() => {
     if (firebase) {
-			// const addData = () => {
-			// 	speakers.forEach(async ({name, description, shortDescription, img, hasCompleted, youtubeLink}, index) => {
-			// 		await setDoc(doc(db, "speakerLineup", `speaker-${index+1}`), {
-			// 			name,
-			// 			description,
-			// 			shortDescription,
-			// 			img,
-			// 			hasCompleted,
-			// 			youtubeLink
-			// 		})
-			// 	})
-			// }
-			// addData();
-
       const fetchActiveSession = async () => {
         const unsub = onSnapshot(doc(db, 'activeStream', 'ufDtRYamOffDFc29hPsn'), (snap) => {
           setActiveSession(snap.data());
@@ -75,15 +102,10 @@ const Live = () => {
 
   return (
     <Container>
-      {/* <LiveSection
-        youtubeLiveLink={activeSession?.link}
-        title={activeSession?.title}
-        speaker={activeSession?.speaker}
-        img={activeSession?.img}
-        designation={activeSession?.designation}
-        sessionDetails={sessionDetails}
-        containerDimensions={containerDimensions}
-      /> */}
+      <GridContainer>
+        <LiveStage youtubeLink={activeSession?.youtubeLink} speaker={activeSession} />
+        <LiveStreamSidebar speakers={sessionDetails} />
+      </GridContainer>
     </Container>
   );
 };
