@@ -8,7 +8,8 @@ const Box3 = styled.div`
 	background: #232323;
 	margin-top: 20px;
 	padding: 15px;
-	height: 39.5%;
+	min-height: 39.5%;
+	height: auto;
 
 	display: flex;
 	align-items: flex-start;
@@ -22,6 +23,12 @@ const ImgContainer = styled.div`
 	overflow: hidden;
 	margin-right: 2rem;
 	background: #535353;
+
+	@media (max-width: 700px) {
+		width: 80px;
+		height: 80px;
+		margin-right: 1rem;
+	}
 `
 
 const Img = styled.img`
@@ -59,6 +66,14 @@ const SpeakerLongDescription = styled.p`
 	font-weight: normal;
 `
 
+const Div = styled.div`
+	width: calc(100% - 100px - 2rem);
+
+	@media (max-width: 700px) {
+		width: calc(100% - 80px - 1rem);
+	}
+`
+
 const TalkDetails = ({speaker}) => {
 	return (
 		<Box3>
@@ -66,11 +81,11 @@ const TalkDetails = ({speaker}) => {
 				<Img src={speaker?.img} alt={speaker?.name} />
 			</ImgContainer>
 
-			<div style={{width: 'calc(100% - 100px - 2rem)'}}>
+			<Div>
 				<SpeakerName>{speaker?.name}</SpeakerName>
 				<SpeakerShortDescription>{speaker?.description}</SpeakerShortDescription>
 				<SpeakerLongDescription>{speaker?.longDescription}</SpeakerLongDescription>
-			</div>
+			</Div>
 		</Box3>
 	)
 }
