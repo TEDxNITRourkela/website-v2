@@ -47,3 +47,8 @@ export { default as App } from './App';
 // SEO
 export { default as SEO } from './shared/seo/SEO';
 export { default as StructuredData } from './shared/seo/StructuredData';
+
+// Talk Details
+export {default as LiveStreamSidebar} from './livestream/Sidebar';
+export {default as LiveStage} from './livestream/Stream';
+export {default as LiveStreamDetails} from './livestream/TalkDetails';

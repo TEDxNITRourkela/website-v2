@@ -101,7 +101,7 @@ function SpeakerCarousel() {
       <HeroContainer>
         <Para2 className='caption'>{home.CONTENT1.caption} </Para2>
         <Heading1 className='heading' style={{ marginTop: '0px' }}>
-          {home.CONTENT1.heading}
+          What Now?
         </Heading1>
 
         <ImgContainer>

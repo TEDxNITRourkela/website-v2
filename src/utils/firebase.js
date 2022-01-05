@@ -38,7 +38,7 @@ export const getFirebase = async () => {
   return null;
 };
 
-export const FirebaseContext = createContext({ firebase: null, db: null, isInitialised: false });
+export const FirebaseContext = createContext({firebase: null, isInitialised: false, db: null});
 
 const FirebaseProvider = ({ children }) => {
   const [isInitialised, setIsInitialised] = useState(false);
