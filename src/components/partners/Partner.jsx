@@ -81,15 +81,15 @@ function Partner({ DATA, home }) {
       </TitleContainer>
 
       <PartnerContainer>
-        {DATA.partners.map((sponsor, index) => (
+        {DATA.partners.map((sponsor) => (
           <ImgSection
-            key={`partner-${index}-${sponsor.name}`}
+            key={`partner-${sponsor.name}`}
             target='_blank'
             rel='noreferrer'
             href={sponsor.href}
             title={sponsor.hrefTitle}
             style={{
-              width: `${sponsor.size}`,
+              width: `${sponsor.width}`,
             }}
           >
             <Sponsor src={sponsor.img} alt='Sponsor' />
