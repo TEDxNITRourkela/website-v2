@@ -112,7 +112,7 @@ function SpeakerCarousel() {
         </ImgContainer>
 
         <Heading2 className='heading' style={{ marginTop: '0px' }}>
-          12th January | 4 - 8 pm
+          8-9th January | 4 - 8 pm
         </Heading2>
       </HeroContainer>
 

@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import { SpeakerCarousel, Hero, TicketHero, BrandAmbassador } from '..';
 
-const Main = ({ number }) => {
+function Main({ number }) {
   const renderHeroSection = () => {
     switch (number) {
       case '1':
@@ -23,6 +23,6 @@ const Main = ({ number }) => {
     }
   };
   return <div>{renderHeroSection()}</div>;
-};
+}
 
 export default Main;
