@@ -40,6 +40,7 @@ const ImgSection = styled.a`
   margin: 10px 10px;
   height: auto;
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
 `;
@@ -87,7 +88,6 @@ function Partner({ DATA, home }) {
             target='_blank'
             rel='noreferrer'
             href={sponsor.href}
-            title={sponsor.hrefTitle}
             style={{
               width: `${sponsor.width}`,
             }}
