@@ -69,6 +69,7 @@ const MenuItem = styled.div`
   padding: 0.5rem;
   &:hover {
     background-color: #525357;
+    cursor: pointer;
   }
   .text {
     margin-left: 5px;
@@ -129,16 +130,24 @@ function DropdownHead({ goToMenu, setActiveMenu, children }) {
   );
 }
 
-function DropdownItem({ goToMenu, setActiveMenu, children, haveChildren }) {
+function DropdownItem({ goToMenu, setActiveMenu, children, haveChildren, handler }) {
+  const clickEvents = () => {
+    if (goToMenu) {
+      setActiveMenu(goToMenu);
+    }
+    if (!haveChildren) {
+      handler();
+    }
+  };
   return (
-    <MenuItem onClick={() => goToMenu && setActiveMenu(goToMenu)}>
+    <MenuItem onClick={clickEvents}>
       <Para2 className='text'>{children}</Para2>
       {haveChildren && <FontAwesomeIcon icon={faAngleRight} />}
     </MenuItem>
   );
 }
 
-function Dropdown({ data }) {
+function Dropdown({ data, handler }) {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
@@ -184,7 +193,7 @@ function Dropdown({ data }) {
             </DropdownHead>
             {items.map(({ link, text }) => (
               <Link className='link' key={link} to={`/events/${title}/${link}`}>
-                <DropdownItem>{text}</DropdownItem>
+                <DropdownItem handler={handler}>{text}</DropdownItem>
               </Link>
             ))}
           </Menu>

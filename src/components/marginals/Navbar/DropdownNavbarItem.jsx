@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // Components
 import { NavText } from './styles';
 
-function DropdownNavbarItem({ name, children }) {
-  const [open, setOpen] = useState(false);
+function DropdownNavbarItem({ name, children, handler, open }) {
   return (
     <>
-      <NavText style={{ padding: '0px 15px', cursor: 'pointer' }} onClick={() => setOpen(!open)}>
+      <NavText style={{ padding: '0px 15px', cursor: 'pointer' }} onClick={handler}>
         {name}
       </NavText>
       {open && children}

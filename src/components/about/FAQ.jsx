@@ -13,15 +13,17 @@ const FAQContainer = styled.div`
   margin-top: 130px;
 `;
 
-const FAQ = () => (
-  <FAQContainer>
-    <Heading2 className='heading' style={{ marginBottom: '30px' }}>
-      FAQs
-    </Heading2>
-    {about.FAQ.map((faq, index) => (
-      <Accordion key={faq.QUESTION} index={index} title={faq.QUESTION} body={faq.ANSWER} />
-    ))}
-  </FAQContainer>
-);
+function FAQ() {
+  return (
+    <FAQContainer>
+      <Heading2 className='heading' style={{ marginBottom: '30px' }}>
+        FAQs
+      </Heading2>
+      {about.FAQ.map((faq, index) => (
+        <Accordion key={faq.QUESTION} index={index} title={faq.QUESTION} body={faq.ANSWER} />
+      ))}
+    </FAQContainer>
+  );
+}
 
 export default FAQ;

@@ -4,14 +4,21 @@ import React, { useState } from 'react';
 import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 
-export default () => {
+export default function () {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const toggleMenuOpen = () => (menuOpen ? setMenuOpen(false) : setMenuOpen(true));
+
+  const DropDownHandler = () => {
+    setOpen(!open);
+  };
 
   return (
     <>
-      <DesktopNavbar toggleMenuOpen={toggleMenuOpen} />
-      {menuOpen && <MobileNavbar toggleMenuOpen={toggleMenuOpen} />}
+      <DesktopNavbar toggleMenuOpen={toggleMenuOpen} handler={DropDownHandler} open={open} />
+      {menuOpen && (
+        <MobileNavbar toggleMenuOpen={toggleMenuOpen} handler={DropDownHandler} open={open} />
+      )}
     </>
   );
-};
+}

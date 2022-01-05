@@ -4,8 +4,8 @@ import React, { useRef } from 'react';
 // libraries
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { useStaticQuery, graphql } from "gatsby";
+import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { useStaticQuery, graphql } from 'gatsby';
 
 // Components
 import { HeroContainer } from './styles';
@@ -44,7 +44,7 @@ const Carousel = styled.div`
   padding: 8px 8px;
   background-color: #383838;
   display: flex;
-  jsutify-content: center;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -53,16 +53,16 @@ const ImgContainer = styled.div`
   height: 200px;
   position: relative;
   margin-top: 2rem;
-`
+`;
 
 const Img = styled.img`
   width: 100%;
   height: auto;
-  objectFit: cover;
-  objectPosition: center;
-`
+  object-fit: cover;
+  object-position: center;
+`;
 
-const SpeakerCarousel = () => {
+function SpeakerCarousel() {
   const data = useStaticQuery(graphql`
     {
       mdx(fileAbsolutePath: { regex: "/content/live/" }) {
@@ -87,7 +87,7 @@ const SpeakerCarousel = () => {
         }
       }
     }
-  `)
+  `);
   const { frontmatter, dates } = data.mdx;
   const { speakers } = frontmatter;
 
@@ -105,7 +105,10 @@ const SpeakerCarousel = () => {
         </Heading1>
 
         <ImgContainer>
-          <Img src="https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641279493/assets/logos/Group_631_goyfk3.png" alt={home.CONTENT1.thankyouurl.alt} />
+          <Img
+            src='https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641279493/assets/logos/Group_631_goyfk3.png'
+            alt={home.CONTENT1.thankyouurl.alt}
+          />
         </ImgContainer>
 
         <Heading2 className='heading' style={{ marginTop: '0px' }}>
@@ -149,6 +152,6 @@ const SpeakerCarousel = () => {
       <ScrollDown />
     </>
   );
-};
+}
 
 export default SpeakerCarousel;
