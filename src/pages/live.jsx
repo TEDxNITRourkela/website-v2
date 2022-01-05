@@ -104,7 +104,7 @@ const Live = () => {
     <Container>
       <GridContainer>
         <LiveStage youtubeLink={activeSession?.youtubeLink} speaker={activeSession} />
-        <LiveStreamSidebar speakers={sessionDetails} />
+        <LiveStreamSidebar speakers={sessionDetails} channelId={activeSession?.discordChannelId} />
       </GridContainer>
     </Container>
   );

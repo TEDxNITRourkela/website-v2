@@ -44,7 +44,7 @@ const Carousel = styled.div`
   padding: 8px 8px;
   background-color: #383838;
   display: flex;
-  jsutify-content: center;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -58,8 +58,8 @@ const ImgContainer = styled.div`
 const Img = styled.img`
   width: 100%;
   height: auto;
-  objectFit: cover;
-  objectPosition: center;
+  object-fit: cover;
+  object-position: center;
 `
 
 const SpeakerCarousel = () => {
@@ -101,7 +101,7 @@ const SpeakerCarousel = () => {
       <HeroContainer>
         <Para2 className='caption'>{home.CONTENT1.caption} </Para2>
         <Heading1 className='heading' style={{ marginTop: '0px' }}>
-          {home.CONTENT1.heading}
+          What Now?
         </Heading1>
 
         <ImgContainer>

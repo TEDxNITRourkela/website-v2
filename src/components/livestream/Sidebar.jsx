@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 // Components
 import { Para1 } from "..";
+import Chat from './Chat';
 
 const Box2 = styled.div`
 	grid-column: 2/3;
@@ -14,6 +15,8 @@ const Box2 = styled.div`
 	@media (max-width: 700px) {
 		grid-column: 1/3;
 	}
+
+	position: relative;
 `
 
 const NavContainer = styled.div`
@@ -46,6 +49,10 @@ const ScheduleContainer = styled.div`
 	padding: 15px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+
+	position: absolute;
+	top: 55px;
+	left: 0px;
 `
 
 const ScheduleItemContainer = styled.div`
@@ -94,27 +101,21 @@ const STAGE = {
 	SCHEDULE: 'Event Lineup',
 }
 
-const Sidebar = ({speakers}) => {
-	const [stage, setStage] = useState(STAGE.SCHEDULE);
+const Sidebar = ({speakers, channelId = "909151871011291162"}) => {
+	const [stage, setStage] = useState(STAGE.CHAT);
 
 	// Handlers
 	const setStageToChat = () => setStage(STAGE.CHAT);
 	const setStageToSchedule = () => setStage(STAGE.SCHEDULE);
 
 	const renderStage = () => {
-		switch(stage) {
-			case STAGE.CHAT:
-				return (
-					<div>
-						Still working on that...
-					</div>
-				)
-
-			case STAGE.SCHEDULE:
-				return (
+		return (
+			<>
+				<Chat channelId={channelId} />
+				{stage === STAGE.SCHEDULE && (
 					<ScheduleContainer>
-						{speakers.map(({name, shortDescription, img}) => (
-							<ScheduleItemContainer>
+						{speakers.filter(({hasCompleted}) => !hasCompleted).map(({name, shortDescription, img}) => (
+							<ScheduleItemContainer key={name}>
 								<ImgContainer>
 									<Img src={img} alt={name} />
 								</ImgContainer>
@@ -126,11 +127,9 @@ const Sidebar = ({speakers}) => {
 							</ScheduleItemContainer>
 						))}
 					</ScheduleContainer>
-				)
-
-			default:
-				<Para1>Loading...</Para1>
-		}
+				)}
+			</>
+		)
 	}
 
 	return (
