@@ -34,7 +34,7 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
 
   return (
     <NavContainer shadow={shadow}>
-      <Container>
+      <Container style={{paddingTop: '0px', paddingBottom: '0px'}}>
         <Navbar>
           <LogoContainer>
             <Link to='/'>

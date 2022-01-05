@@ -17,8 +17,8 @@ const GridContainer = styled.div`
 
   @media (max-width: 700px) {
 		grid-column: 1/3;
-    margin-top: 30px;
     height: auto;
+    margin-bottom: 6rem;
 	}
 `
 
