@@ -15,9 +15,21 @@ export default function () {
 
   return (
     <>
-      <DesktopNavbar toggleMenuOpen={toggleMenuOpen} handler={DropDownHandler} open={open} />
+      <DesktopNavbar
+        toggleMenuOpen={toggleMenuOpen}
+        handler={DropDownHandler}
+        open={open}
+        setOpen={setOpen}
+        mobile={false}
+      />
       {menuOpen && (
-        <MobileNavbar toggleMenuOpen={toggleMenuOpen} handler={DropDownHandler} open={open} />
+        <MobileNavbar
+          toggleMenuOpen={toggleMenuOpen}
+          handler={DropDownHandler}
+          open={open}
+          setOpen={setOpen}
+          mobile
+        />
       )}
     </>
   );

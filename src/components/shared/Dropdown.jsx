@@ -10,6 +10,9 @@ import { faAngleRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 // Components
 import { Para2 } from '..';
 
+// utils
+import useMediaQuery from '../../utils/useMediaQuery';
+
 const DropdownContainer = styled.div`
   position: absolute;
   top: 100px;
@@ -19,8 +22,8 @@ const DropdownContainer = styled.div`
   overflow: hidden;
   transition: height 500ms ease;
   @media (max-width: 769px) {
-    top: 345px;
-    transform: translateX(-35%);
+    top: 355px;
+    transform: translateX(0%);
   }
   .menu-primary-enter {
     position: absolute;
@@ -76,7 +79,7 @@ const MenuItem = styled.div`
     @media (max-width: 769px) {
       font-style: normal;
       font-weight: normal;
-      font-size: 1.25rem;
+      font-size: 1rem;
       line-height: 1.6;
       color: #ffffff;
     }
@@ -130,13 +133,24 @@ function DropdownHead({ goToMenu, setActiveMenu, children }) {
   );
 }
 
-function DropdownItem({ goToMenu, setActiveMenu, children, haveChildren, handler }) {
+function DropdownItem({
+  goToMenu,
+  setActiveMenu,
+  children,
+  haveChildren,
+  handler,
+  toggleMenuOpen,
+  mobile,
+}) {
   const clickEvents = () => {
     if (goToMenu) {
       setActiveMenu(goToMenu);
     }
     if (!haveChildren) {
       handler();
+      if (mobile) {
+        toggleMenuOpen();
+      }
     }
   };
   return (
@@ -147,7 +161,7 @@ function DropdownItem({ goToMenu, setActiveMenu, children, haveChildren, handler
   );
 }
 
-function Dropdown({ data, handler }) {
+function Dropdown({ data, handler, open, setOpen, toggleMenuOpen, mobile }) {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
@@ -155,6 +169,24 @@ function Dropdown({ data, handler }) {
   useEffect(() => {
     setMenuHeight(dropdownRef.current?.firstChild.offsetHeight);
   }, []);
+
+  const isDesktop = useMediaQuery('(min-width: 769px)');
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (open && dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    if (isDesktop) {
+      document.addEventListener('mousedown', checkIfClickedOutside);
+    }
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener('mousedown', checkIfClickedOutside);
+    };
+  }, [open, setOpen, isDesktop]);
 
   const calcHeight = (el) => {
     const height = el.offsetHeight;
@@ -193,7 +225,9 @@ function Dropdown({ data, handler }) {
             </DropdownHead>
             {items.map(({ link, text }) => (
               <Link className='link' key={link} to={`/events/${title}/${link}`}>
-                <DropdownItem handler={handler}>{text}</DropdownItem>
+                <DropdownItem toggleMenuOpen={toggleMenuOpen} mobile={mobile} handler={handler}>
+                  {text}
+                </DropdownItem>
               </Link>
             ))}
           </Menu>

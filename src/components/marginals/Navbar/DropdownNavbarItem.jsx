@@ -1,24 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // Components
 import { NavText } from './styles';
 
-function DropdownNavbarItem({ name, children, handler, open }) {
-  const [hover, setHover] = useState(false);
-  const hoverHandler = () => {
-    setHover(!hover);
+import useMediaQuery from '../../../utils/useMediaQuery';
+
+function DropdownNavbarItem({ name, children, handler, open, setOpen }) {
+  const isDesktop = useMediaQuery('(min-width: 769px)');
+  const mouseOver = () => {
+    if (isDesktop) {
+      setOpen(true);
+    }
   };
   return (
     <>
       <NavText
         style={{ padding: '0px 15px', cursor: 'pointer' }}
-        onMouseOver={hoverHandler}
-        onMouseOut={hoverHandler}
+        onMouseOver={mouseOver}
         onClick={handler}
       >
         {name}
       </NavText>
-      {(open || hover) && children}
+      {open && children}
     </>
   );
 }
