@@ -6,8 +6,8 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 
 // Components
-import { EventHero, SpeakerSection, Container } from '../../components';
-import Partner from '../../components/partners/Partner';
+import { EventHero, SpeakerSection, Container } from '..';
+import Partner from '../partners/Partner';
 
 // Assets
 import { GRAPHICS } from '../../../config/img/graphics';
@@ -66,7 +66,7 @@ export const pageQuery = graphql`
   }
 `;
 
-const Events = ({ data }) => {
+function Events({ data }) {
   const { frontmatter } = data.mdx;
   const { dates, name, speakers, partners, about, slug } = frontmatter;
 
@@ -87,12 +87,13 @@ const Events = ({ data }) => {
 
       <EventHero year={dates} name={name} about={about} />
 
-      <Container style={{ marginBottom: '100px' }}>
+      <Container style={{ marginBottom: '50px' }}>
         <SpeakerSection title='Speakers' data={speakersModified} />
       </Container>
 
-      <div style={{ marginTop: '150px' }}>
+      <div style={{ marginTop: '100px', marginBottom: '50px' }}>
         {partners.map((DATA, index) => (
+          // eslint-disable-next-line react/no-array-index-key
           <Partner DATA={DATA} key={index} />
         ))}
       </div>
@@ -100,6 +101,6 @@ const Events = ({ data }) => {
       <DecorationOne src={GRAPHICS.TOP_RIGHT_EVENT} alt='ellipse' />
     </div>
   );
-};
+}
 
 export default Events;

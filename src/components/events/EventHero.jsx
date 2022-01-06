@@ -62,23 +62,25 @@ const Text = styled(Para2)`
   }
 `;
 
-const EventHero = ({ year, name, about }) => (
-  <>
-    <ImageContainer>
+function EventHero({ year, name, about }) {
+  return (
+    <>
+      <ImageContainer>
+        <Container>
+          <Content>
+            <div className='main'>
+              <img src={events.CONTENT.logo.src} alt={events.CONTENT.logo.alt} className='logo' />
+              <Heading1 className='heading'>{name}</Heading1>
+            </div>
+            <Heading3 className='year'>{year}</Heading3>
+          </Content>
+        </Container>
+      </ImageContainer>
       <Container>
-        <Content>
-          <div className='main'>
-            <img src={events.CONTENT.logo.src} alt={events.CONTENT.logo.alt} className='logo' />
-            <Heading1 className='heading'>{name}</Heading1>
-          </div>
-          <Heading3 className='year'>{year}</Heading3>
-        </Content>
+        <Text>{about}</Text>
       </Container>
-    </ImageContainer>
-    <Container>
-      <Text>{about}</Text>
-    </Container>
-  </>
-);
+    </>
+  );
+}
 
 export default EventHero;
