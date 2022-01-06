@@ -76,6 +76,7 @@ const Navigator = styled.div`
 
 const Sponsor = styled.img`
   opacity: ${({ main }) => (main ? `1` : `1`)};
+  margin: 10px 0px;
   width: 90%;
   height: auto;
 `;
