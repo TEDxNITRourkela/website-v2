@@ -25,6 +25,14 @@ export const HeroContainer = styled.div`
       font-size: 24px;
     }
   }
+  .dates {
+    font-size: 40px;
+    margin-top: 50px;
+    @media (max-width: 700px) {
+      font-size: 20px;
+      margin-top: 40px;
+    }
+  }
   .logo {
     margin-top: 5px;
     width: 300px;

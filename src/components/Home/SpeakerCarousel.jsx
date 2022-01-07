@@ -50,9 +50,12 @@ const Carousel = styled.div`
 
 const ImgContainer = styled.div`
   width: 50%;
-  height: 200px;
+  height: auto;
   position: relative;
   margin-top: 2rem;
+  @media (max-width: 769px) {
+    width: 75%;
+  }
 `;
 
 const Img = styled.img`
@@ -111,7 +114,7 @@ function SpeakerCarousel() {
           />
         </ImgContainer>
 
-        <Heading2 className='heading' style={{ marginTop: '0px' }}>
+        <Heading2 className='dates'>
           8-9th January | 4 - 8 pm
         </Heading2>
       </HeroContainer>

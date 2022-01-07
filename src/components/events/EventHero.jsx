@@ -25,7 +25,7 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   @media (max-width: 500px) {
-    align-items: flex-end;
+    flex-direction: column;
   }
   .main {
     display: flex;
