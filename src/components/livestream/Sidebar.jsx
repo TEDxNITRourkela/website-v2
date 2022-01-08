@@ -114,7 +114,7 @@ const Sidebar = ({speakers, channelId = "909151871011291162"}) => {
 				<Chat channelId={channelId} />
 				{stage === STAGE.SCHEDULE && (
 					<ScheduleContainer>
-						{speakers.filter(({hasCompleted}) => !hasCompleted).map(({name, shortDescription, img}) => (
+						{speakers.sort((a, b) => a.serialNumber - b.serialNumber).filter(({hasCompleted}) => !hasCompleted).map(({name, shortDescription, img}) => (
 							<ScheduleItemContainer key={name}>
 								<ImgContainer>
 									<Img src={img} alt={name} />
