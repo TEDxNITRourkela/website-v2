@@ -10,10 +10,11 @@ import { Container, LiveStage, LiveStreamSidebar} from '../components';
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   grid-gap: 1rem;
   height: calc(100vh - 120px);
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-bottom: 5rem;
 
   @media (max-width: 700px) {
 		grid-column: 1/3;
@@ -52,7 +53,6 @@ const firebase = initializeApp(config);
 const db = getFirestore(firebase);
 
 const Live = () => {
-	// const {firebase, db} = useFirebase();
   const [activeSession, setActiveSession] = useState(null);
   const [sessionDetails, setSessionDetails] = useState([]);
   const [containerDimensions, setContainerDimensions] = useState({
@@ -101,7 +101,7 @@ const Live = () => {
   }, [activeSession]);
 
   return (
-    <Container>
+    <Container style={{paddingtop: '0px'}}>
       <GridContainer>
         <LiveStage youtubeLink={activeSession?.youtubeLink} speaker={activeSession} />
         <LiveStreamSidebar speakers={sessionDetails} channelId={activeSession?.discordChannelId} />
