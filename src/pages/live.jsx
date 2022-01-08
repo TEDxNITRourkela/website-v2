@@ -12,7 +12,8 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   grid-gap: 1rem;
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
+  height: auto;
   margin-top: 50px;
   margin-bottom: 5rem;
 
