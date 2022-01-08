@@ -5,11 +5,11 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 // Components
 import { HeroContainer } from './styles';
-import { SpeakerCard, Para2, Heading1, Heading2 } from '..';
+import { SpeakerCard, Para2, Heading1, Heading2, CustomButton } from '..';
 import { ScrollDown } from './Common';
 
 // Assets
@@ -91,7 +91,7 @@ function SpeakerCarousel() {
       }
     }
   `);
-  const { frontmatter, dates } = data.mdx;
+  const { frontmatter } = data.mdx;
   const { speakers } = frontmatter;
 
   const ref = useRef(null);
@@ -114,9 +114,10 @@ function SpeakerCarousel() {
           />
         </ImgContainer>
 
-        <Heading2 className='dates'>
-          8-9th January | 4 - 8 pm
-        </Heading2>
+        <Heading2 className='dates'>8-9th January | 4 - 8 pm</Heading2>
+        <Link to='/live'>
+          <CustomButton>Watch Live</CustomButton>
+        </Link>
       </HeroContainer>
 
       <ButtonContainer>

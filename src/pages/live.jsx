@@ -6,7 +6,7 @@ import { getFirestore, collection, getDocs, onSnapshot, doc, setDoc } from 'fire
 import styled from 'styled-components';
 
 // Components
-import { Container, LiveStage, LiveStreamSidebar} from '../components';
+import { Container, LiveStage, LiveStreamSidebar } from '../components';
 
 const GridContainer = styled.div`
   display: grid;
@@ -16,24 +16,26 @@ const GridContainer = styled.div`
   margin-top: 30px;
 
   @media (max-width: 700px) {
-		grid-column: 1/3;
+    grid-column: 1/3;
     height: auto;
     margin-bottom: 6rem;
-	}
-`
+  }
+`;
 
 const addData = () => {
-  speakers.forEach(async ({name, description, shortDescription, img, hasCompleted, youtubeLink}, index) => {
-    await setDoc(doc(db, "speakerLineup", `speaker-${index+1}`), {
-      name,
-      description,
-      shortDescription,
-      img,
-      hasCompleted,
-      youtubeLink
-    })
-  })
-}
+  speakers.forEach(
+    async ({ name, description, shortDescription, img, hasCompleted, youtubeLink }, index) => {
+      await setDoc(doc(db, 'speakerLineup', `speaker-${index + 1}`), {
+        name,
+        description,
+        shortDescription,
+        img,
+        hasCompleted,
+        youtubeLink,
+      });
+    },
+  );
+};
 
 // Firebase web config
 const config = {
@@ -51,8 +53,8 @@ const config = {
 const firebase = initializeApp(config);
 const db = getFirestore(firebase);
 
-const Live = () => {
-	// const {firebase, db} = useFirebase();
+function Live() {
+  // const {firebase, db} = useFirebase();
   const [activeSession, setActiveSession] = useState(null);
   const [sessionDetails, setSessionDetails] = useState([]);
   const [containerDimensions, setContainerDimensions] = useState({
@@ -101,12 +103,12 @@ const Live = () => {
   }, [activeSession]);
 
   return (
-    <Container>
+    <Container style={{ marginBottom: '50px' }}>
       <GridContainer>
         <LiveStage youtubeLink={activeSession?.youtubeLink} speaker={activeSession} />
         <LiveStreamSidebar speakers={sessionDetails} channelId={activeSession?.discordChannelId} />
       </GridContainer>
     </Container>
   );
-};
+}
 export default Live;

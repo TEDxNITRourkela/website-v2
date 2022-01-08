@@ -28,6 +28,7 @@ export const HeroContainer = styled.div`
   .dates {
     font-size: 40px;
     margin-top: 50px;
+    margin-bottom: 50px;
     @media (max-width: 700px) {
       font-size: 20px;
       margin-top: 40px;
