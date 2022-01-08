@@ -6,7 +6,7 @@ import { getFirestore, collection, getDocs, onSnapshot, doc, setDoc } from 'fire
 import styled from 'styled-components';
 
 // Components
-import { Container, LiveStage, LiveStreamSidebar} from '../components';
+import { Container, LiveStage, LiveStreamSidebar } from '../components';
 
 const GridContainer = styled.div`
   display: grid;
@@ -18,11 +18,11 @@ const GridContainer = styled.div`
   margin-bottom: 5rem;
 
   @media (max-width: 700px) {
-		grid-column: 1/3;
+    grid-column: 1/3;
     height: auto;
     margin-bottom: 6rem;
-	}
-`
+  }
+`;
 
 // const lineup = [
 //   {
@@ -68,17 +68,19 @@ const GridContainer = styled.div`
 // ]
 
 const addData = () => {
-  speakers.forEach(async ({name, description, shortDescription, img, hasCompleted, youtubeLink}, index) => {
-    await setDoc(doc(db, "speakerLineup", `speaker-${index+1}`), {
-      name,
-      description,
-      shortDescription,
-      img,
-      hasCompleted,
-      youtubeLink
-    })
-  })
-}
+  speakers.forEach(
+    async ({ name, description, shortDescription, img, hasCompleted, youtubeLink }, index) => {
+      await setDoc(doc(db, 'speakerLineup', `speaker-${index + 1}`), {
+        name,
+        description,
+        shortDescription,
+        img,
+        hasCompleted,
+        youtubeLink,
+      });
+    },
+  );
+};
 
 // Firebase web config
 const config = {
@@ -152,5 +154,5 @@ const Live = () => {
       </GridContainer>
     </Container>
   );
-};
+}
 export default Live;

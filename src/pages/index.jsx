@@ -45,7 +45,7 @@ const DecorationThree = styled.img`
   }
 `;
 
-const Homepage = () => {
+function Homepage() {
   return (
     <>
       <Main number='4' />
@@ -58,6 +58,6 @@ const Homepage = () => {
       </Container>
     </>
   );
-};
+}
 
 export default Homepage;

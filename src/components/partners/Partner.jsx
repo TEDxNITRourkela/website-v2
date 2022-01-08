@@ -7,8 +7,13 @@ import styled from 'styled-components';
 import { Heading2 } from '../index';
 import { GRAPHICS } from '../../../config/img/graphics';
 
+import useMediaQuery from '../../utils/useMediaQuery';
+
 const Title = styled(Heading2)`
   font-weight: 700;
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -27,21 +32,28 @@ const HorizontalLine = styled.div`
 `;
 
 const PartnerContainer = styled.div`
-  margin: 20px 0px;
-  flex: 1;
+  margin: 20px auto;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   z-index: -1;
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 `;
 
 const ImgSection = styled.a`
-  margin: 10px 10px;
+  margin: 10px 30px;
   height: auto;
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
+  @media (max-width: 700px) {
+    margin: 10px 20px;
+  }
 `;
 
 const Img = styled.img`
@@ -64,6 +76,7 @@ const Navigator = styled.div`
 
 const Sponsor = styled.img`
   opacity: ${({ main }) => (main ? `1` : `1`)};
+  margin: 10px 0px;
   width: 90%;
   height: auto;
 `;
@@ -73,6 +86,7 @@ const Link = styled.a`
 `;
 
 function Partner({ DATA, home }) {
+  const isDesktop = useMediaQuery('(min-width: 500px)');
   const renderPartnerContainer = (
     <div>
       <TitleContainer>
@@ -81,15 +95,14 @@ function Partner({ DATA, home }) {
       </TitleContainer>
 
       <PartnerContainer>
-        {DATA.partners.map((sponsor, index) => (
+        {DATA.partners.map((sponsor) => (
           <ImgSection
-            key={`partner-${index}-${sponsor.name}`}
+            key={`partner-${sponsor.name}`}
             target='_blank'
             rel='noreferrer'
             href={sponsor.href}
-            title={sponsor.hrefTitle}
             style={{
-              width: `${sponsor.size}`,
+              width: isDesktop ? `${sponsor.width}` : '37%',
             }}
           >
             <Sponsor src={sponsor.img} alt='Sponsor' />

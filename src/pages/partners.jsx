@@ -32,14 +32,13 @@ function Partner({ data }) {
   const { dates, partners } = frontmatter;
 
   const tags = [];
-  partners.forEach(({ partners: list }, i1) => {
-    list.forEach(({ name, href }, i2) => {
+  partners.forEach(({ partners: list }) => {
+    list.forEach(({ name, href }) => {
       tags.push(
         <meta
-          key={`meta-${i1}-${i2}`}
+          key={href}
           name='description'
           content={`TEDxNITRourkela ${dates} | Partner | ${name}`}
-          key={href}
         />,
       );
     });
@@ -57,6 +56,7 @@ function Partner({ data }) {
 
       <div style={{ marginTop: '2rem', marginBottom: '5rem' }}>
         {partners.map((pd, index) => (
+          // eslint-disable-next-line react/no-array-index-key
           <Partners DATA={pd} key={index} />
         ))}
       </div>

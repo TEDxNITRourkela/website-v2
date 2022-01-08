@@ -13,7 +13,7 @@ import DropdownNavbarItem from './DropdownNavbarItem';
 // assets
 import { nav, events } from '../../../../config/content';
 
-const DesktopNavbar = ({ toggleMenuOpen }) => {
+function DesktopNavbar({ toggleMenuOpen, open, handler, setOpen, mobile }) {
   const [shadow, setShadow] = useState(false);
   const { logo, navItems } = nav;
 
@@ -34,7 +34,7 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
 
   return (
     <NavContainer shadow={shadow}>
-      <Container style={{paddingTop: '0px', paddingBottom: '0px'}}>
+      <Container style={{ paddingTop: '0px', paddingBottom: '0px' }}>
         <Navbar>
           <LogoContainer>
             <Link to='/'>
@@ -48,8 +48,20 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
             {navItems.map(({ link, name }) => {
               if (name === 'Events') {
                 return (
-                  <DropdownNavbarItem key={link} name={name}>
-                    <DropDown data={events.NAVTEXT} />
+                  <DropdownNavbarItem
+                    key={link}
+                    setOpen={setOpen}
+                    name={name}
+                    open={open}
+                    handler={handler}
+                  >
+                    <DropDown
+                      open={open}
+                      setOpen={setOpen}
+                      handler={handler}
+                      data={events.NAVTEXT}
+                      mobile={mobile}
+                    />
                   </DropdownNavbarItem>
                 );
               }
@@ -64,6 +76,6 @@ const DesktopNavbar = ({ toggleMenuOpen }) => {
       </Container>
     </NavContainer>
   );
-};
+}
 
 export default DesktopNavbar;

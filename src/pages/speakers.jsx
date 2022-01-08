@@ -49,7 +49,7 @@ export const pageQuery = graphql`
   }
 `;
 
-const Speaker = ({ data }) => {
+function Speaker({ data }) {
   const { frontmatter, dates } = data.mdx;
   const { speakers } = frontmatter;
 
@@ -68,12 +68,12 @@ const Speaker = ({ data }) => {
         ))}
       </Helmet>
 
-      <div style={{ marginTop: '2rem', marginBottom: '5rem' }}>
-        <SpeakerSection data={speakers} />
+      <div style={{ marginTop: '3.5rem', marginBottom: '5rem' }}>
+        <SpeakerSection title='TEDxNITRourkelaWomen 2022' data={speakers} />
         <Decoration src={GRAPHICS.TOP_LEFT} alt='ellipse' />
       </div>
     </Container>
   );
-};
+}
 
 export default Speaker;

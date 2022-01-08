@@ -54,12 +54,12 @@ const CircularProgress = styled.div`
     will-change: transform;
     @media (max-width: 540px) {
       height: 20px;
-    width: 20px;
+      width: 20px;
     }
   }
 `;
 
-export default ({ children, loading, link, handleClick, disable }) => {
+export default function ({ children, loading, link, handleClick, disable }) {
   const ModifiedButton = (
     <Button onClick={handleClick} disabled={disable}>
       {loading ? <CircularProgress /> : children}
@@ -67,4 +67,4 @@ export default ({ children, loading, link, handleClick, disable }) => {
   );
 
   return link ? <a href={link} target='_blank' rel='noreferrer noopener' /> : ModifiedButton;
-};
+}

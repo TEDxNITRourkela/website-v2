@@ -12,7 +12,7 @@ import DropdownNavbarItem from './DropdownNavbarItem';
 // assets
 import { nav, events } from '../../../../config/content';
 
-const MobileNavbar = ({ toggleMenuOpen }) => {
+function MobileNavbar({ toggleMenuOpen, handler, open, setOpen, mobile }) {
   const { navItems } = nav;
 
   return (
@@ -24,13 +24,26 @@ const MobileNavbar = ({ toggleMenuOpen }) => {
           {navItems.map(({ link, name }) => {
             if (name === 'Events') {
               return (
-                <DropdownNavbarItem key={link} name={name}>
-                  <DropDown data={events.NAVTEXT} />
+                <DropdownNavbarItem
+                  setOpen={setOpen}
+                  open={open}
+                  handler={handler}
+                  key={link}
+                  name={name}
+                >
+                  <DropDown
+                    toggleMenuOpen={toggleMenuOpen}
+                    setOpen={setOpen}
+                    open={open}
+                    handler={handler}
+                    data={events.NAVTEXT}
+                    mobile={mobile}
+                  />
                 </DropdownNavbarItem>
               );
             }
             return (
-              <TabLink key={link} to={link}>
+              <TabLink onClick={toggleMenuOpen} key={link} to={link}>
                 <NavText>{name}</NavText>
               </TabLink>
             );
@@ -39,6 +52,6 @@ const MobileNavbar = ({ toggleMenuOpen }) => {
       </div>
     </MobileNavbarSection>
   );
-};
+}
 
 export default MobileNavbar;

@@ -10,6 +10,9 @@ import { faAngleRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 // Components
 import { Para2 } from '..';
 
+// utils
+import useMediaQuery from '../../utils/useMediaQuery';
+
 const DropdownContainer = styled.div`
   position: absolute;
   top: 100px;
@@ -19,8 +22,8 @@ const DropdownContainer = styled.div`
   overflow: hidden;
   transition: height 500ms ease;
   @media (max-width: 769px) {
-    top: 345px;
-    transform: translateX(-35%);
+    top: 355px;
+    transform: translateX(0%);
   }
   .menu-primary-enter {
     position: absolute;
@@ -69,13 +72,14 @@ const MenuItem = styled.div`
   padding: 0.5rem;
   &:hover {
     background-color: #525357;
+    cursor: pointer;
   }
   .text {
     margin-left: 5px;
     @media (max-width: 769px) {
       font-style: normal;
       font-weight: normal;
-      font-size: 1.25rem;
+      font-size: 1rem;
       line-height: 1.6;
       color: #ffffff;
     }
@@ -115,26 +119,49 @@ const MenuHead = styled.div`
   }
 `;
 
-const DropdownHead = ({ goToMenu, setActiveMenu, children }) => (
-  <MenuHead>
-    <FontAwesomeIcon
-      className='icon'
-      onClick={() => goToMenu && setActiveMenu(goToMenu)}
-      icon={faArrowLeft}
-      size='xs'
-    />
-    <Para2 className='heading'>{children} </Para2>
-  </MenuHead>
-);
+function DropdownHead({ goToMenu, setActiveMenu, children }) {
+  return (
+    <MenuHead>
+      <FontAwesomeIcon
+        className='icon'
+        onClick={() => goToMenu && setActiveMenu(goToMenu)}
+        icon={faArrowLeft}
+        size='xs'
+      />
+      <Para2 className='heading'>{children} </Para2>
+    </MenuHead>
+  );
+}
 
-const DropdownItem = ({ goToMenu, setActiveMenu, children, haveChildren }) => (
-  <MenuItem onClick={() => goToMenu && setActiveMenu(goToMenu)}>
-    <Para2 className='text'>{children}</Para2>
-    {haveChildren && <FontAwesomeIcon icon={faAngleRight} />}
-  </MenuItem>
-);
+function DropdownItem({
+  goToMenu,
+  setActiveMenu,
+  children,
+  haveChildren,
+  handler,
+  toggleMenuOpen,
+  mobile,
+}) {
+  const clickEvents = () => {
+    if (goToMenu) {
+      setActiveMenu(goToMenu);
+    }
+    if (!haveChildren) {
+      handler();
+      if (mobile) {
+        toggleMenuOpen();
+      }
+    }
+  };
+  return (
+    <MenuItem onClick={clickEvents}>
+      <Para2 className='text'>{children}</Para2>
+      {haveChildren && <FontAwesomeIcon icon={faAngleRight} />}
+    </MenuItem>
+  );
+}
 
-const Dropdown = ({ data }) => {
+function Dropdown({ data, handler, open, setOpen, toggleMenuOpen, mobile }) {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
@@ -142,6 +169,24 @@ const Dropdown = ({ data }) => {
   useEffect(() => {
     setMenuHeight(dropdownRef.current?.firstChild.offsetHeight);
   }, []);
+
+  const isDesktop = useMediaQuery('(min-width: 769px)');
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (open && dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    if (isDesktop) {
+      document.addEventListener('mousedown', checkIfClickedOutside);
+    }
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener('mousedown', checkIfClickedOutside);
+    };
+  }, [open, setOpen, isDesktop]);
 
   const calcHeight = (el) => {
     const height = el.offsetHeight;
@@ -180,7 +225,9 @@ const Dropdown = ({ data }) => {
             </DropdownHead>
             {items.map(({ link, text }) => (
               <Link className='link' key={link} to={`/events/${title}/${link}`}>
-                <DropdownItem>{text}</DropdownItem>
+                <DropdownItem toggleMenuOpen={toggleMenuOpen} mobile={mobile} handler={handler}>
+                  {text}
+                </DropdownItem>
               </Link>
             ))}
           </Menu>
@@ -188,6 +235,6 @@ const Dropdown = ({ data }) => {
       ))}
     </DropdownContainer>
   );
-};
+}
 
 export default Dropdown;
