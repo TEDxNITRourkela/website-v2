@@ -10,10 +10,12 @@ import { Container, LiveStage, LiveStreamSidebar } from '../components';
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   grid-gap: 1rem;
-  height: calc(100vh - 120px);
-  margin-top: 30px;
+  min-height: calc(100vh - 120px);
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 5rem;
 
   @media (max-width: 700px) {
     grid-column: 1/3;
@@ -21,6 +23,49 @@ const GridContainer = styled.div`
     margin-bottom: 6rem;
   }
 `;
+
+// const lineup = [
+//   {
+//     name: 'Dr. Yojna Sah Jain',
+//     description: 'Dr. Yojna Sah Jain is the founder and CEO of the digital healthcare company, HealthPrax. Apart from this, she is also an author of three books and a strong advocate for the propagation of Hindi and Indian culture.',
+//     img: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641211287/2021-22/TEDxNITRourkelaWomen/yojna-sah-jain_psko8m.png',
+//     shortDescription: 'Healthcare Expert | Entrepreneur',
+//     youtubeLink: 'https://www.youtube.com/embed/Ab_5JLanGsQ',
+//     hasCompleted: false,
+//   },
+//   {
+//     name: 'Veethika Mishra',
+//     description: 'Veethika Mishra has showcased her diligence and determination as a senior designer in numerous esteemed companies. She likes to explore the possibility of Play in solving sensitive real-world issues and is highly interested in open practices to improve learning experiences.',
+//     img: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641211280/2021-22/TEDxNITRourkelaWomen/veethika-mishra_l0iuor.png',
+//     shortDescription: 'Senior Product Designer | GitLab',
+//     youtubeLink: 'https://www.youtube.com/embed/Ab_5JLanGsQ',
+//     hasCompleted: false,
+//   },
+//   {
+//     name: 'Dr. Hansika Kapoor',
+//     description: "Dr. Hansika Kapoor works at Prayogshalaas a Research Author. Besides that, she is committed to studying and improving people's mental health and has looked into the negative creativity construct using psychophysiological methodologies.",
+//     img: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641211295/2021-22/TEDxNITRourkelaWomen/hansika-kapoor_m7f0nk.png',
+//     shortDescription: 'Research Author | FullBright Nehru Fellow',
+//     youtubeLink: 'https://www.youtube.com/embed/Ab_5JLanGsQ',
+//     hasCompleted: false,
+//   },
+//   {
+//     name: 'Kaneenika Sinha',
+//     description: "Kaneenika Sinha is a mathematician who is currently an Associate Professor of Mathematics at the IISER ,Pune. She has received her Bachelor of Arts (Honours) in mathematics from Lady Shriram College in Delhi and went on to Queen's University in Canada for her MSc and PhD.",
+//     img: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641211298/2021-22/TEDxNITRourkelaWomen/kaneenika-sinha_apw5ji.png',
+//     shortDescription: 'Associate Professor | Mathematics | IISER, Pune',
+//     youtubeLink: 'https://www.youtube.com/embed/Ab_5JLanGsQ',
+//     hasCompleted: false,
+//   },
+//   {
+//     name: 'Ronkini Gupta',
+//     description: 'Ronkini Gupta is an Indian playback singer and composer who shot into fame after winning the Saregamapa World Series back in 2004. She has won several awards in her fantastic career, including multiple Filmfare nominations.',
+//     img: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641211298/2021-22/TEDxNITRourkelaWomen/ronkini-gupta_j2lfea.png',
+//     shortDescription: 'Composer | Playback singer',
+//     youtubeLink: 'https://www.youtube.com/embed/Ab_5JLanGsQ',
+//     hasCompleted: false,
+//   },
+// ]
 
 const addData = () => {
   speakers.forEach(
@@ -53,8 +98,7 @@ const config = {
 const firebase = initializeApp(config);
 const db = getFirestore(firebase);
 
-function Live() {
-  // const {firebase, db} = useFirebase();
+const Live = () => {
   const [activeSession, setActiveSession] = useState(null);
   const [sessionDetails, setSessionDetails] = useState([]);
   const [containerDimensions, setContainerDimensions] = useState({
@@ -103,7 +147,7 @@ function Live() {
   }, [activeSession]);
 
   return (
-    <Container style={{ marginBottom: '50px' }}>
+    <Container style={{paddingtop: '0px'}}>
       <GridContainer>
         <LiveStage youtubeLink={activeSession?.youtubeLink} speaker={activeSession} />
         <LiveStreamSidebar speakers={sessionDetails} channelId={activeSession?.discordChannelId} />

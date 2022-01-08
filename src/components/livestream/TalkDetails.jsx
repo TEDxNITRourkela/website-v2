@@ -8,7 +8,6 @@ const Box3 = styled.div`
 	background: #232323;
 	margin-top: 20px;
 	padding: 15px;
-	min-height: 39.5%;
 	height: auto;
 
 	display: flex;
