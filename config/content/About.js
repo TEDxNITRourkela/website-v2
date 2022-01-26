@@ -96,7 +96,7 @@ const TEAM = {
     },
     {
       NAME: 'Sonakshi Satpathy',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641308828/team/technical/Sonakshi_Satpathy_km3sl5.jpg',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643198800/team/technical/Sonakshi_Satpathy_mujquq.png',
       DESIGNATION: 'Technical Team Member',
     },
     {
