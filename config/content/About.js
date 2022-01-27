@@ -91,7 +91,7 @@ const TEAM = {
     },
     {
       NAME: 'Sambit Sankalp',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641303936/team/technical/Sambit_Sankalp_ddfkx2.jpg',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643281545/team/technical/Sambit_Sankalp_omdbgy.png',
       DESIGNATION: 'Technical Team Member',
     },
     {
@@ -140,7 +140,7 @@ const TEAM = {
     },
     {
       NAME: 'Sauraj Goswami',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641291520/team/management/Sauraj_Goswami_umjzro.jpg',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643280989/team/management/Sauraj_Goswami_sbrfnt.png',
       DESIGNATION: 'Management Team Member',
     },
     {
@@ -160,7 +160,7 @@ const TEAM = {
     },
     {
       NAME: 'Pranav Kumar Vaishnava',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643081842/team/management/Pranav_Kumar_Vaishnava_rcu0cq.png',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643280956/team/management/Pranav_Kumar_Vaishnava_m6vuhd.png',
       DESIGNATION: 'Management Team Member',
     },
     {
@@ -187,7 +187,7 @@ const TEAM = {
     },
     {
       NAME: 'Tushar Goel',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643092190/team/pr/Tushar_Goel_fvgtm3.png',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643281063/team/pr/Tushar_Goel_kzpenu.png',
       DESIGNATION: 'Public Relations Team Member',
     },
     {
@@ -212,7 +212,7 @@ const TEAM = {
     },
     {
       NAME: 'Berin Biju',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643114543/team/pr/Berin_Biju_g1xlfz.png',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643281053/team/pr/Berin_Biju_gvkx2e.png',
       DESIGNATION: 'Public Relations Team Member',
     },
   ],
@@ -244,17 +244,17 @@ const TEAM = {
     },
     {
       NAME: 'Prerna Chordiya',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641290763/team/curation/Prerna_Chordiya_gozlwg.webp',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643280808/team/curation/Prerna_Chordiya_jzifsd.png',
       DESIGNATION: 'Curation Team Member',
     },
     {
       NAME: 'Meghana Gajji',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1641290774/team/curation/20210906_141226-01_neuyza.jpg',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643280800/team/curation/Meghana_nj0kcr.png',
       DESIGNATION: 'Curation Team Member',
     },
     {
       NAME: 'Aditi Sitaula',
-      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643081761/team/curation/Aditi_Sitaula_xk0zov.png',
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1643280892/team/curation/Aditi_Sitaula_z0jvfr.png',
       DESIGNATION: 'Curation Team Member',
     },
     {
