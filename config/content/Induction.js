@@ -8,12 +8,6 @@ export default {
       ' All candidates are expected to be able to fluently converse in English and overall have strong communication skills.',
       ' Any and all information disclosed in this club is confidential by law unless explicitly declared otherwise. Violation may lead to legal action.',
       'Positions in this club are year-independent. All are expected to cooperate with the organizational structure regardless of the age/batch of any member.',
-      {
-        text:
-          'By applying for this club, you are hereby declaring that, if selected, you agree to be legally bound by the Membership Terms as stated in the document found ',
-        linktext: 'here.',
-        link: 'https://files.tedxnitrourkela.com/Membership_Terms.pdf',
-      },
     ],
     TEAMS: [
       {
