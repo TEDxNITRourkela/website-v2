@@ -18,11 +18,14 @@ function Details({ scrollFun }) {
       <Typography variant='body2' className={classes.subHeading}>
         Team Induction Form for Academic Year 2022-23. Open for all years.
       </Typography>
+      <Typography variant='body2' className={classes.subHeading}>
+        Want to know more, check out the slideshow below!
+      </Typography>
       <div className={classes.videoContainer}>
         <iframe
           width='560'
           height='315'
-          src='https://link.tedxnitrourkela.com/orientation-autumn-2021-yt'
+          src='https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFKm_d-5ro&#x2F;view?embed'
           title='Orientation Autumn 2021 | TEDxNITRourkela'
           frameBorder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'

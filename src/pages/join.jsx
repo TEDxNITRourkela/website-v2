@@ -32,7 +32,6 @@ function Join() {
         </Container>
         <hr color='red' style={{ margin: '30px 0px' }} />
         <Container>
-          <Team />
           <Container ref={ref}>
             <Widget id='gThpTlqg' style={{ height: '70vh' }} />
           </Container>
