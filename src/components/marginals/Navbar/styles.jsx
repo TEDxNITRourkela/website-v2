@@ -48,7 +48,7 @@ export const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  lg:height: 64px;
 `;
 
 export const LogoContainer = styled.div`
