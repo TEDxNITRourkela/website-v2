@@ -19,19 +19,22 @@ const Content = styled(Para2)`
   font-size: 0.95rem;
   line-height: 1.3;
 `;
-
+// /
 const Section = styled.div`
   width: 50%;
   margin: 0 10px;
 
-  @media (max-width: 540px) {
+  @media (max-width: 850px) {
     width: 90%;
   }
 `;
-
+// /
 const Img = styled.img`
   width: 90%;
   height: auto;
+  @media (max-width: 850px) {
+    margin: 20px;
+  }
 `;
 
 const Img1 = styled.img`
@@ -79,8 +82,8 @@ const Wrapper = styled(Container)`
   height: 100%;
   width: 100%;
   min-height: 300px;
-
-  @media (max-width: 540px) {
+  // /
+  @media (max-width: 850px) {
     flex-direction: ${(reverse) => (reverse ? 'column-reverse' : 'column')};
   }
 `;
