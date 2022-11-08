@@ -15,7 +15,7 @@ const faIcons = {
   ...faIcons2,
 };
 
-const SpeakerCard = ({
+const SpeakerCard = function ({
   name,
   description,
   shortDescription,
@@ -24,7 +24,7 @@ const SpeakerCard = ({
   links,
   isLongCard,
   isPublished,
-}) => {
+}) {
   const [front, setFront] = useState(true);
   const [card, setCard] = useState('card');
 
@@ -37,7 +37,12 @@ const SpeakerCard = ({
   const image = isPublished ? speakerImage : shilhouette;
 
   return (
-    <CardContainer isPublished={isPublished} isLongCard={isLongCard}>
+    <CardContainer
+      isPublished={isPublished}
+      isLongCard={isLongCard}
+      onClick={onClick}
+      onKeyDown={onClick}
+    >
       <div className={card}>
         <Common>
           <ImageContainer isLongCard={isLongCard} isPublished={isPublished} image={image} />
