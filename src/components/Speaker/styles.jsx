@@ -24,9 +24,15 @@ export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .isFlipped {
     transform: rotateY(180deg);
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 
